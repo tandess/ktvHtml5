@@ -1,0 +1,11 @@
+<root>
+	<com_config>
+		<a nVersion="2" nStepNum="2" />
+	</com_config>
+	<next_btnpos>
+		<a x="691" y="571" width="126" height="50"/>
+	</next_btnpos>
+	<end_btnpos>
+		<a x="464" y="609" width="169" height="101"/>
+	</end_btnpos>
+</root>

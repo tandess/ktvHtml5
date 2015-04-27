@@ -1,0 +1,12 @@
+<root>
+	<function_config>
+		<a first_openhall="0" headtype="1" bTitleToolTip="0"/>
+	</function_config>
+	<ui_config>
+		<a ui_sysmsgsend="3" col_richedit_sys_r="241" col_richedit_sys_g="246" col_richedit_sys_b="254"
+		   col_loginversion_r="139" col_loginversion_g="139" col_loginversion_b="139"/>
+	</ui_config>
+	<info_config>
+		<a corperation="È«ÇòÓéÀÖ"/>
+	</info_config>
+</root>

@@ -1,0 +1,25 @@
+[Level: Warning] [2014-06-03:10-32-30] beginner
+[Level: Warning] [2014-06-03:10-32-30] ChatConnection::open,host:192.168.1.147,port:9009
+[Level: Warning] [2014-06-03:10-32-30]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-06-03:10-32-30]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-06-03:10-32-30] ChatChannel::svc,svc start,Cmd,1e4
+[Level: Warning] [2014-06-03:10-32-30]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-06-03:10-32-31] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-06-03:10-32-31] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-06-03:10-32-31] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-06-03:10-32-31] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-06-03:10-32-31]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-06-03:14-03-46] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-06-03:15-00-37] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,1e4
+[Level: Warning] [2014-06-03:15-01-37]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-06-03:15-01-37] beginner
+[Level: Warning] [2014-06-03:15-01-37] ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-06-03:15-01-42]  //创建命令通道  ChatConnection::open_ex,host:25.kkyoo.com,port:9009,type:1
+[Level: Warning] [2014-06-03:15-01-42]  //启动定时器线程 ChatConnection::open_ex
+[Level: Warning] [2014-06-03:15-01-42] ChatChannel::svc,svc start,Cmd,1180
+[Level: Warning] [2014-06-03:15-01-42]  //发送进入聊天室命令 ChatConnection::open_ex
+[Level: Warning] [2014-06-03:15-01-42] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-06-03:15-01-42] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-06-03:15-01-42] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-06-03:15-01-42]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-06-03:15-04-35] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,1180

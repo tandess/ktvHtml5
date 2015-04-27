@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        paceOptions = {
+          startOnPageLoad: false
+        };
+    </script>
+    <script src="../js/boia.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/tween.js"></script>
+    <script type="text/javascript" src="../js/md5.js"></script>
+    <script src="../js/pace.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pace-theme-flash.css" />
+    <title>登陆窗口</title>
+    <style type="text/css">
+        body .pace {width: 380px;}
+        .pace .pace-progress {top: 248px;max-width: 380px;}
+        .pace .pace-activity {left: 360px;top: 225px;}
+        .pace .pace-progress-inner {display: none;}
+        .login-box { width: 380px; height: 294px; background: url(../images/window/texture.png), url(../images/loginUI/login_bg.jpg) repeat-x; }
+         .container:before { -webkit-box-sizing: border-box; position: absolute; width: 100%; height: 100%; display: block; content: ''; border-radius: 5px; background: transparent; border-bottom: 1px solid #858585; border-top: 1px solid #858585;z-index: -1; } 
+        .header { height: 140px; }
+        .label-box { width: 50px; }
+        .body .select-box,
+        .body .input-box { width: 180px; }
+        .body .col-2 { width: 180px; text-align: left; }
+        .body .col-3 { color: #0C7AB9; cursor: pointer; }
+        .body .col-3:hover { color: #088CD8; }
+        .body { text-align: center; }
+        .body .row { height: 34px;margin-bottom: 6px; }
+        .body .row:first-child {margin-bottom: 10px;}
+        .footer { position: absolute; width: 100%; bottom: 0; height: 50px; line-height: 55px; border-radius: 5px; }
+        .footer .login-btn-box {position: absolute;left: 110px;}
+        .footer .registBtn { float: left; background: url("../images/loginUI/regist_normal.png") no-repeat; }
+        .footer .systemBtn { float: right; margin-right: 15px; background: url("../images/loginUI/system_normal.png") no-repeat; }
+        .footer .registBtn:hover { background: url("../images/loginUI/regist_hover.png") no-repeat; }
+        .footer .systemBtn:hover { background: url("../images/loginUI/system_hover.png") no-repeat; }
+        .footer .loginBtn { width: 143px; height: 28px; }
+        .footer .registBtn:active { background: url("../images/loginUI/regist_down.png") no-repeat; }
+        .footer .systemBtn:active { background: url("../images/loginUI/system_down.png") no-repeat; }
+        .footer .imgBtn { width: 33px; height: 33px; cursor: pointer; margin-top: 10px; }
+
+        .move{ position: relative;font-size: 20px;letter-spacing: 15px; }
+        .single{ display: inline-block;position: absolute; }
+        .single1 { left: 90px; }
+        .single2 { left: 130px; }
+        .single3 { left: 170px; }
+        .single4 { left: 210px; }
+        .single5 { left: 250px; }
+    </style>
+</head>
+
+<body class="isDrag">
+    <div class="componentBox"></div>
+    <div class="container login-box isDrag">
+        <div class="header isDrag">
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body isDrag">
+            <div class="move hide">
+                <span class="single single1">正</span>
+                <span class="single single2">在</span>
+                <span class="single single3">登</span>
+                <span class="single single4">录</span>
+                <span class="single single5">中</span>
+            </div>
+            <div class="form-box isDrag">
+                <div class="row isDrag">
+                    <div class="col col-1 label-box isDrag">账号：</div>
+                    <div class="col col-2">
+                        <div class="combobox">
+                            <div class="combobox-inner input-style">
+                                <input type="text" class="combobox-input username" />
+                                <span class="combobox-arrow-box top">
+                                    <span class="combobox-arrow"></span>
+                                </span>
+                            </div>
+                            <ul class="combobox-drop hide">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-3 deleteBtn">删除账号</div>
+                </div>
+                <div class="row isDrag">
+                    <div class="col col-1 label-box isDrag">密码：</div>
+                    <div class="col col-2">
+                        <input type="password" class="input-box input-style password disabled" disabled  />
+                    </div>
+                    <div class="col col-3 backPsdBtn">找回密码</div>
+                </div>
+                <div class="row isDrag">
+                    <div class="col col-1 label-box isDrag"></div>
+                    <div class="col col-2 isDrag">
+                        <div class="check-box col">
+                            <span class="checkbox-wrap">
+                                <input type="checkbox" id="remeber-box" class="checkbox-box isRemeber disabled" disabled>
+                            </span>
+                            <label for="remeber-box" class="label top">记住密码</label>
+                        </div>
+                        <div class="check-box col">
+                            <span class="checkbox-wrap">
+                                <input type="checkbox" id="stealth-box" class="checkbox-box isStealth disabled" disabled>
+                            </span>
+                            <label for="stealth-box" class="label top">隐身登陆</label>
+                        </div>
+                    </div>
+                    <div class="col col-3 applyBtn">申请密保</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer isDrag">
+            <div class="row isDrag">
+                <div class="col registBtn imgBtn" title="注册"></div>
+                <div class="col login-btn-box">
+                    <button type="button" class="btn btn-default loginBtn">登录</button>
+                </div>
+                <div class="col systemBtn imgBtn" title="系统设置"></div>
+            </div>
+        </div>
+    </div>
+<script>
+    var Container  = window.Container;
+
+    (function(B) {
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(380,294);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        //动画变量
+        var start = 0,during = 5,b = 0, c = 20,x,top;
+        var single = B.one('.move').all('.single'), length = single.length, loop = 0;
+        var isStop = false;
+
+        //随机生成6位密码
+        var randSixNum = function(){
+            return Math.floor(Math.random()*899999+100000);
+        };
+
+        var randPsd = randSixNum(), savePsd = '', storePasswd, invis;
+
+        //判断是否选中密码
+        var isChecked = function(isRemeber,isStealth, psd){
+            if(isRemeber === true) {
+                B.one('.password').value = psd;
+                B.one('.isRemeber').setAttribute('checked', true);
+            }else {
+                B.one('.isRemeber').removeAttribute('checked');
+                B.one('.password').value = '';
+            }
+            if(isStealth === true) {
+                B.one('.isStealth').setAttribute('checked', true);
+            }else {
+                B.one('.isStealth').removeAttribute('checked');
+            }
+        };
+
+        // 登陆
+        var login = function(event){
+            var user, psd ,isStealth = 0,isRemeber = 0;
+            var isMD5 = true;
+
+            event.stopPropagation();
+
+            if(B.one('.isStealth').checked) {
+                isStealth = 1;
+            }else {
+                isStealth = 0;
+            }
+
+            if(B.one('.isRemeber').checked) {
+                isRemeber = 1;
+            }else {
+                isRemeber = 0;
+            }
+
+            if(this.text() === '登录') {
+                user = B.one('.username').value;
+                psd = B.one('.password').value;
+
+                if(!user) {
+                    userTooltip.show();
+                    return;
+                }
+                if(!psd){
+                    psdTooltip.show();
+                    return;
+                }
+
+                /*判断用户密码是否为第一次输入
+                    判断用户输入的账号是否在下拉框下
+                    判断是否记住密码
+                    判断输入的密码是否随机生成的密码相同
+                */
+
+                [].forEach.call(B.all('.combobox-result'), function(item, index){
+
+                    if(user === B.Lang.trim(item.text())){
+
+                        if(storePasswd === true){
+
+                            if(parseInt(psd) == randPsd) {
+                                // psd = item.dataset['psd'];   
+                                psd = savePsd;
+                                isMD5 = false;
+                            }   
+                        }  
+                    }
+                });
+
+                if(isMD5) {
+                    psd = hex_md5(psd);
+                }
+
+                B.one('.body').one('.form-box').hide();
+                B.one('.body').one('.move').show();
+                B.one('.footer').one('.registBtn').hide();
+                B.one('.footer').one('.systemBtn').hide();
+
+                Pace.restart();
+                // webkitRequestAnimationFrame(_runTop);
+                this.text('返回');
+            }else {
+                B.one('.body').one('.form-box').show();
+                B.one('.body').one('.move').hide();
+                B.one('.footer').one('.registBtn').show();
+                B.one('.footer').one('.systemBtn').show();
+
+                B.one('.pace').parentNode.removeChild(B.one('.pace'));
+                // Pace.stop();
+                this.text('登录');
+
+                return;
+            }
+
+            // 判断done监听的数组是不是重复
+            if(Pace.bindings && Pace.bindings.done){
+                if(Pace.bindings.done.length > 1){
+                    Pace.bindings.done.pop();
+                }
+            }
+            //监听用户是否点击了取消
+            Pace.on('stop', function(){
+                console.log('stop')
+                isStop = true;
+            }); 
+
+            // 监听动画是否完成
+            Pace.on('done', function(){
+                if(!isStop){
+                    Container && Container.login(user,psd,isRemeber,isStealth); 
+                }
+                isStop = false;
+            }); 
+        };
+
+        // 从c++获得每一条用户的信息和密码
+        var getUserInfo = function(uin){
+            var userInfoObj = {};
+
+            userInfoObj = Container && Container.getUserLoginSet(uin);
+            savePsd = userInfoObj.passwd;
+            storePasswd = userInfoObj.storePasswd;
+            invis = userInfoObj.invis;
+
+            isChecked(storePasswd,invis,randPsd);
+        };
+
+        //用户框
+        var username = new B.Combobox({
+
+            boundingBox: '.combobox',
+
+            onListClick: function(target){
+                
+                /*var userInfoObj = {};
+                userInfoObj = Container && Container.getUserLoginSet(target.text());
+                savePsd = userInfoObj.passwd;
+                storePasswd = userInfoObj.storePasswd;
+                invis = userInfoObj.invis;*/
+
+                getUserInfo(target.text());
+
+                // isChecked(storePasswd,invis,randPsd);
+                // isChecked(target.getAttribute('isRemeber'), target.getAttribute('isStealth'),target.getAttribute('psd'));
+                // isChecked(target.getAttribute('isRemeber'), target.getAttribute('isStealth'), randPsd);
+            }
+        });
+
+        //用户名提示框
+        var userTooltip = new B.Tooltip({
+            trigger: '.username',
+            tipText: '请您输入账号后在登陆'
+        }).render();
+        //密码提示框
+        var psdTooltip = new B.Tooltip({
+            trigger: '.password',
+            tipText: '请您输入密码后在登陆'
+        }).render();
+
+        Container && Container.onLogining.connect(function(){
+                B.one('.body').one('.form-box').hide();
+                B.one('body').one('.move').show();
+
+                webkitRequestAnimationFrame(_runTop);
+                B.one('.loginBtn').text('返回');            
+        });
+        Container && Container.onInitComplete.connect(function(){
+            Array.prototype.forEach.call(B.all('.disabled'), function(item){
+                item.removeAttribute('disabled');
+            });
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });
+
+        //登陆
+        B.one('.loginBtn').on('click', login);
+        document.addEventListener('keydown', function(event){
+            var loginBtn = B.one('.loginBtn');
+            if(event.keyCode === 13){
+                if(loginBtn.text() !== '返回'){
+                    // 将this作用域指向登陆按钮
+                    login.call(B.one('.loginBtn'),event);
+                }
+            }
+        });
+        
+        // 注册
+        B.one('.registBtn').on('click', function(event){
+            event.stopPropagation();
+            Container && Container.setRegistUrl();
+        });
+
+        /*function _runTop() {
+            top = B.Tween.Quad.easeOut(start,b,c,during);
+            single[loop].css('top','-'+top+'px');
+            if(start < during){
+                start++;
+                webkitRequestAnimationFrame(function(){
+                    _runTop(loop);
+                });
+            }else {
+                webkitRequestAnimationFrame(function(){
+                    _runBottom(loop);
+                }); 
+            }
+        }
+
+        function _runBottom() {
+            top = B.Tween.Bounce.easeInOut(start,b,c,during);
+            single[loop].css('top','-'+top+'px');
+
+            if(start > 0) {
+                start--;
+                webkitRequestAnimationFrame(function(){
+                    _runBottom(loop);
+                });
+            }else {
+                if(loop < (length-1)){
+                    loop++; 
+                }else{
+                    loop = 0;
+                }
+                webkitRequestAnimationFrame(function(){
+                    _runTop(loop);
+                });
+            }
+        }*/
+
+        //记住登录过的账号(只将账号传到js)
+        Container && Container.sigSendUserId.connect(function(slist){
+            var list = []
+            //,slist=['7584379825','3456465510', '1438357711']
+            ;
+
+            slist.forEach(function(item,index){
+                var liNode = '<li class="combobox-result">{num}</li>';
+
+                if(index === 0){
+                    B.one('.username').value = item;
+
+                    /*userInfoObj = Container && Container.getUserLoginSet(item);
+                    savePsd = userInfoObj.passwd;
+                    storePasswd = userInfoObj.storePasswd;
+                    invis = userInfoObj.invis;*/
+
+                    getUserInfo(item);
+                    // isChecked(storePasswd, invis, randPsd);
+                }
+
+                B.one('.combobox-drop').append(B.Lang.sub(liNode,{
+                    num: item
+                }));
+
+            });
+        });
+        
+        B.one('.backPsdBtn').on('click', function(){
+            Container.showForgetPage();
+        });
+        B.one('.applyBtn').on('click', function(){
+            Container.showApplyPage();
+        });
+
+        //删除账号
+        B.one('.deleteBtn').on('click', function(){
+            var firstNode;
+            var uin = B.one('.username').value;
+
+            firstNode = username.item(1);
+            username.deleteLine(username.currentIndex,1);
+
+            if(firstNode) {
+                Container && Container.deleteAccount(uin);
+
+                if(B.one('.username').value){
+
+                    getUserInfo(B.one('.username').value);
+                }else {
+                    B.one('.password ').value = '';
+                    B.one('.isStealth').removeAttribute('checked');
+                    B.one('.isRemeber').removeAttribute('checked');
+                }
+
+                /*isChecked(firstNode.getAttribute('isRemeber'),firstNode.getAttribute('isStealth'),firstNode.getAttribute('psd'));*/
+            }   
+        });
+
+        //登录返回的信号
+        Container && Container.sigToMain.connect(function(error){
+
+            switch(error) {
+                case 0: 
+                    Container.showmain()
+                    break;
+                case 3: 
+                    B.one('.body').one('.form-box').show();
+                    B.one('body').one('.move').hide();
+                    B.one('.footer').one('.registBtn').show();
+                    B.one('.footer').one('.systemBtn').show();
+					B.one('.loginBtn').text('登录');
+                    userTooltip.tipText = '您的IP被封杀';
+                    userTooltip.show();
+                    break;
+                case 4: 
+                    B.one('.body').one('.form-box').show();
+                    B.one('body').one('.move').hide();
+                    B.one('.footer').one('.registBtn').show();
+                    B.one('.footer').one('.systemBtn').show();
+					B.one('.loginBtn').text('登录');
+                    userTooltip.tipText = '连接服务器失败';
+                    userTooltip.show();
+                    break;
+                default:
+                    B.one('.body').one('.form-box').show();
+                    B.one('body').one('.move').hide();
+                    B.one('.footer').one('.registBtn').show();
+                    B.one('.footer').one('.systemBtn').show();
+                    B.one('.loginBtn').text('登录');
+                    psdTooltip.tipText = '密码错误';
+                    psdTooltip.show();
+                    break;
+            };
+        });
+
+    })(Boia);
+</script>
+</body>
+
+</html>

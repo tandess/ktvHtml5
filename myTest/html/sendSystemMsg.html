@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统消息</title>
+    <script type="text/javascript" src="../js/boia.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style type="text/css">
+        .send-system-msg-box{width: 500px;height: 440px;}
+        .header .title {font-size: 14px;font-weight: normal;}
+        .body {padding: 15px;}
+        .body .label {width: 60px;}
+        .body .content-label,.body .reason-label {vertical-align: top;}
+        .body .btns {text-align: center;}
+        .body .title-input,.body .content-input,.body .publisher-input,.body .reason-input {width: 350px;}
+        .body .row {margin-bottom: 10px;}
+        .body fieldset {padding: 8px; position: relative;}
+        .body .kickout-btn {position: absolute;right: 10px;top: 13px;}
+    </style>
+</head>
+<body class="isDrag">
+    <div class="container send-system-msg-box isDrag">
+        <div class="header header-style isDrag">
+            <h1 class="title isDrag">发送系统消息</h1>
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="row">
+                <label class="label" for="title">标题:</label>
+                <input type="text" id="title" class="input-box title-input" />
+                <span class="hint">
+                    <span class="current-num">0</span>/<span class="total">18</span>
+                </span>
+            </div>
+            <div class="row">
+                <label class="label" for="publisher">发布者:</label>
+                <input type="text" id="publisher" class="input-box publisher-input" />
+            </div>
+            <div class="row">
+                <label class="label content-label" for="content">内容:</label>
+                <textarea id="content" class="content-input" rows="5"></textarea>
+            </div>
+            <div class="row">
+                <div class="row btns">
+                    <button type="button" class="btn col btn-default send-btn">发送</button>
+                    <button type="button" class="btn col btn-default cancel-btn">取消</button>
+                </div>
+            </div>
+            <form>
+                <fieldset>
+                    <legend>踢出用户</legend>
+                    <div class="row">
+                        <label class="label" for="userId">用户Id:</label><input type="text" id="userId" class="userId-input" /><button type="button" class="btn col btn-default kickout-btn">踢出系统</button>
+                    </div>
+                    <div class="row">
+                        <label class="label reason-label" for="reason">原因:</label><textarea id="reason" class="reason-input" rows="3"></textarea>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    var Container  = window.Container;
+
+    (function(B){
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(500, 400);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });        
+
+        //发送
+        B.one('.send-btn').on('click', function(){
+            var title = B.one('.title-input').value,
+                publisher = B.one('.publisher-input').value,
+                content = B.one('.content-input').value;
+
+            Container && Container.sendMessage(title+'WHG@#&$$&&'+publisher+'WHG@#&$$&&'+content);
+            Container && Container.close();
+        });
+
+        //取消
+        B.one('.cancel-btn').on('click', function(){
+            console.log('取消')
+        });        
+
+        //提出系统
+        B.one('.kickout-btn').on('click', function(){
+            var userId = B.one('.userId-input').value,
+                reason = B.one('.reason-input').value;
+
+            Container && Container.kickout(userId, reason)
+            Container && Container.close();
+        }); 
+
+    })(Boia);
+</script>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en" data-framework="backbonejs">
+
+<head>
+    <meta charset="utf-8">
+    <title>ktv</title>
+    <link href="../css/jquery-custom.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/ktv.css">
+    <script type="text/javascript" src="../js/im_const.js"></script>
+</head>
+<body class="ktv-sam">
+    <div class="ktv-container">
+        <div class="ktv-header" id="ktv_header">
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-zoom" data-status="0"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="ktv-wrap">
+            <div class="ktv-aside" id="ktv_aside">
+                <div class="header">
+                    <h2>
+                        <span class="room"></span>
+                        <span class="title">
+                            <span class="roomName"></span>
+                            (<span class="roomId"></span>)
+                        </span>
+                        <span class="signal-high signal"></span>
+                    </h2>
+                    <div class="tools">
+                        <span class="invite-friend"></span>
+                        <span class="collect"></span>
+                    </div>
+                </div>
+                <div class="ktv-tab">
+                </div>
+                <div class="ktv-notice-board">
+                </div>
+            </div>
+            <div class="ktv-content">
+                <div class="ktv-track">
+                    <span class="track-text"></span>
+                </div>
+                <div class="ktv-viedos-wrap">
+                    <div class="ktv-viedos">
+                        <div class="ktv-viedo-box" id="viedo1">
+                            <ul class="viedo-dropdown-menu dropdown-menu" data-menu="1">
+                                <li role="presentation" class="viedo clo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">打开视频</a>
+                                </li>
+                                <li role="presentation" class="audio clo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">打开声音</a>
+                                </li>
+                                <li role="presentation" class="net off">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">连接</a>
+                                </li>
+                                <li role="presentation" class="photo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">拍照</a>
+                                </li>
+                            </ul>
+                            <div class="ktv-viedo">
+                                <object id="viedo-object1" class="viedo-object viedo-market"
+                                        type="application/x-qt-rtmpplugin"
+                                        width="258" height="210">
+                                </object>
+                            </div>
+                            <div class="viedo-info">
+                                <span class="signal-high signal"></span>
+                                <span>主持人:</span>
+                                <span class="name"></span>
+                                <span class="viedo-menu-box">
+                                    <span class="viedo-status marker">上麦</span>
+                                    <span class="video-menu" data-menu="1"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ktv-viedo-box" id="viedo2">
+                            <ul class="viedo-dropdown-menu dropdown-menu" data-menu="2">
+                                <li role="presentation" class="viedo clo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">打开视频</a>
+                                </li>
+                                <li role="presentation" class="audio clo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">打开声音</a>
+                                </li>
+                                <li role="presentation" class="net off">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">连接</a>
+                                </li>
+                                <li role="presentation" class="photo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">拍照</a>
+                                </li>
+                            </ul>
+                            <div class="ktv-viedo">
+                                <object id="viedo-object2" class="viedo-object"
+                                        type="application/x-qt-rtmpplugin"
+                                        width="258" height="210">
+                                </object>
+                            </div>
+                            <div class="viedo-info">
+                                <span class="signal-high signal"></span>
+                                <span>主持人:</span>
+                                <span class="name"></span>
+                                <span class="viedo-menu-box">
+                                    <span class="viedo-status master" data-index="0">上管</span>
+                                    <span class="video-menu"  data-menu="2"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ktv-viedo-box" id="viedo3">
+                            <ul class="viedo-dropdown-menu dropdown-menu" data-menu="3">
+                                <li role="presentation" class="viedo clo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">打开视频</a>
+                                </li>
+                                <li role="presentation" class="audio clo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">打开声音</a>
+                                </li>
+                                <li role="presentation" class="net off">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">连接</a>
+                                </li>
+                                <li role="presentation" class="photo">
+                                    <a role="menuitem" class="link" tabindex="-1" href="#">拍照</a>
+                                </li>
+                            </ul>
+                            <div class="ktv-viedo">
+                                <object id="viedo-object3"  class="viedo-object"
+                                        type="application/x-qt-rtmpplugin"
+                                        width="258" height="210">
+                                </object>
+                            </div>
+                            <div class="viedo-info">
+                                <span class="signal-high signal"></span>
+                                <span>主持人:</span>
+                                <span class="name"></span>
+                                <span class="viedo-menu-box">
+                                    <span class="viedo-status master" data-index='1'>上管</span>
+                                    <span class="video-menu"  data-menu="3"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ktv-interaction-box">
+                    <div class="ktv-chat-box">
+                        <div class="send-info ktv-chat-message">
+                            <ul class="info-ul">
+                                <!-- <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共20束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共21束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共22束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共23束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共24束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共25束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共26束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共27束</li>
+                                <li class="list">小青送给小华一束玫瑰<img src="../images/Gift/Gift015.gif" width="60" height="60">,共28束</li> -->
+                            </ul>
+                        </div>
+                        <div class="notice-box">
+                            <!-- <span>【房间公告】：每天早上8--24点</span> -->
+                        </div>
+                        <div class="ktv-handle-box">
+                        <ul id="roomFresh" class="set-sub-menu dropdown-menu" data-menu="1" style="display:none ;">
+                            <li role="presentation" >
+                                <a deal="fastFresh" class="setDeal" value="0" href="#">急速模式</a>
+                            </li>
+                            <li role="liu" >
+                                <a  deal="fluencyFresh" class="setDeal" value="1" href="#">流畅模式</a>
+                            </li>
+                        </ul>
+                        <ul id="video"class="set-sub-menu dropdown-menu" data-menu="1" style="display:none;">
+                            <li role="presentation" >
+                                <a  deal="fastVideo" class="setDeal" value="0" href="#">清晰模式</a>
+                            </li>
+                            <li role="liu" >
+                                <a  deal="fluencyVideo" class="setDeal" value="1" href="#">流畅模式</a>
+                            </li>
+                        </ul>
+                            <div class="voice-set-dialog hide" id="voiceSetDialog" title="音频设置">
+                                <div class="modal-body">
+                                    <p>设置音频</p>
+                                </div>
+                            </div>
+
+                            <div class="seal-dialog hide" id="sealDialog" title="印章">
+                                印章
+                            </div>
+                            <div class="toolbar">
+                                <div class="popover top smilies-popover">
+                                    <ul class="nav nav-tabs" id="myTab">
+                                        <li class="active"><a href="#default" data-toggle="tab">默认</a></li>
+                                        <li><a href="#lovely" data-toggle="tab">可爱</a></li>
+                                        <li><a href="#onion" data-toggle="tab">洋葱</a></li>
+                                        <li><a href="#boy" data-toggle="tab">Boy</a></li>
+                                        <li><a href="#monkey" data-toggle="tab">猴子</a></li>
+                                        <li><a href="#custom" data-toggle="tab">自定义</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="default">
+                                            <span class="emotion-box emotion-box1">
+                                                <!-- <span class="thumb-box" data-index="1">
+                                                    <img class="thumb-img" width="24" height="24" data-index="1" src="../images/emotion/emotion001.gif" alt="" title="">
+                                                </span> -->
+                                            </span>
+                                        </div>
+                                        <div class="tab-pane" id="lovely">
+                                            <span class="emotion-box emotion-box2"></span>
+                                        </div>
+                                        <div class="tab-pane" id="onion">
+                                            <span class="emotion-box emotion-box3"></span>
+                                        </div>
+                                        <div class="tab-pane" id="boy">
+                                            <span class="emotion-box emotion-box4"></span>
+                                        </div>
+                                        <div class="tab-pane" id="monkey">
+                                            <span class="emotion-box emotion-box5"></span>
+                                        </div>
+                                        <div class="tab-pane" id="custom">
+                                            <span class="emotion-box emotion-box6"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <select class="send-user" id="send-user">
+                                    <option value="2">所有人</option>
+                                    <option value="1">自己</option>
+                                </select> -->
+                                <div class="combobox send-user">
+                                    <div class="combobox-inner input-style" data-uid="0">
+                                        <input type="text" class="combobox-input" value="所有人" />
+                                        <span class="combobox-arrow-box top">
+                                            <span class="combobox-arrow"></span>
+                                        </span>
+                                    </div>
+                                    <ul class="combobox-drop hide">
+                                        <li class="combobox-result" data-value="0">所有人</li>
+                                        <li class="combobox-result" data-value="1">自己</li>
+                                    </ul>
+                                </div>
+                                <span class="checkbox-wrap">
+                                    <input type="checkbox" class="checkbox-box" name="isQuietly" id="isQuietly" />
+
+                                </span>
+                                <label for="isQuietly">悄悄</label>
+                                <span class="font-box tool" title="选择字体">
+                                    <span class="icon font-icon"></span>
+                                </span>
+                                <span class="smilies-box tool" title="选择表情">
+                                    
+                                    <span class="icon smilies-icon"></span>
+                                </span>
+                                <span class="broadcast-box tool" title="发广播">
+                                    <ul class="broadcast-dropdown-menu dropdown-menu" data-menu="1">
+                                        <li role="presentation" class="system-broadcast">
+                                            <a role="menuitem" class="link" tabindex="-1" href="#">系统广播</a>
+                                        </li>
+                                        <li role="presentation" class="temp-notice">
+                                            <a role="menuitem" class="link" tabindex="-1" href="#">临时公告</a>
+                                        </li>
+                                    </ul>
+                                    <span class="icon broadcast-icon"></span>
+                                </span>
+                                <span class="game-box tool" title="游戏">
+                                    <span class="icon game-icon"></span>
+                                </span>
+                                <span class="vote-box tool" title="投票">
+                                    <span class="icon vote-icon"></span>
+                                </span>
+                                <span class="seal-box tool" title="印章">
+                                    <span class="icon seal-icon"></span>
+                                </span>
+                                <span class="colour-bar-box tool" title="彩条">
+                                     <ul class="color-dropdown-menu dropdown-menu" data-menu="1">
+
+                                     </ul>
+                                    <span class="icon colour-bar-icon"></span>
+                                </span>
+                                <span class="shop-box tool" title="购物车">
+                                    <span class="icon shop-icon"></span>
+                                </span>
+                                <span class="set-icon-box">
+                                     <ul class="set-dropdown-menu dropdown-menu" data-menu="1" style="margin-left: 328px;margin-top: -260px">
+                                         <li role="kill" class="system-set root">
+                                             <a role="menuitem" deal="kill" class="setDeal" value="0" href="#"><span class="check"></span>封杀IP</a>
+                                         </li>
+                                         <li role="forbidden" class="system-set root">
+                                             <a role="menuitem" deal="forbidden" class="setDeal" value="1" href="#">禁止发言</a>
+                                         </li>
+                                         <li role="out" class="system-set root">
+                                             <a role="menuitem" deal="out" class="setDeal" value="2" href="#">踢出房间</a>
+                                         </li>
+                                 <li class="root">
+                                     <hr>
+                                 </li>
+                                           <li role="presentation" class="system-set">
+                                               <a role="menuitem"  deal="saw" class="setDeal" value="0" href="#">查看资料</a>
+                                           </li>
+                                           <li role="presentation" class="system-set">
+                                               <a role="menuitem" deal="beFriend"class="setDeal" value="1" href="#">加为好友</a>
+                                           </li>
+                                           <li role="presentation" class="system-set">
+                                               <a role="menuitem" deal="shieldPublic" class="setDeal" value="2" href="#">屏蔽公聊</a>
+                                           </li>
+                                           <li role="presentation" class="system-set">
+                                               <a role="menuitem" deal="shieldAnimate" class="setDeal" value="3" href="#">屏蔽礼物动画</a>
+                                           </li>
+                                           <li role="presentation" class="system-set">
+                                               <a role="menuitem" deal="shieldVoice" class="setDeal" value="4" href="#">屏蔽礼物声音</a>
+                                           </li>
+                                           <li role="presentation" class="system-set">
+                                               <a role="menuitem" deal="shieldPrize"  class="setDeal" value="5" href="#">屏蔽中奖动画</a>
+                                           </li>
+                                           <li role="presentation" class="sub" call="video">
+                                               <a role="menuitem"  value="6" href="#">视频模式
+                                                   <span class="set-combobox-arrow-box right"><span class="set-combobox-arrow"></span></span>
+                                               </a>
+                                           </li>
+                                         <li role="presentation" class="sub" call="roomFresh">
+                                             <a role="menuitem"  value="6" href="#" >房间刷新模式
+                                                 <span class="set-combobox-arrow-box right"><span class="set-combobox-arrow"></span></span>
+                                             </a>
+                                         </li>
+                                         <li role="presentation" class="system-set">
+                                             <a role="menuitem" deal=" excellent"class="link setDeal" value="6" href="#">优选网络</a>
+                                         </li>
+                                     </ul>
+                                    <span class="icon set-icon"></span>
+                                    <span class="set-text">设置</span>
+                                </span>
+                                <span class="manage-icon-box" title="管理">
+                                    <span class="icon manage-icon"></span>
+                                    <span class="manage-text">管理</span>
+                                </span>
+                            </div>
+                            <div class="input-box">
+                                <div class="textarea type-area" contenteditable="true"></div>
+                                <div class="btns">
+                                    <button class="markerBtn btn btn-default">
+                                        <span class="marker-icon"></span>
+                                        <span class="split-line"></span>
+                                        <span class="marker-text">排麦</span>
+                                    </button>
+                                    <button class="sendBtn btn btn-default">
+                                        <span class="send-icon"></span>
+                                        <span class="split-line"></span>
+                                        <span class="send-text">发送</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="toolbar tool-voice">
+                                <div id="mediaConfig" style="display:none">
+                                    <span id="micConfig" value="50"></span>
+                                    <span id="voiceConfig" value="50"></span>
+                                    <span id="voicePress" value="1"></span>
+                                    <span id="micPress" value="1"></span>
+                                    <span id="isMic" value="1"></span>
+                                    <span id="isBgMusic" value="1"></span>
+                                    <span id="playDrive" value="1"></span>
+                                    <span id="recordDrive" value="1"></span> 
+                                    <span id="camDrive" value="1"></span>      
+                                </div>
+                                <span class="left media">
+                                    <span class="mic-icon icon calm" name="mic" value="1"></span>
+                                    <input class="range" type="range" id="mic" value="50" step="1"  min="0" max="100"/>
+                                    <span class="voice-icon icon calm" name="voice" value="1"></span>
+                                    <input class="range" type="range" id="voice" value="50" step="1" min="0" max="100"/>
+                                </span>
+                                <span class="right">
+                                    <button class="voiceSetBtn voiceBtn btn btn-default">
+                                        <span class="voiceSet-icon icon"></span>
+                                        <span class="voiceSet-text text">音频设置</span>
+                                    </button>
+                                    <button class="bgmusicBtn btn btn-default" value="1">
+                                        <span class="bgmusic-icon icon"></span>
+                                        <span class="bgmusic-text text">背景音乐</span>
+                                    </button>
+                                    <span class="radio-wrap">
+                                        <input type="radio" class="radio-box" id="microphone" name="audioMix"  checked value="1">
+                                    </span>
+                                    <label for="microphone">麦克风</label>
+                                    <span class="radio-wrap">
+                                        <input type="radio" class="radio-box" id="audioMix" name="audioMix" value="0">
+                                    </span>
+                                    <label for="audioMix">混音</label>                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ktv-corner-box">
+                    <div class="ktv-order-box">
+                        <div class="header">
+                            <span class="order-text">麦序</span>
+                            <span class="pause-order" data-isPause='1'>暂停麦序</span>
+                        </div>
+                        <div class="body" id="order">
+                            <div class="order-list-box">
+                                <ul class="dropdown-menu order-menu">
+                                    <li role="presentation" class="stick">
+                                        <a role="menuitem" class="link" tabindex="-1" href="#">置顶</a>
+                                    </li>
+                                    <li role="presentation" class="cancelOrder">
+                                        <a role="menuitem" class="link" tabindex="-1" href="#">取消麦序</a>
+                                    </li>
+                                    <li role="presentation" class="moveUpOrder">
+                                        <a role="menuitem" class="link" tabindex="-1" href="#">上移麦序</a>
+                                    </li>
+                                    <li role="presentation" class="moveDownOrder">
+                                        <a role="menuitem" class="link" tabindex="-1" href="#">下移麦序</a>
+                                    </li>
+                                </ul>
+                                <ol class="orders">
+                                    <!-- <li class="order-list">如来01 (45887)</li>
+                                    <li class="order-list">如来02 (89349)</li>
+                                    <li class="order-list">如来03 (54465)</li>
+                                    <li class="order-list">如来04 (76734)</li>
+                                    <li class="order-list">如来05 (15434)</li>
+                                    <li class="order-list">如来06 (86798)</li>
+                                    <li class="order-list">如来07 (45887)</li>
+                                    <li class="order-list">如来08 (89349)</li>
+                                    <li class="order-list">如来09 (54465)</li>
+                                    <li class="order-list">如来10 (76734)</li>
+                                    <li class="order-list">如来11 (15434)</li>
+                                    <li class="order-list">如来12 (86798)</li>
+                                    <li class="order-list">如来13 (45887)</li>
+                                    <li class="order-list">如来14 (89349)</li>
+                                    <li class="order-list">如来15 (54465)</li>
+                                    <li class="order-list">如来16 (76734)</li>
+                                    <li class="order-list">如来17 (15434)</li>
+                                    <li class="order-list">如来18 (86798)</li> -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ktv-prize-box">
+                        <div class="img-box">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#emotion" data-toggle="tab">幸运</a></li>
+                                <li><a href="#wealth" data-toggle="tab">抢星</a></li>
+                                <li><a href="#gift" data-toggle="tab">情感</a></li>
+                                <li><a href="#tab4" data-toggle="tab">娱乐</a></li>
+                                <li><a href="#tab5" data-toggle="tab">节日</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="emotion">
+                                    <!-- <span class="gift-box"  data-index="9" name="星光麦克" value="1万 金币" title="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="1" src="../images/Gift/Gift009.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="10" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="2" src="../images/Gift/Gift010.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="24" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="3" src="../images/Gift/Gift024.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="25" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="4" src="../images/Gift/Gift025.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="13" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="5" src="../images/Gift/Gift013.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="14" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="6" src="../images/Gift/Gift014.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="15" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="7" src="../images/Gift/Gift015.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="16" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="8" src="../images/Gift/Gift016.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="17" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="9" src="../images/Gift/Gift017.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="18" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="3" src="../images/Gift/Gift018.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="19" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="10" src="../images/Gift/Gift019.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="20" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="11" src="../images/Gift/Gift020.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="21" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="12" src="../images/Gift/Gift021.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="22" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="13" src="../images/Gift/Gift022.bmp" alt="" title="">
+                                    </span>
+                                    <span class="gift-box"  data-index="23" name="星光麦克" value="1万 金币" prize="送出后最多获得100倍奖金哦">
+                                        <img class="thumb-img" width="40" height="40" data-index="23" src="../images/Gift/Gift023.bmp" alt="" title="">
+                                    </span> -->
+
+                                    <!-- <div class="ktv-gift-detail hide">
+                                        <div class="gift-info-box">
+                                            <div class="img-box">
+                                                <img src="" class="img" width="60" height="60" alt="">
+                                            </div>
+                                            <div class="text-box">
+                                                <div class="name-box">
+                                                    <span>名称：</span>
+                                                    <span class="name"></span>
+                                                </div>
+                                                <div class="val-box">
+                                                    <span>价值：</span>
+                                                    <span class="val"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prizeContent"></div>
+                                    </div> -->
+                                </div>
+                                <div class="tab-pane" id="wealth"></div>
+                                <div class="tab-pane" id="gift"></div>
+                                <div class="tab-pane" id="tab4"></div>
+                                <div class="tab-pane" id="tab5"></div>
+                            </div>
+                            <div class="sent-info-box">
+                                <div>
+                                    送给: <span class="receive-user" data-uid="0">所有人</span>
+                                    <span class="checkbox-wrap">
+                                        <input type="checkbox" class="checkbox-box" id="quietlyGive">
+                                    </span>
+                                    <label for="quietlyGive">悄悄送</label>
+                                </div>
+                                <div class="">
+                                    <span class="ktv-label">数量:</span> 
+                                    <div class="combobox amount-select" >
+                                        <!-- <input class="span2" type="text" value="1">
+                                        <button class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+                                        <ul class="dropdown-menu">
+                                            <li data-value="1"><a href="#">5</a></li>
+                                            <li data-value="2"><a href="#">10</a></li>
+                                            <li data-value="3"><a href="#">15</a></li>
+                                            <li data-value="4"><a href="#">20</a></li>
+                                        </ul>
+                                        <select name="" id="amount-select">
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                        </select> -->
+                                        <div class="combobox-inner input-style" id="amount-combobox">
+                                            <input type="text" class="combobox-input" value="1" />
+                                            <span class="combobox-arrow-box top">
+                                                <span class="combobox-arrow"></span>
+                                            </span>
+                                        </div>
+                                        <ul class="combobox-drop hide">
+                                            <li class="combobox-result" data-value="5">5</li>
+                                            <li class="combobox-result" data-value="10">10</li>
+                                            <li class="combobox-result" data-value="15">15</li>
+                                            <li class="combobox-result" data-value="20">20</li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group give-gift-group">
+                                      <button type="button" class="btn btn-default send-gift">送出礼物</button>
+                                      <button type="button" class="btn btn-default dropdown-toggle gift-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                      <ul class="dropdown-menu bath-dropdown" role="menu">
+                                        <li><a href="#">批量送出</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>礼金: <span class="inmoney"></span></div>
+                                <div>金币: <span class="money"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ktv-consume-box">
+                        <div class="header">
+                            房间周消费榜
+                        </div>
+                        <div class="body">
+                            <ol class="users">
+                                <li class="list odd">1.华山</li>
+                                <li class="list">2.果儿</li>
+                                <li class="list odd">3.袖儿</li>
+                            </ol>
+                        </div>
+                        <div class="footer">
+                            <div class="center pay-center">
+                                <span class="icon pay-icon"></span>
+                                充值中心
+                            </div>
+                            <div class="center convert-center">
+                                <span class="icon convert-icon"></span>
+                                兑换中心
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>        
+        </div>
+    </div>
+
+    <script data-main="../js/main" src="../bower_components/requirejs/require.js"></script>
+</body>
+
+<script id="header-template" type="text/x-handlebars-template">
+    <div class="select-box">
+        <span class="img-box">
+            <img class="user-image" src="../images/small/2-1.bmp" alt="头像">
+        </span>
+        <span class="userNum">
+            <span class="nick"><%= nick %></span>
+            (<span class="num myUserId"><%= roomId %></span>)
+            <span class="my_thing"></span>
+        </span>
+    </div>
+    <h1 class="title track">
+        <span class="track-text">
+        </span>
+    </h1>  
+</script>
+
+<script id="aisde-tab-template" type="text/x-handlebars-template">
+    <ul class="nav nav-tabs">
+        <li><a href="#manage" data-toggle="tab">管理</a></li>
+        <li class="active"><a href="#user" data-toggle="tab">用户</a></li>
+        <li><a href="#order" data-toggle="tab">麦序</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane" id="manage">
+            <div class="manage-list-box list-box">
+                <ul class="user-list-menu dropdown-menu manage-menu  multi-level" aria-labelledby="dropdownMenu">
+                    <li role="presentation" class="menuList voidSelf" data-index="1">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">查看资料</a>
+                    </li>
+                    <li role="presentation" class="menuList voidSelf" data-index="2">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">加为好友</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-submenu holdMike">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱上主持麦</a>
+                        <ul class="dropdown-menu">
+                            <li class="menuList" data-index="3"><a tabindex="-1" href="javascript:;">主持麦(1)</a></li>
+                            <li class="menuList" data-index="4"><a tabindex="-1" href="javascript:;">主持麦(2)</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="menuList stopMike" data-index="5">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱下主持麦</a>
+                    </li>
+                    <li role="presentation" class="menuList holdSong" data-index="6">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱上演唱麦</a>
+                    </li>
+                    <li role="presentation" class="menuList  stopSong" data-index="7">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱下演唱麦</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="8">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">禁言用户</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="9">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">解除禁言</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="10">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">踢出房间</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="11">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">封杀IP</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="12">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">永封IP</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="13">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">封杀PC</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="14">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">永封PC</a>
+                    </li>
+                </ul>
+                <div class="manage-header header">
+                    <span class="search-icon icon"></span>
+                    <span class="position-icon icon"></span>
+                    <span class="help-icon icon"></span>
+                </div>
+                <div class="search-box hide">
+                    <input class="search-text input-style" />
+                </div>
+                <ul class="manage-list list-wrap">
+                </ul>
+            </div>
+        </div>
+        <div class="tab-pane active" id="user">
+            <div class="user-list-box list-box">
+                <ul class="user-list-menu dropdown-menu user-menu" id="user-menu">
+                    <li role="presentation" class="menuList voidSelf" data-index="1">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">查看资料</a>
+                    </li>
+                    <li role="presentation" class="menuList voidSelf" data-index="2">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">加为好友</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-submenu holdMike">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱上主持麦</a>
+                        <ul class="dropdown-menu">
+                            <li class="menuList" data-index="3"><a tabindex="-1" href="javascript:;">主持麦(1)</a></li>
+                            <li class="menuList" data-index="4"><a tabindex="-1" href="javascript:;">主持麦(2)</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="menuList stopMike" data-index="5">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱下主持麦</a>
+                    </li>
+                    <li role="presentation" class="menuList holdSong" data-index="6">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱上演唱麦</a>
+                    </li>
+                    <li role="presentation" class="menuList  stopSong" data-index="7">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">抱下演唱麦</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="8">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">禁言用户</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="9">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">解除禁言</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="10">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">踢出房间</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="11">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">封杀IP</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="12">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">永封IP</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="13">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">封杀PC</a>
+                    </li>
+                    <li role="presentation" class="menuList setAdmin" data-index="14">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">永封PC</a>
+                    </li>
+                </ul>
+                <div class="user-header header">
+                    <span class="search-icon icon"></span>
+                    <span class="position-icon icon"></span>
+                    <span class="help-icon icon"></span>
+                </div>
+                <div class="search-box hide">
+                    <input class="search-text  input-style" />
+                </div>
+                <ul class="user-list list-wrap">    
+                </ul>
+            </div>
+        </div>
+        <div class="tab-pane" id="order">
+            <div class="order-list-box list-box">
+                <ul class="dropdown-menu order-menu">
+                    <li role="presentation" class="stick">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">置顶</a>
+                    </li>
+                    <li role="presentation" class="cancelOrder">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">取消麦序</a>
+                    </li>
+                    <li role="presentation" class="moveUpOrder">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">上移麦序</a>
+                    </li>
+                    <li role="presentation" class="moveDownOrder">
+                        <a role="menuitem" class="link" tabindex="-1" href="#">下移麦序</a>
+                    </li>
+                </ul>
+                <ol class="orders">
+                    /*<li class="order-list">如来1 (45887)</li>
+                    <li class="order-list">如来2 (89349)</li>
+                    <li class="order-list">如来3 (54465)</li>
+                    <li class="order-list">如来4 (76734)</li>
+                    <li class="order-list">如来5 (15434)</li>
+                    <li class="order-list">如来6 (86798)</li>*/
+                </ol>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="aisde-tab-list-template" type="text/x-handlebars-template">
+    <div class="userImg">
+        <img src="../images/small/<%= faceIndex %>-1.bmp" alt="" />
+    </div>
+    
+    <div class="userinfo">
+        <div>
+            <span class="identity icon" style="background-image: url(../images/ktvImg/ico/special_ico0<%= (specialStatusIconIndex) %>.gif)"></span> 
+            <span class="nick"><%= nick %></span>
+        </div>
+        <div class="num"><%= uid %></div>
+    </div>
+    <div class="userStatus">
+        <span class="icon user-v" style="background-image: url(../images/ktvImg/ico/level_ico0<%= (wealthIconIndex) %>.gif)"></span>
+        <span class="icon user-m" style="background-image: url(../images/ktvImg/ico/moneyrank1_0<%= (moneyLevelIconIndex) %>.bmp)"></span>
+        <span class="icon user-s"></span>
+    </div>
+
+</script>
+
+<script id="aisde-notice-list-template" type="text/x-handlebars-template">
+    <div class="list">
+        <span class="notice-content">【房间<span class="room-num"><%= roomid %></span>】<%= str %></span>
+        <div class="name"><%= nick %>(<%= uin %>)</div>
+    </div>
+</script>
+        
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练歌房</title>
+    <script type="text/javascript" src="../js/boia.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style type="text/css">
+        .song-room-box {width: 530px;height: 780px;}
+        .header {background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #54aedb), color-stop(1, #47bbee));height: 50px;padding: 10px; }
+        .header .title {color: white;}
+        .body .viedo-box {width: 515px;height: 380px;margin: 10px auto;background: #effafe;border: 1px solid #c6c6c6;}
+        .body .song-info {height: 35px;width: 100%;border-bottom: 1px solid #c6c6c6;}
+        .body .toolbar {height: 80px;width: 100%;border-bottom: 1px solid #c6c6c6;padding: 8px; }
+        .body .toolbar .tool-box {display: inline-block;width: 58px;height: 64px;border: 1px solid transparent;}
+        .body .toolbar .tool-box:hover {border-color: #c6c6c6;background: #ebebeb;}
+    </style>
+</head>
+<body class="isDrag">
+    <div class="container song-room-box isDrag">
+        <div class="header isDrag">
+            <h2 class="title isDrag">练歌房</h2>
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="viedo-box"></div>
+            <div class="song-info-box">
+                <span class="info sing-name">
+                    <img src="../images/songroom/singName.png" alt="" width="12" height="26">
+                    <span class="text">歌曲名称</span>
+                </span>
+            </div>
+            <div class="toolbar">
+                <span class="tool-box">
+                    <img src="../images/songroom/openLocalFile.png" alt="" width="52" height="62" title="打开本地文件">
+                </span>
+                <span class="tool-box">
+                    <img src="../images/songroom/play.png" alt="" width="52" height="62" title="播放">
+                </span>
+                <span class="tool-box">
+                    <img src="../images/songroom/original.png" alt="" width="52" height="62" title="原唱">
+                </span>
+                <span class="tool-box">
+                    <img src="../images/songroom/harmonic.png" alt="" width="52" height="62" title="伴唱">
+                </span>
+                <span class="tool-box">
+                    <img src="../images/songroom/repeatSing.png" alt="" width="52" height="62" title="复唱">
+                </span>
+                <span class="tool-box">
+                    <img src="../images/songroom/tabSing.png" alt="" width="52" height="62" title="切歌">
+                </span>
+                <span class="tool-box">
+                    <img src="../images/songroom/tabViedo.png" alt="" width="52" height="62" title="视频切换">
+                </span>
+                <span class="tool-box">
+                    <img src="../images/songroom/record.png" alt="" width="52" height="62" title="录制">
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var Container  = window.Container;
+    (function(B){    
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        var img = 0;
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(530, 780);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+            
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });     
+
+    })(Boia);
+</script>
+</html>

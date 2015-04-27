@@ -1,0 +1,21 @@
+<headlist>
+<config>
+<item listTabNum="4" />
+</config>
+<names>
+<item list1="普通" list2="红色VIP" list3="水晶会员" list4="贵族"/>
+</names>
+<list1>
+<item startIndex="1" endIndex="254" path="face\\small\\INDEX-1.bmp"/>
+<item startIndex="360" endIndex="360" path="face\\small\\INDEX-1.bmp"/>
+</list1>
+<list2>
+<item startIndex="255" endIndex="294" path="face\\small\\INDEX-1.bmp"/>
+</list2>
+<list3>
+<item startIndex="295" endIndex="330" path="face\\small\\INDEX-1.bmp"/>
+</list3>
+<list4>
+<item startIndex="331" endIndex="359" path="face\\small\\INDEX-1.bmp"/>
+</list4>
+</headlist>

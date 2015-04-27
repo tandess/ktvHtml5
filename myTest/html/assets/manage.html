@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/boia.js"></script>
+    <script src="../../bower_components/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../bower_components/underscore/underscore.min.js" type="text/javascript"></script>
+    <script src="../../bower_components/backbone/backbone.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../js/view/component/manageView.js"></script>
+    <style type="text/css">
+        body {font-size: 12px;}
+        input[type=radio], input[type=checkbox] {margin: 0;}
+        .btn {height: 21px;padding: 0 4px;font-size: 12px;margin: 0;}
+        .checkbox-wrap {padding: 0px;}
+        .manage-box {width: 650px;height: 460px;background: white;}
+        .selected {background: #3399FF;color: white;}
+        .body {position: relative;padding-left: 130px;}
+        .body .top {vertical-align: top;}
+        .body .sidebar {position: absolute;left: 0;width: 125px;height: 300px;border-right: 1px solid #DCDCDC;margin-top: 10px;text-align: center;}
+        .body .sidebar .nav-tabs {border: 0;text-align: center;margin-top: 15px;}
+        .body .sidebar .nav-tabs > li {float: none;margin-bottom: 15px;padding: 0 5px;}
+        .body .sidebar .nav-tabs > li > a {border: 0;padding: 3px 8px;}
+        .body .sidebar .nav-tabs > li.active > a {border: 1px solid #D8D8D8;border-radius: 5px;background: #F0F0F0;}
+        .body .user-list-box {width: 150px;height: 130px;overflow: auto;}
+        .body .member-list-box {width: 150px;height: 55px;overflow: auto;}
+        .body .operate-box {vertical-align: top;}
+        .body .operate-box .btns {vertical-align: top;}
+        .body .operate-box .btns .btn {display: block;margin-top: 8px;}
+        .body .room-tab-content {height: 320px;width: 95%;margin: 5px;}
+        .body .room-set-tab {border: 1px solid #abd7ed;padding-top: 5px;padding-left: 20px;}
+        .body .room-set-tab .input-style {width: 40px;}
+        .footer {padding: 10px;}
+        .footer .btns {float: right;}
+
+    </style>
+</head>
+<body class="isDrag">
+        <div class="container manage-box isDrag">
+        <div class="header header-style isDrag">
+            <span class="title isDrag">设置</span>
+            <div class="tool">
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div id="myTab">
+                <div class="sidebar">
+                    <span class="img-box"><img src="../../images/small/4-1.bmp" alt="头像"></span>
+                    <ul class="nav nav-tabs">
+                        <li class="list active"><a  href="#room-box-tab" class="link">房间管理</a></li>
+                        <li class="list"><a  href="#good-box-tab" class="link">收礼详情</a></li>
+                        <li class="list"><a  href="#tab-3" class="">邀请好友</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="room-box-tab">
+                        <div class="tab-content-box1 room-manage">
+                            <ul class="nav nav-tabs">
+                                <li class="list active"><a  href="#room-manage-tab" class="link">房间管理</a></li>
+                                <li class="list"><a  href="#room-set-tab" class="link">房间设置</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane room-tab-content active" id="room-manage-tab">
+                                    <div class="content">
+                                        <div class="row">
+                                            <div class="col col-1 label-box">房间名称：</div>
+                                            <div class="col col-2">
+                                                <input  type="text" class="input-style" id="roomName" />
+                                            </div>
+                                            <div class="col col-3">
+                                                <span class="hint">最多可输入十个汉字</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-1 label-box top">房间信息：</div>
+                                            <div class="col col-2">
+                                                <textarea class="room-info input-style" rows="2" cols="60" id="roomDescript"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-1 label-box top">房间公告：</div>
+                                            <div class="col col-2">
+                                                <textarea class="room-info input-style" rows="2" cols="60" id="roomNotice"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="g50 operate-box member-operate-box">
+                                                <fieldset>
+                                                    <legend>进入管理</legend>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <span class="radio-wrap">
+                                                                <input type="radio" class="radio-box isOpenRoom" name="isManage" id="openManage" value="1">
+                                                            </span>
+                                                            <label for="openManage">打开</label>
+                                                        </div>
+                                                        <div class="col">
+                                                            <span class="radio-wrap">
+                                                                <input type="radio" class="radio-box adminAll member" name="memberOpera" id="adminAll" value="0">
+                                                            </span>
+                                                            <label for="adminAll">容许任何</label>
+                                                        </div>
+                                                        <div class="col">
+                                                            <span class="radio-wrap">
+                                                                <input type="radio" class="radio-box blacklist member" name="memberOpera" id="blacklist" value="2">
+                                                            </span>
+                                                            <label for="blacklist">黑名单</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <span class="radio-wrap">
+                                                                <input type="radio" class="radio-box isOpenRoom" name="isManage" id="closeManage" value="0">
+                                                            </span>
+                                                            <label for="closeManage">关闭</label>                         
+                                                        </div>
+                                                        <div class="col">
+                                                            <span class="radio-wrap">
+                                                                <input type="radio" class="radio-box assignMember member" name="memberOpera" id="assignMember" value="1">
+                                                            </span>
+                                                            <label for="assignMember">指定成员</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row ">
+                                                        <div class="col member-list-box"></div>
+                                                        <div class="col btns">
+                                                            <input class="btn btn-default add-member-btn add-btn" type="button" value="添加" />
+                                                            <input class="btn btn-default delete-member-btn delete-btn" type="button" value="删除" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="hint">
+                                                            注：添加黑名单功能对管理类角色无效
+                                                        </span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="checkbox-wrap">
+                                                            <input type="checkbox" class="checkbox-box passVerify" id="passVerify">
+                                                        </span>
+                                                        <label for="passVerify">密码验证</label>
+                                                        <input class="input-style pass-input" type="password" disabled />
+                                                    </div>
+                                                    <div class="row">
+                                                        <input class="btn btn-default release-kick-btn" type="button" value="释放踢出者" />
+                                                        <input class="input-style userid" type="text" />
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                            <div class="g50 manage-operate-box operate-box">
+                                                <fieldset>
+                                                    <legend>
+                                                        <input class="btn btn-default add-btn" type="button" value="管理员设置" />
+                                                        <input class="btn btn-default add-btn" type="button" value="评委设置" />
+                                                        <input class="btn btn-default add-btn" type="button" value="副室主设置" />
+                                                    </legend>
+                                                    <div class="user-list-box col"></div>
+                                                    <div class="col btns">
+                                                        <input class="btn btn-default add-user-btn add-btn" type="button" value="添加" />
+                                                        <input class="btn btn-default delete-user-btn delete-btn" type="button" value="删除" />
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <fieldset>
+                                                    <legend>全部释放</legend>
+                                                    <input class="btn btn-default add-btn" type="button" value="踢出用户释放" />
+                                                    <input class="btn btn-default add-btn" type="button" value="封杀IP释放" />
+                                                    <input class="btn btn-default add-btn" type="button" value="封杀PC释放" />
+                                                </fieldset>
+                                            </div>
+                                            <div class="col">
+                                                <input class="btn btn-default add-btn" type="button" value="升级房间规模" />                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <div class="tab-pane room-tab-content room-set-tab" id="room-set-tab">
+                                    <div class="row">
+                                        <div class="col">聊天设置：</div>
+                                        <div class="col">
+                                            <span class="checkbox-wrap">
+                                                <input type="checkbox" class="checkbox-box shieldPublicChat" id="shieldPublicChat">
+                                            </span>
+                                            <label for="shieldPublicChat">屏蔽公聊</label>
+                                        </div>
+                                        <div class="col">
+                                            <span class="checkbox-wrap">
+                                                <input type="checkbox" class="checkbox-box shieldPrivateChat" id="shieldPrivateChat">
+                                            </span>
+                                            <label for="shieldPrivateChat">屏蔽私聊</label>                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">是否选择：</div>
+                                        <div class="col">
+                                            <span class="checkbox-wrap">
+                                                <input type="checkbox" class="checkbox-box autoPlayMTV" id="autoPlayMTV">
+                                            </span>
+                                            <label for="autoPlayMTV">自动播放MTV</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">金麦克：</div>
+                                        <div class="col">
+                                            <span class="radio-wrap">
+                                                <input type="radio" class="radio-box openMike k-mic" name="k-mic" id="openMike" value="1">
+                                            </span>
+                                            <label for="openMike">开启</label>
+                                        </div>
+                                        <div class="col">
+                                            <span class="radio-wrap">
+                                                <input type="radio" class="radio-box closeMike k-mic" name="k-mic" id="closeMike" value="0">
+                                            </span>
+                                            <label for="closeMike">关闭</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">传输延迟设置：</div>
+                                    <div class="row">
+                                        <div class="col">频率：</div>
+                                        <div class="col">
+                                            <input type="number" class="input-style frequency" id="frequency">
+                                            <label for="frequency">毫秒</label>
+                                        </div>
+                                        <div class="col">
+                                            <label for="buffer">K歌缓冲</label>
+                                            <input type="number" class="input-style buffer" id="buffer">
+                                            <span class="hint">毫秒</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">已点歌曲点歌上限设置：</div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="songLimit">点歌上限</label>
+                                            <input type="number" class="input-style songLimit" id="songLimit">
+                                            <span class="hint">首</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">个人点歌设置：</div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="personSongLimit">点歌上限</label>
+                                            <input type="number" class="input-style personSongLimit" id="personSongLimit" min="1" max="3">
+                                            <span class="hint">首</span>
+                                        </div>
+                                        <div class="col">(可设置1-3首)</div>
+                                    </div>
+                                    <div class="row">K歌窗口上麦最长时间设置：</div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="mikeLimit">上麦上限：</label>
+                                            <input type="number" class="input-style mikeLimit" id="mikeLimit" min="5">
+                                            <span class="hint">分钟</span>
+                                        </div>
+                                        <div class="col">(最低时限5分钟)</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">房间个性图标设置：</div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-default set-icon-btn">设置图标</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">点歌娃娃：</div>
+                                        <div class="col">
+                                            <span class="radio-wrap">
+                                                <input type="radio" class="radio-box openSong songBaby" name="songBaby" id="openSong" value="1">
+                                            </span>
+                                            <label for="openSong">开启</label>
+                                        </div>
+                                        <div class="col">
+                                            <span class="radio-wrap">
+                                                <input type="radio" class="radio-box closeSong songBaby" name="songBaby" id="closeSong" value="0">
+                                            </span>
+                                            <label for="closeSong">关闭</label>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-default set-song-btn">点歌娃娃设置</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">视频锁定：</div>
+                                        <div class="col">
+                                            <span class="radio-wrap">
+                                                <input type="radio" class="radio-box openViedo isLockViedo" name="isLockViedo" id="openViedo" value="1">
+                                            </span>
+                                            <label for="openViedo">打开</label>
+                                        </div>
+                                        <div class="col">
+                                            <span class="radio-wrap">
+                                                <input type="radio" class="radio-box closeViedo isLockViedo" name="isLockViedo" id="closeViedo" value="0">
+                                            </span>
+                                            <label for="closeViedo">关闭</label>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-default set-song-btn">视频锁定设置</button>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                            <footer>
+                                <div class="row">
+                                    <div class="col">
+                                        <span>自动挂号上限：</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="input-style auto-reg-num" id="auto-reg-num" min="0">
+                                        <button type="button" class="btn btn-default set-auto-reg-btn">设置</button>
+                                    </div>
+                                    <div class="col">
+                                        <input class="btn btn-default update-btn" type="button" value="更新" />
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="good-box-tab">
+                        <div class="tab-content-box1 good-details">
+                            22
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

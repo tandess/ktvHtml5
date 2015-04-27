@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>字体设置</title>
+        <link href="../../css/font.css" rel="stylesheet"/>
+        <script src="../../bower_components/jquery/jquery.min.js" type="text/javascript"></script>
+        <style type="text/css">
+            .font-box {width: 540px;height: 423px;}
+        </style>
+    </head>
+<body>
+<div class="container font-box isDrag" >
+    <!-- head start -->
+    <div class="header header-style isDrag">
+        <div class="tool">
+            <div class="tool-close"></div>
+        </div>
+    </div>
+    <!-- head end -->
+    <!-- content start -->
+    <div  id="fontDialog" class="font-dialog">
+        <!-- up start -->
+        <div class="up">
+            <div class="left">
+                <span>字体(<a href="#" style="text-decoration: underline">F</a>)</span>
+                <div><input class="inner-left" id="font-family-show"/></div>
+                <div class="scrollDiv" id="font-family">
+                    <div value="宋体" class="fontSet">宋体</div>
+                    <div value="微软雅黑" class="fontSet">微软雅黑</div>
+                    <div value="新宋体" class="fontSet">新宋体</div>
+                    <div value="幼圆" class="fontSet">幼圆</div>
+                    <div value="KaiTi" class="fontSet" >楷体</div>
+                    <div value="LiSu" class="fontSet"style="font-family: 微软雅黑">隶书</div>
+                </div>
+            </div>
+            <div class="center">
+                <span>字形(<a href="#" style="text-decoration: underline">Y</a>)</span>
+                <div><input class="inner-center" id="font-style-show"/></div>
+                <div  class="scrollDiv" id="font-style">
+                    <div style="font-style: normal" class="fontSet"value="normal">常规</div>
+                    <div style="font-style: italic" class="fontSet"value="italic">倾斜</div>
+                    <div class="fontSet"style="font-weight: bold"value="bold" >粗体</div>
+                    <div class="fontSet"style="font-style: italic;font-weight:  bold"value="italicBold" >倾斜 粗体</div>
+                </div>
+            </div>
+            <div class="right">
+                <span>大小(<a href="#" style="text-decoration: underline">S</a>)</span>
+                <div><input class="inner-right" id="font-size-show"/></div>
+                <div  class="scrollDiv" id="font-size">
+                    <div class="fontSet"value="42" data-prop="1">初号</div>
+                    <div class="fontSet"value="36" data-prop="2">小初</div>
+                    <div class="fontSet"value="26" data-prop="3">一号</div>
+                    <div class="fontSet"value="24" data-prop="1">小一</div>
+                    <div class="fontSet"value="22" data-prop="2">二号</div>
+                    <div class="fontSet"value="18" data-prop="3">小二</div>
+                    <div class="fontSet"value="16" data-prop="1">三号</div>
+                    <div class="fontSet"value="15" data-prop="2">小三</div>
+                    <div class="fontSet"value="14" data-prop="3">四号</div>
+                    <div class="fontSet"value="12" data-prop="1">小四</div>
+                    <div class="fontSet"value="10.5" data-prop="2">五号</div>
+                    <div class="fontSet"value="9" data-prop="3">小五</div>
+                </div>
+            </div>
+            <div class="btn">
+                <div><input class="container"type="button" id="btn_sure" value="确定"></div>
+                <div style="margin-top: 8px"><input id="btn_cancel" class="container" type="button" value="取消"></div>
+            </div>
+        </div>
+        <!-- up end-->
+        <!-- down start-->
+        <div class="down">
+            <!-- DownLeft start -->
+            <div class="config">
+                <fieldset class="normal">
+                    <legend>
+                        效果
+                    </legend>
+                    <dl>
+                        <dd id="underL">
+                            <input type="checkbox" id="underline" class="fontSet" value="on"><span>下划线(<a href="#" style="text-decoration: underline">U</a>)</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <div style="margin-top: 10px;">
+                                <span>颜色(<a href="#" style="text-decoration: underline">F</a>)</span>
+                                    <div>
+                                        <div class="com-box">
+                                                <span class="my-input" id="color-show"></span>
+                                                <span class="combobox-arrow-box top" rel="FontColor">
+                                                    <span class="combobox-arrow"></span>
+                                                </span>
+                                        </div>
+                                            <ul class="combobox-drop hide FontColor" id="color">
+                                                <li class="fontSet" value="ffff00"><div class="li-div"   style="background-color: #ffff00"></div><a class="li-a"> 黄色 </a></li>
+                                                <li class="fontSet" value="ff0000"><div class="li-div"  style="background-color: #ff0000"></div><a class="li-a">红色 </a></li>
+                                            </ul>
+                                    </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                </fieldset>
+            </div>
+            <!-- DownLeft end -->
+            <!-- DownRight start -->
+            <div class="demonstration">
+                <!-- 示例start -->
+                <div class="demo">
+                    <fieldset>
+                        <legend>
+                            示例
+                        </legend>
+                        <dl>
+                            <dd>
+                                <a href="#" id="demonstration" style="text-decoration:none">娱乐闹翻天</a>
+                            </dd>
+                        </dl>
+                    </fieldset>
+                </div>
+                <!-- 示例end -->
+                <!-- 示例字符集start -->
+                <div style="width: 100%">
+                    <div>
+                        <span>字符集(<a href="#" style="text-decoration: underline">F</a>)</span>
+                        <div>
+                            <div class="com-box">
+                                <span id="font-character-show"  class="my-input character"></span>
+                                    <span class="combobox-arrow-box top" rel="FontCharacter">
+                                        <span class="combobox-arrow"></span>
+                                    </span>
+                            </div>
+                                <ul class="combobox-drop hide FontCharacter" id="font-character">
+                                     <li class="fontSet" value="英语"><a>英语</a></li>
+                                    <li class="fontSet" value="汉语"><a>汉语</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+               <!-- 示例字符集end -->
+           </div>
+           <!-- DownRight end -->
+        </div>
+        <!-- down end-->
+    </div>
+    <!-- content end -->
+  </div>
+</body>
+</html>
+<script src="../bower_components/requirejs/require.js"></script>
+<script>
+    'use strict';
+
+    var Container = window.Container;
+
+    (function($) {
+        // 拖动事件
+        $('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = $(event.target);
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(600,500);
+            Container && Container.onDOMContentLoaded();
+
+        });
+
+        $('.tool-close,.cancel-btn').on('click', function(event){
+            Container && Container.close();
+        });
+    })(jQuery);
+    (function($){
+        function FontSet (){
+           this._options={
+               el:'#fontDialog',
+               isUnderline:"",
+               $underline:$("#underline"),
+               $fontCharacter:$("#fontCharacter"),
+               $demonstration:$("#demonstration"),
+               color:"",
+               colorFlag : true,
+               chartSetFlag:true
+           }
+            this.initClick();
+        }
+        FontSet.prototype.initClick = function(){
+            var self = this;
+            $("#btn_sure").click(function(){
+                self.fontSet();
+            });
+            $("#btn_cancel").click(function(){
+                self.cancelFontSet();
+            });
+            $(".fontSet").click(function(){
+               var value = $(this).attr("value"),style=$(this).parent().attr("id"),text=$(this).text();
+                if("LI"== this.nodeName){
+                    $(this).parent().addClass("hide");
+                }else{
+                    $(this).addClass("active").siblings().removeClass("active");
+                }
+                self.demonstration(style,value,text)
+            });
+            $(".top").click(function(){
+                var id = $(this).attr("rel");
+                $("."+id).trigger(self.showOrHide(id));
+            });
+        },
+        FontSet.prototype.showOrHide=function(id){
+            switch(id){
+                case "FontColor":
+                    if(this._options.colorFlag){
+                        $("."+id).removeClass("hide") ;
+                        this._options.colorFlag = false;
+                    }else{
+                        $("."+id).addClass("hide") ;
+                        this._options.colorFlag = true;
+                    };
+                    break;
+                default:
+                    if(this._options.chartSetFlag ){
+                        $("."+id).removeClass("hide") ;
+                        this._options.chartSetFlag = false;
+                    }else{
+                        $("."+id).addClass("hide") ;
+                        this._options.chartSetFlag = true;
+                    };
+                    break;
+            }
+        },
+        FontSet.prototype.inputShowStyle=function(type,text,value){
+            var $input = $("#"+type+"-show"),fontType=type;
+            switch (value){
+                case"bold":
+                    fontType = "font-weight";
+                    $input = $("#font-style-show");
+                    break;
+                case"italicBold":
+                    $input = $("#font-style-show");
+                    break;
+                default:
+                    break;
+            }
+            //this.change($input,value,fontType);
+            //"bold" == value ? $input.css("font-style",""):"";
+            "color"==type||"font-character"==type?this.canvasHtml($input,type,text,value):$input.val(text);
+
+        },
+        FontSet.prototype.canvasHtml=function($input,type,text,value){
+           var html = '<div class="li-div-span"  style="background-color: '+ value +'"></div><a class="li-a-span">'+ text +'</a>'
+            "color"==type?$input.html(html):$input.html(text);
+
+        },
+        FontSet.prototype.demonstration=function(id,fontStyle,text){
+            console.log(fontStyle);
+            var type="",value = fontStyle,underline,$demo=this._options.$demonstration;
+            "英语" == value? $demo.text("AaBbCcDdEe"):$demo.text("娱乐闹翻天");
+            underline = this._options.isUnderline = this._options.$underline.is(":checked");
+            "bold" == value ? (type = "font-weight",$demo.css("font-style","")) : ("on"==value ? type="text-decoration" : type=id);
+            this.change($demo,value,type);
+            value = "text-decoration" == type ? (true == underline ? "underline" : "none") : value;
+            value ="color"==type?"#"+value : value;
+            this._options.color = "color"==type? value:this._options.color;
+            this._options.$demonstration.css(type,value);
+            this.inputShowStyle(type,text,value);
+        },
+        FontSet.prototype.fontSet=function(){
+            var $demo = this._options.$demonstration;
+            var pkt = {
+                "font-name": $demo.css("font-family"),
+                "font-weight":$demo.css("font-weight"),
+                "font-style":$demo.css("font-style"),
+                "font-size": $demo.css("font-size"),
+                "color": this._options.color.substring(1),
+                "Underline": this._options.isUnderline==true,
+                "font-character": this._options.$fontCharacter.val()
+            };
+            Container && Container.fire('font-set',pkt);
+            this.cancelFontSet();
+        },
+
+        FontSet.prototype.cancelFontSet=function(){
+            Container && Container.close();
+        },
+
+        FontSet.prototype.change =function($demo,value,type){
+            "normal" == value ? $demo.css("font-weight",""):"";
+            "italic" == value ? $demo.css("font-weight",""):"";
+            "italicBold" == value?($demo.css("font-style","italic"),$demo.css("font-weight","bold")):($demo.css(type,value));
+        }
+         new FontSet();
+    })(jQuery)
+
+
+</script>

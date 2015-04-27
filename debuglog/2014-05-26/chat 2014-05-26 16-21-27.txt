@@ -1,0 +1,27 @@
+[Level: Warning] [2014-05-26:16-21-27] beginner
+[Level: Warning] [2014-05-26:16-21-27] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-26:16-21-27]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-26:16-21-27]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-26:16-21-27] ChatChannel::svc,svc start,Cmd,2fd0
+[Level: Warning] [2014-05-26:16-21-27]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-26:16-21-27] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-05-26:16-21-27] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-05-26:16-21-27] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-05-26:16-21-27] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-26:16-21-27]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-05-26:16-23-09] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-26:16-23-17] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-26:16-24-19] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-26:17-08-46]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-05-26:17-08-46] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,2fd0
+[Level: Warning] [2014-05-26:17-08-46] beginner
+[Level: Warning] [2014-05-26:17-08-46] ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-26:17-08-51]  //创建命令通道  ChatConnection::open_ex,host:25.kkyoo.com,port:9009,type:1
+[Level: Warning] [2014-05-26:17-08-51]  //启动定时器线程 ChatConnection::open_ex
+[Level: Warning] [2014-05-26:17-08-51] ChatChannel::svc,svc start,Cmd,2fc8
+[Level: Warning] [2014-05-26:17-08-51]  //发送进入聊天室命令 ChatConnection::open_ex
+[Level: Warning] [2014-05-26:17-08-51] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-05-26:17-08-51] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-05-26:17-08-51] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-05-26:17-08-51]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-05-26:18-02-56] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,2fc8

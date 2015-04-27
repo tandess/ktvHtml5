@@ -1,0 +1,217 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../../css/font.css" rel="stylesheet"/>
+
+        <style type="text/css">
+            .font-box {width: 385px;height: 260px;background: white;}
+        </style>
+    </head>
+<body>
+<div  id="fontDialog" class="font-dialog font-box" title="字体设置">
+    <div>
+        <div class="left">
+            <span>字体(<a href="#" style="text-decoration: underline">F</a>)</span>
+            <p><input class="input" id="font-family-show"/></p>
+            <div><select id="font-family" class="font-set set" size="3">
+                <option value="宋体">宋体</option>
+                <option value="微软雅黑">微软雅黑</option>
+                <option value="新宋体">新宋体</option>
+            </select></div>
+        </div>
+        <div class="left">
+            <span>字形(<a href="#" style="text-decoration: underline">Y</a>)</span>
+            <p><input class="input" id="font-style-show"/></p>
+            <div><select id="font-style" class="font-set set" size="3">
+                <option value="normal">常规</option>
+                <option value="italic">倾斜</option>
+                <option value="bold" >粗体</option>
+            </select></div>
+        </div>
+        <div class="right">
+            <span>大小(<a href="#" style="text-decoration: underline">S</a>)</span>
+            <p><input class="input" id="font-size-show"/></p>
+            <div><select id="font-size" class="font-set set" size="3">
+                <option value="一号">一号</option>
+                <option value="二号">二号</option>
+                <option value="三号">三号</option>v
+            </select></div>
+        </div>
+        <div class="btn">
+            <p><input type="button" id="btn_sure" value="确定"></p>
+            <p style="margin-top: 8px"><input id="btn_cancel" type="button" value="取消"></p>
+        </div>
+    </div>
+    <div class="config">
+        <fieldset class="normal">
+            <legend>
+                效果
+            </legend>
+            <dl>
+                <dd>
+                    <input type="checkbox" id="underline" class="set" checked="checked"><span>下划线(<a href="#" style="text-decoration: underline">U</a>)</span>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <span>颜色(<a href="#" style="text-decoration: underline">C</a>)</span>
+                    <div><select id="color" class="font-set set">
+                        <option value="blue">蓝色</option>
+                        <option value="red">红色</option>
+                    </select></div>
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset>
+            <legend>
+                示例
+            </legend>
+            <dl>
+                <dd>
+                    <a href="#" id="demonstration">娱乐闹翻天</a>
+                </dd>
+            </dl>
+        </fieldset>
+    </div>
+    <div style="width:47%;float:left;margin-left:5px">
+        <span>字符集(<a href="#" style="text-decoration: underline">R</a>)</span>
+        <div><select id="fontCharacter" class="font-set-R set">
+            <option value="chinese">汉语</option>
+            <option value="english">英语</option>
+        </select></div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../bower_components/requirejs/require.js"></script>
+<script>
+    'use strict';
+
+    var Container = window.Container;
+
+    (function($) {
+        // 拖动事件
+        $('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = $(event.target);
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(800,500);
+            Container && Container.onDOMContentLoaded();
+
+        });
+
+        $('.tool-close,.cancel-btn').on('click', function(event){
+            Container && Container.close();
+        });
+    })(jQuery);
+    (function($){
+        function FontSet (){
+           this.option={
+               el:'#fontDialog',
+               isUnderline:"",
+               $fontFamily:$("#font-family"),
+               $fontStyle:$("#font-style"),
+               $fontSize:$("#font-size"),
+               $fontColor:$("#font-color"),
+               $underline:$("#underline"),
+               $fontCharacter:$("#fontCharacter"),
+               $demonstration:$("#demonstration")
+           }
+            this.init();
+
+        }
+        FontSet.prototype.init=function(){
+            this.initStyle($(this.option.el).find("option"));
+            this.initClick();
+        }
+        FontSet.prototype.initClick=function(){
+            $("#btn_sure").click(function(){
+                this.fontSet();
+            },this);
+            $("#btn_cancel").click(function(){
+                this.cancelFontSet();
+            },this);
+            $(".set").click(function(){
+                this.demonstration();
+            },this);
+        }
+        FontSet.prototype.initStyle = function(options){
+            $(options).each(function(i){
+                switch(this.value){
+                    case "宋体":
+                    case "微软雅黑":
+                    case "新宋体":
+                        $(this).css("font-family",this.value);
+                        break;
+                    case "normal":
+                    case "italic":
+                        $(this).css("font-style",this.value);
+                        break;
+                    case "bold":
+                        $(this).css("font-weight",this.value);
+                        break;
+                    case "1":
+                    case "2":
+                    case "3":
+                        $(this).css("font-size",this.value);
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+        FontSet.prototype.inputShowStyle=function(type,value){
+            var $input = $("#"+type+"-show");
+            switch (value){
+                case"italic":
+                    value = "斜体";
+                    break;
+                case"normal":
+                    value = "常规";
+                    break;
+                case"bold":
+                    value = "粗体";
+                    $input = $("#font-style-show");
+                    break;
+                default:
+                    value = value;
+                    break;
+            }
+            $input.val(value);
+        }
+        FontSet.prototype.demonstration=function(){
+            var type="",currentTarget=event.currentTarget,value = currentTarget.value,underline;
+            underline = this._options.isUnderline = this._options.$underline.is(":checked");
+            "bold" == value ? (type = "font-weight") : ("on"==value ? type="text-decoration" : type=currentTarget.id);
+            value = "text-decoration" == type ? (true == underline ? "underline" : "none") : value;
+            this._options.$demonstration.css(type,value);
+            this.inputShowStyle(type,value);
+        }
+        FontSet.prototype.close=function(){
+            Container && Container.close();
+        }
+        FontSet.prototype.fontSet=function(){
+            var pkt = {};
+            pkt.fontFamily = this._options.$fontFamily.val();
+            pkt.fontStyle = this._options.$fontStyle.val();
+            pkt.fontSize = this._options.$fontSize.val();
+            pkt.fontColor = this._options.$fontColor.val();
+            pkt.underline = this._options.isUnderline;
+            pkt.fontCharacter = this._options.$fontCharacter.val();
+            this.callC(pkt);
+            this.close();
+        }
+        FontSet.prototype.cancelFontSet=function(){
+            this.close();
+        }
+    })(jQuery)
+
+
+</script>

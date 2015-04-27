@@ -1,0 +1,50 @@
+[Level: Warning] [2014-05-20:16-44-27] beginner
+[Level: Warning] [2014-05-20:16-44-27] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-20:16-44-27]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-20:16-44-27]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-27] ChatChannel::svc,svc start,Cmd,e58
+[Level: Warning] [2014-05-20:16-44-27]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-27] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,e58
+[Level: Warning] [2014-05-20:16-44-27] beginner
+[Level: Warning] [2014-05-20:16-44-27] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-20:16-44-27]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-20:16-44-27]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-27] ChatChannel::svc,svc start,Cmd,2688
+[Level: Warning] [2014-05-20:16-44-27]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-35] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,2688
+[Level: Warning] [2014-05-20:16-44-35] beginner
+[Level: Warning] [2014-05-20:16-44-35] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-20:16-44-35]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-20:16-44-35]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-35] ChatChannel::svc,svc start,Cmd,2574
+[Level: Warning] [2014-05-20:16-44-35]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-35] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-05-20:16-44-35] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-05-20:16-44-35] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-05-20:16-44-35] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-20:16-44-35]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-05-20:16-44-36] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,2574
+[Level: Warning] [2014-05-20:16-44-36] beginner
+[Level: Warning] [2014-05-20:16-44-36] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-20:16-44-36]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-20:16-44-36]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-36] ChatChannel::svc,svc start,Cmd,260c
+[Level: Warning] [2014-05-20:16-44-36]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-20:16-44-36] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-05-20:16-44-36] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-05-20:16-44-36] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-05-20:16-44-36] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-20:16-44-36]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-05-20:16-46-06] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,260c
+[Level: Warning] [2014-05-20:16-46-06] beginner
+[Level: Warning] [2014-05-20:16-46-06] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-20:16-46-06]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-20:16-46-06]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-20:16-46-06] ChatChannel::svc,svc start,Cmd,242c
+[Level: Warning] [2014-05-20:16-46-06]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-20:16-46-06] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-05-20:16-46-06] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-05-20:16-46-06] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-05-20:16-46-06] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-20:16-46-06]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-05-20:16-46-38] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,242c

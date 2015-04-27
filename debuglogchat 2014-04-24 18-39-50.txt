@@ -1,0 +1,1 @@
+[Level: Warning] [2014-04-24:18-39-50]  //启动定时器线程 ChatConnection::open

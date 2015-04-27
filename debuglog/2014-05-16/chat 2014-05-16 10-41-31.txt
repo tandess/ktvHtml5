@@ -1,0 +1,43 @@
+[Level: Warning] [2014-05-16:10-41-31] beginner
+[Level: Warning] [2014-05-16:10-41-31] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-16:10-41-31]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-16:10-41-31]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-16:10-41-31] ChatChannel::svc,svc start,Cmd,1b80
+[Level: Warning] [2014-05-16:10-41-31]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-16:10-41-32] Cmd channel get packet:EPH_CHAT_LOGON_ROOM
+[Level: Warning] [2014-05-16:10-41-32] Cmd channel get packet:EPH_CHAT_ROOM_PARAM
+[Level: Warning] [2014-05-16:10-41-32] //收到房间参数时被调用 ChatConnection::OnRcvRoomParam
+[Level: Warning] [2014-05-16:10-41-32] Cmd channel get packet:EPH_CHAT_USER_ENTER_ROOM
+[Level: Warning] [2014-05-16:10-41-32]  //麦序列表接收完整 ChatConnection::OnRcvSongList
+[Level: Warning] [2014-05-16:10-45-53] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,1b80
+[Level: Warning] [2014-05-16:10-46-31]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-05-16:10-46-31] beginner
+[Level: Warning] [2014-05-16:10-46-31] ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-16:10-46-37]  //创建命令通道  ChatConnection::open_ex,host:25.kkyoo.com,port:9009,type:1
+[Level: Warning] [2014-05-16:10-46-57]  //启动定时器线程 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-46-57]  //发送进入聊天室命令 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-47-58]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-05-16:10-47-58] beginner
+[Level: Warning] [2014-05-16:10-47-58] ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-16:10-48-03]  //创建命令通道  ChatConnection::open_ex,host:25.kkyoo.com,port:9009,type:1
+[Level: Warning] [2014-05-16:10-48-23]  //启动定时器线程 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-48-23]  //发送进入聊天室命令 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-49-23]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-05-16:10-49-24] beginner
+[Level: Warning] [2014-05-16:10-49-24] ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-16:10-49-29]  //创建命令通道  ChatConnection::open_ex,host:25.kkyoo.com,port:9009,type:1
+[Level: Warning] [2014-05-16:10-49-50]  //启动定时器线程 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-49-50]  //发送进入聊天室命令 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-50-50]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-05-16:10-50-50] beginner
+[Level: Warning] [2014-05-16:10-50-50] ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-16:10-50-55]  //创建命令通道  ChatConnection::open_ex,host:25.kkyoo.com,port:9009,type:1
+[Level: Warning] [2014-05-16:10-51-16]  //启动定时器线程 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-51-16]  //发送进入聊天室命令 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-52-16]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-05-16:10-52-16] beginner
+[Level: Warning] [2014-05-16:10-52-16] ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-16:10-52-21]  //创建命令通道  ChatConnection::open_ex,host:25.kkyoo.com,port:9009,type:1
+[Level: Warning] [2014-05-16:10-52-42]  //启动定时器线程 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-52-42]  //发送进入聊天室命令 ChatConnection::open_ex
+[Level: Warning] [2014-05-16:10-53-42]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1

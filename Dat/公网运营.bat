@@ -1,0 +1,1 @@
+copy svr_kkyoo.waw svr.waw

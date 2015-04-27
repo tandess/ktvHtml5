@@ -1,0 +1,123 @@
+<root>
+	<virtual_money_name>
+		<a first_money_name="K¶¹" second_money_name="K¶¹" use_dynamic_goods="1" buse_win_goods="1"/>
+	</virtual_money_name>
+	
+	<public_chat_scrollbar_color>
+		<a highlight="0xA9BDDB" shadow="0xA9BDDB" dlight="0xDDEAFE" track="0xDDEAFE" darkshadow="0xDDEAFE" base="0xA9BDDB" arrow="0x547AB2" face="0xe0e9fa" />
+	</public_chat_scrollbar_color>
+	
+	<private_chat_scrollbar_color>
+		<a highlight="0xA9BDDB" shadow="0xA9BDDB" dlight="0xDDEAFE" track="0xDDEAFE" darkshadow="0xDDEAFE" base="0xA9BDDB" arrow="0x547AB2" face="0xe0e9fa" />
+	</private_chat_scrollbar_color>
+	
+	<show_goods_scrollbar_color>
+		<a highlight="0xA9BDDB" shadow="0xA9BDDB" dlight="0xDDEAFE" track="0xDDEAFE" darkshadow="0xDDEAFE" base="0xA9BDDB" arrow="0x547AB2" face="0xe0e9fa" />
+	</show_goods_scrollbar_color>
+	
+	<show_broadcast_scrollbar_color>
+		<a highlight="0xA9BDDB" shadow="0xA9BDDB" dlight="0xDDEAFE" track="0xDDEAFE" darkshadow="0xDDEAFE" base="0xA9BDDB" arrow="0x547AB2" face="0xe0e9fa" />
+	</show_broadcast_scrollbar_color>
+	
+	<public_chat_user_name_color>
+		<a sendcolor="0x0080ff" recvcolor="0x0080ff" coloncolor="0x000000" textcolor="0x000000" />
+	</public_chat_user_name_color>
+	
+	<private_chat_user_name_color>
+		<a sendcolor="0x007700" recvcolor="0x007700" coloncolor="0x000000" textcolor="0x000000" />
+	</private_chat_user_name_color>
+	
+	<use_goods_color>
+		<a senduser_color="0xFFFFFF" recvuser_color="0xFFFFFF" private_senduser_color="0x007700" private_recvuser_color="0x007700" text_color="0xF79808" num_color="ffe103" default_color="0xf5900b" />
+	</use_goods_color>
+	
+	<use_dynamic_goods_color>
+		<a senduser_color="0xFFFFFF" recvuser_color="0xFFFFFF" text_color="0xf5900b" num_color="0xf5900b" default_color="0xf5900b" />
+	</use_dynamic_goods_color>
+	
+	<use_vote_color>
+		<a senduser_color="0xf5900b" recvuser_color="0xf5900b" text_color="0xffffff" num_color="0x760f82" default_color="0xFFFFFF" />
+	</use_vote_color>
+	
+	<broadcast_show_set>
+		<a user_color="0xf4739a" user_size="14" text_color="0xF4739A" text_size="14" roomid_color="0x80B4E0" roomid_size="14"/>
+	</broadcast_show_set>
+	
+	<system_broadcast>
+		<a bg_color="0x2E56B4" text_color="0xF9F92D" transparent="128" money="20Íò" />
+	</system_broadcast>
+	
+	<dynamic_goods_background>
+		<a bg_color="0xF0F0F0" use_web="true" />
+	</dynamic_goods_background>
+	
+	<chatinput_config>
+		<a is_align_right="true" btn_set_x="305" btn_set_y="3" btn_set_cx="20" btn_set_cy="20" btn_viprecharge_x="280" btn_viprecharge_y="3" btn_viprecharge_cx="20" btn_viprecharge_cy="20" />
+	</chatinput_config>
+		
+	<dicegame_config>
+		<a costlygift_price="5000000" cheapgift_price="100000" time_interval="15" />
+	</dicegame_config>
+	
+	<text_chat_ctrl>
+		<a splitter_btn_default_height = 0 />
+	</text_chat_ctrl>
+	
+	<marquee_config>
+		<a default_font_family = "Î¢ÈíÑÅºÚ" default_font_size = "30px" default_font_color = "#1284dc" username_font_family = "ÐÂËÎÌå" username_font_size = "30px" username_font_color = "#FF6702" uin_font_family = "ºÚÌå" uin_font_size = "25px"
+		uin_font_color = "#FF6702" giftname_font_family = "Î¢ÈíÑÅºÚ" giftname_font_size = "30px" giftname_font_color = "#FF0099" greeting_font_family = "ÐÂËÎÌå" greeting_font_size="30px" greeting_font_color="#0096ff" scrollAmount_normal = "6" scrollAmount_high = "15" 
+		roomid_font_family = "Î¢ÈíÑÅºÚ" roomid_font_size = "35px" roomid_font_color = "#0271B9" 
+		sendtime_font_family = "Î¢ÈíÑÅºÚ" sendtime_font_size = "18px" sendtime_font_color = "#0271B9" 
+		scrollTimes = "2"/>
+	</marquee_config>
+	
+	<fingerguessing_config>
+		<a fingerguessing_timeinterval="20" sendgift_timeinterval="10" />
+	</fingerguessing_config>
+	
+	<game_config>
+		<a dice_game = "1" fingerguessing_game = "1" pointcombat_game = "1" digtreasure_game = "1"/>
+	</game_config>
+	
+	<userlist_linecolor_config>
+		<a line_bkcolor1_r="255" line_bkcolor1_g="255" line_bkcolor1_b="255" line_bkcolor2_r="221" line_bkcolor2_g="238" line_bkcolor2_b="255" select_border_r="163" select_border_g="214" select_border_b="255" select_bk_r="163" select_bk_g="214" select_bk_b="255" />
+	</userlist_linecolor_config>
+	
+	<sendandrecvinfodlg_colorconfig>
+		<a headerbk_r = "211" headerbk_g = "224" headerbk_b = "254" itembk_r = "248" itembk_g = "248" itembk_b = "255" line_r = "120" line_g = "120" line_b = "120" selected_r = "163" selected_g = "214" selected_b = "255"
+		scrollthumb_r = "211" scrollthumb_g = "224" scrollthumb_b = "254" scrollbk_r = "224" scrollbk_g = "240" scrollbk_b = "254"/>
+	</sendandrecvinfodlg_colorconfig>
+	
+	<userlist_scrollbar_color>
+		<a scrollbar_r="211" scrollbar_g="224" scrollbar_b="254"			bkground_r="224" bkground_g="240" bkground_b="254" 
+		   light_r="255" light_g="255" light_b="255"						shodow_r="64" shodow_g="64" shodow_b="64"
+		   presslight_r="192" presslight_g="192" presslight_b="192"		pressshodow_r="192" pressshodow_g="192" pressshodow_b="192"/>
+	</userlist_scrollbar_color>
+	
+	<gamelist_dlg_size>
+		<a width="480" height="480" />
+	</gamelist_dlg_size>
+	
+	<room_exchange>
+		<a giftexchange_name="Àñ½ð" giftexchange_ratio="100" giftexchange_min="1000" />
+	</room_exchange>
+	
+	<login_bg_filename>
+		<a image_name="login_bg.jpg" />
+	</login_bg_filename>
+	<client_params>
+		<a titleDlgType="0" bSysDlgBG="1" bGameList="1" GiftWndHeight="318" bChatActArea="0" bSelectSong="1" bTempnotice="1" bEffect="1" bChatPic="1"
+		GiftInfoBGColor="#f4f9ff"/>
+	</client_params>
+	<functon_config>
+		<a MikeSet="1" CarSet="1" MallSkinType="1" bWinMsg="1" bUserCheck="1" uInitVolume="80" bMediaMute="0" bGiftToSelf="1" bConsumeMsg="1"
+		bWinMsgMerger="1" uGiftShowType="1" bPriMike="1" broad_gift="0" broadInChar="0" MaxBroadNum="10" gifeLineTimeInterval="10"  bSpecialCircleLast="0" bPhoto="1"
+		bMulSendGift="1" bMulSendGuaHao="1" nSecondSendNum="5" nSpecialGiftMsg="1"/>
+	</functon_config>
+	<sys_config>
+		<a bShowCloseDlg="0" bShowKickSelfDlg="0" />
+	</sys_config>
+	<ktvdlg_ui_config>
+		<a chat_bk_r="232" chat_bk_g="241" chat_bk_b="246"/>
+	</ktvdlg_ui_config>
+</root>

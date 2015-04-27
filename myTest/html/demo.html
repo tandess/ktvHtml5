@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="fuelux">
+
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+
+    <script src="../bower_components/requirejs/require.js"></script> 
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/fuelux.min.css" rel="stylesheet">
+    
+    <style type="text/css">
+    #MyCombobox {position: absolute;left: 100px;top: 100px;}
+    .fuelux .combobox {
+        display: inline-block;
+        }
+        .input-append, .fuelux .input-prepend {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 0;
+        white-space: nowrap;
+        vertical-align: middle;
+        }
+        .fuelux .input-append input, .fuelux .input-append select, .fuelux .input-append .uneditable-input {
+        -webkit-border-radius: 4px 0 0 4px;
+        }
+        .fuelux .input-append input, .fuelux .input-prepend input, .fuelux .input-append select, .fuelux .input-prepend select, .fuelux .input-append .uneditable-input, .fuelux .input-prepend .uneditable-input {
+        position: relative;
+        margin-bottom: 0;
+        vertical-align: top;
+        -webkit-border-radius: 0 4px 4px 0;
+        }
+        .fuelux textarea, .fuelux input[type="text"], .fuelux input[type="password"], .fuelux input[type="datetime"], .fuelux input[type="datetime-local"], .fuelux input[type="date"], .fuelux input[type="month"], .fuelux input[type="time"], .fuelux input[type="week"], .fuelux input[type="number"], .fuelux input[type="email"], .fuelux input[type="url"], .fuelux input[type="search"], .fuelux input[type="tel"], .fuelux input[type="color"], .fuelux .uneditable-input {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        -webkit-transition: border linear .2s,box-shadow linear .2s;
+        transition: border linear .2s,box-shadow linear .2s;
+        }
+    </style>
+</head>
+
+<body>
+<div id="MyCombobox" class="input-append dropdown combobox"  draggable="true">
+    <input class="span2" type="text">
+    <button class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+    <ul class="dropdown-menu">
+        <li data-value="1" data-foo="bar"><a href="#">One</a></li>
+        <li data-value="2"><a href="#">Two</a></li>
+        <li data-value="3" data-selected="true"><a href="#">Three</a></li>
+        <li data-value="4" data-fizz="buzz"><a href="#">Four</a></li>
+    </ul>
+</div>
+
+<script>
+        'use strict';
+
+        require.config({
+            shim: {
+                'jquery': {
+                    exports: '$'
+                },
+                'bootstrap': {
+                    deps: ['jquery']
+                },
+                'bootstrap-drag': {
+                    deps: ['bootstrap','jquery']
+                }
+            },
+            paths: { 
+                'jquery': '../bower_components/jquery/jquery',
+                'bootstrap': '../bower_components/bootstrap/bootstrap',
+                'bootstrap-drag': '../bower_components/bootstrap/bootstap-dragdrop'
+            }
+        });
+
+        require(['bootstrap','bootstrap-drag'], function() {
+            $('#MyCombobox').combobox().dragDrop();
+        });  
+</script>
+</body>
+
+</html>

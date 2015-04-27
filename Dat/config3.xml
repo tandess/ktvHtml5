@@ -1,0 +1,141 @@
+<root>
+	<virtual_money_name>
+		<a first_money_name="K豆" second_money_name="K豆" use_dynamic_goods="1" giftexchange_name="礼金" giftexchange_ratio="100" giftexchange_min="1000" giftexchange_useweb="0" buse_win_goods="1"/>
+	</virtual_money_name>
+	
+	<public_chat_scrollbar_color>
+		<a highlight="0xEFFFFE" shadow="0xE0EDF7" dlight="0x91BCF3" track="0xDAEAFA" darkshadow="0x91BCF1" base="0xD8E8FC" arrow="0x3A4879" face="0xe0e9fa" />
+	</public_chat_scrollbar_color>
+	
+	<private_chat_scrollbar_color>
+		<a highlight="0xEFFFFE" shadow="0xE0EDF7" dlight="0x91BCF3" track="0xDAEAFA" darkshadow="0x91BCF1" base="0xD8E8FC" arrow="0x3A4879" face="0xe0e9fa" />
+	</private_chat_scrollbar_color>
+	
+	<show_goods_scrollbar_color>
+		<a highlight="0xEFFFFE" shadow="0xE0EDF7" dlight="0x91BCF3" track="0xDAEAFA" darkshadow="0x91BCF1" base="0xD8E8FC" arrow="0x3A4879" face="0xe0e9fa" />
+	</show_goods_scrollbar_color>
+	
+	<show_broadcast_scrollbar_color>
+		<a highlight="0xEFFFFE" shadow="0xE0EDF7" dlight="0x91BCF3" track="0xDAEAFA" darkshadow="0x91BCF1" base="0xD8E8FC" arrow="0x3A4879" face="0xe0e9fa" />
+	</show_broadcast_scrollbar_color>
+	
+	<public_chat_user_name_color>
+		<a sendcolor="0x0080ff" recvcolor="0x0080ff" coloncolor="0x000000" textcolor="0x000000" />
+	</public_chat_user_name_color>
+	
+	<private_chat_user_name_color>
+		<a sendcolor="0x007700" recvcolor="0x007700" coloncolor="0x000000" textcolor="0x000000" />
+	</private_chat_user_name_color>
+	
+	<use_goods_color>
+		<a senduser_color="0xfff600" recvuser_color="0xfff600" text_color="0xf5900b" num_color="0xfff600" default_color="0xfff600" />
+	</use_goods_color>
+	
+	<use_dynamic_goods_color>
+		<a senduser_color="0xfff600" recvuser_color="0xfff600" text_color="0xf5900b" num_color="0xfff600" default_color="0xfff600" />
+	</use_dynamic_goods_color>
+	
+	<use_vote_color>
+		<a senduser_color="0xfff600" recvuser_color="0xfff600" text_color="0xf0920c" num_color="0xfff600" default_color="0xf0920c" />
+	</use_vote_color>
+	
+	<broadcast_show_set>
+		<a user_color="0xCE7286" user_size="12" text_color="0x272C52" text_size="14" roomid_color="0x80B4E0" roomid_size="14" sendtime_color="0xFF4B4C" sendtime_size="12"/>
+	</broadcast_show_set>
+	
+	<system_broadcast>
+		<a bg_color="0x2E56B4" text_color="0xF9F92D" transparent="128" money="20万" />
+	</system_broadcast>
+	
+	<dynamic_goods_background>
+		<a bg_color="0xF0F0F0" use_web="true" />
+	</dynamic_goods_background>
+	
+	<chatinput_config>
+		<a is_align_right="true" btn_set_x="305" btn_set_y="3" btn_set_cx="20" btn_set_cy="20" btn_viprecharge_x="280" btn_viprecharge_y="3" btn_viprecharge_cx="20" btn_viprecharge_cy="20" />
+	</chatinput_config>
+		
+	<dicegame_config>
+		<a costlygift_price="550000" cheapgift_price="100000" time_interval="15" />
+	</dicegame_config>
+	
+	<text_chat_ctrl>
+		<a splitter_btn_default_height = 638 />
+	</text_chat_ctrl>
+	
+	<marquee_config>
+		<a default_font_family = "微软雅黑" default_font_size = "35px" default_font_color = "#000000" 
+		roomid_font_family = "微软雅黑" roomid_font_size = "35px" roomid_font_color = "#0271B9" 
+		username_font_family = "微软雅黑" username_font_size = "35px" username_font_color = "#FF6702" 
+		uin_font_family = "黑体" uin_font_size = "25px" uin_font_color = "#FF6702" 
+		giftname_font_family = "微软雅黑" giftname_font_size = "35px" giftname_font_color = "#FF0099" 
+		greeting_font_family = "新宋体" greeting_font_size = "35px" greeting_font_color = "#0096ff" 
+		sendtime_font_family = "微软雅黑" sendtime_font_size = "18px" sendtime_font_color = "#0271B9"
+		scrollAmount_normal = "6" scrollAmount_high = "15" scrollTimes = "2"/>
+	</marquee_config>
+	
+	<userlist_linecolor_config>
+		<a line_bkcolor1_r="255" line_bkcolor1_g="255" line_bkcolor1_b="255" line_bkcolor2_r="221" line_bkcolor2_g="238" line_bkcolor2_b="255" select_border_r="163" select_border_g="214" select_border_b="255" select_bk_r="163" select_bk_g="214" select_bk_b="255" />
+	</userlist_linecolor_config>
+	
+	<qucik_reply_default>
+		<a reply1="千山万水总是情，打开视频行不行？" reply2="IC、IP、IQ卡，统统告诉我密码" reply3="大姐姐、小姐姐，公子这厢有礼了！" 
+		reply4="妹妹真是好可爱哦，电话几号？" reply5="脸都红了，恨没有地洞，好让我钻进去。" />
+	</qucik_reply_default>
+	
+	<auto_reply_default>
+		<a reply1="你好，有事出去下，一会再联系！" reply2="工作中，请勿打扰。" reply3="我去吃饭了，一会再联系。" />
+	</auto_reply_default>
+	
+	<userlist_scrollbar_color>
+		<a scrollbar_r="211" scrollbar_g="224" scrollbar_b="254"			bkground_r="224" bkground_g="240" bkground_b="254" 
+		   light_r="255" light_g="255" light_b="255"						shodow_r="64" shodow_g="64" shodow_b="64"
+		   presslight_r="192" presslight_g="192" presslight_b="192"		pressshodow_r="192" pressshodow_g="192" pressshodow_b="192"/>
+	</userlist_scrollbar_color>
+	
+	<sendandrecvinfodlg_colorconfig>
+		<a headerbk_r = "211" headerbk_g = "224" headerbk_b = "254" itembk_r = "248" itembk_g = "248" itembk_b = "255" line_r = "120" line_g = "120" line_b = "120" selected_r = "163" selected_g = "214" selected_b = "255"
+		scrollthumb_r = "211" scrollthumb_g = "224" scrollthumb_b = "254" scrollbk_r = "224" scrollbk_g = "240" scrollbk_b = "254"/>
+	</sendandrecvinfodlg_colorconfig>
+	
+	<mediawnd_usernicksrcoll_config>
+		<a time_interval = "100" step = "1" />
+	</mediawnd_usernicksrcoll_config>
+	
+	<room_saltutory_wnd>
+		<a emblem_font="微软雅黑" emblem_size="15" emblem_color="#CE7286"
+		content_font="微软雅黑" content_size="14" content_color="#272C52"
+		roomid_font="微软雅黑" roomid_size="14" roomid_color="#CE7286"
+		show_height="100"/>
+	</room_saltutory_wnd>
+	
+	<giftvote_show_config>
+		<a showinsinglewnd="1"  giftwnd_splitter_ymin="79" giftwnd_splitter_ymax="372" 
+		bTrisection="1" wnd_splitter_y="370" sndwnd_splitter_y="220"
+		bSetRatio="1" GiftRatio="4" PublicRatio="3" PrivateRatio="3"/>
+	</giftvote_show_config>
+	
+	<game_config>
+		<a dice_game = "1" fingerguessing_game = "1" digtreasure_game = "1"/>
+	</game_config>
+	
+	<fingerguessing_config>
+		<a fingerguessing_timeinterval="20" sendgift_timeinterval="10" />
+	</fingerguessing_config>
+	
+	<login_bg_filename>
+		<a image_name="login_bg.jpg" />
+	</login_bg_filename>
+	<client_params>
+		<a cooperation_zones="jiatianxia" bSelectSong="1"/>
+	</client_params>
+	<functon_config>
+		<a MikeSet="1" CarSet="1" MallSkinType="0" bWinMsg="1" MaxBroadNum="10" gifeLineTimeInterval="10" bPhoto="1" bMulSendGift="1" bMulSendGuaHao="1" nSecondSendNum="5"/>
+	</functon_config>
+	<sys_config>
+		<a bShowCloseDlg="0" bShowKickSelfDlg="0" />
+	</sys_config>
+	<ktvdlg_ui_config>
+		<a chat_bk_r="232" chat_bk_g="241" chat_bk_b="246"/>
+	</ktvdlg_ui_config>
+</root>

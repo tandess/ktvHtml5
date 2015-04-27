@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="fuelux">
+
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <script src="../../bower_components/jquery/jquery.min.js" type="text/javascript"></script>
+</head>
+ <script>
+   function Person(name,sex){
+   	   this.name = name;
+   	   this.sex = sex;
+   }
+   Person.prototype.showName=function(){
+   	 alert(this.name);
+   }
+   Person.prototype.showSex=function(){
+   	 alert(this.sex);
+   }
+   function Worker(sex,name,job){
+   	 Person.call(this,sex,name);
+   	 this.job = job;
+   	 //this.showName();
+   }
+   Worker.prototype = Person.prototype;
+   Worker.prototype.showJob=function(){
+      alert(this.job)
+   }
+    var w = new Worker("李晓梅","女","美工");
+    w.showName();
+ </script>
+  <script>
+   console.log("%c大家好","color:red");
+ </script>
+<body>
+ <span class="check"></span>
+</body>
+
+</html>

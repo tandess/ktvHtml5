@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布广播</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script src="../../bower_components/jquery/jquery.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .publish-broadcast-box {width: 385px;height: 260px;background: white;}
+        .body {padding-left: 5px;}
+        .footer {padding: 10px;}
+        .footer .btns {float: right;}
+    </style>
+</head>
+<body class="isDrag">
+        <div class="container publish-broadcast-box isDrag">
+        <div class="header header-style isDrag">
+            <div class="tool">
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body">
+            <p>说明：每条系统广播发布的价格为200万Q豆 输入系统广播内容</p>
+            <textarea  rows="6" cols="50" style="resize: none" class="input-style publish-content" maxlength="50"></textarea>
+            <p>已输入<span class="has-count">0</span>个字，还可以输入<span class="remain-count">50</span>个字</p>
+        </div>
+        <div class="footer isDrag">
+            <div class="row btns isDrag">
+                <button type="button" class="btn col btn-default publish-btn">发布</button>
+                <button type="button" class="btn col btn-default cancel-btn">取消</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var Container  = window.Container;
+
+    (function($) {
+        // 拖动事件
+        $('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = $(event.target);
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(385,260);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        // 输入判断字数
+        $('.publish-content').on('input', function(event){
+            var length = event.currentTarget.value.length;
+
+            $('.has-count').text(length);
+            $('.remain-count').text(50-length);
+        });
+
+        $('.publish-btn').on('click', function(){
+            var content = $('.publish-content').val();
+
+            Container && Container.fire('publish-broadcast', {
+                content: content
+            });
+
+            Container && Container.close();
+        });
+
+        $('.tool-close,.cancel-btn').on('click', function(event){
+            Container && Container.close();
+        });
+    })(jQuery);
+</script>
+</html>

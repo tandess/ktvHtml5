@@ -1,0 +1,8 @@
+[Level: Warning] [2014-04-23:15-06-13] beginner
+[Level: Warning] [2014-04-23:15-06-13] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-04-23:15-06-13]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-04-23:15-06-14]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-04-23:15-06-14] ChatChannel::svc,svc start,Cmd,1d24
+[Level: Warning] [2014-04-23:15-06-14]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-04-23:15-07-54]  //掉线并重新登录 ChatConnection::OnOffLineAndRelogin,m_uProtocolType:1
+[Level: Warning] [2014-04-23:15-09-15] ChatChannel::svc,tcp Socket destoryed,exit thread:Cmd,1d24

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统消息</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/boia.js"></script>
+    <style type="text/css">
+        .system-msg-box{width: 350px;height: 260px;}
+        .header .title {font-size: 14px;font-weight: normal;}
+        .body .title{text-align: center;margin-top: -25px;position: relative; }
+        .body .content {text-indent: 2em;margin-top: 20px;margin-left: 5px;line-height: 20px;}
+        .hint {position: absolute;right: 0;bottom: 0;}
+        .footer .name {text-align: center;}
+        .footer .time {margin-bottom: 12px;margin-right: 5px;}
+    </style>
+</head>
+<body class="isDrag">
+    <div class="container system-msg-box isDrag">
+        <div class="header header-style isDrag">
+            <h1 class="title isDrag">系统消息</h1>
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body isDrag">
+            <h2 class="title isDrag">系统消息标题</h2>
+            <p class="content isDrag">
+                我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容，我是消息内容
+            </p>
+        </div>
+        <div class="footer isDrag">
+            <div class="hint isDrag">
+                <p class="name isDrag">K秀</p>
+                <p class="time isDrag">2014 02.12 14:56:20</p>
+            </div> 
+        </div>
+    </div>
+<script type="text/javascript">
+    var Container  = window.Container;
+    (function(B) {
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(350, 260);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });
+
+        Container && Container.sig_showMsg.connect(function(list){
+
+            //var msgArr = msg.split(';');
+
+            B.one('.body').one('.title').text(list[0]);
+            B.one('.content').text(list[1]);
+            B.one('.time').text(list[2]);
+            B.one('.name').text(list[3]);
+
+            //Container && Container.sysMsg();
+        });
+
+    })(Boia);
+</script>
+</body>
+</html>

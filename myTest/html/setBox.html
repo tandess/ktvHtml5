@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <script type="text/javascript" src="../js/boia.js"></script>
+    <script type="text/javascript" src="../js/md5.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style type="text/css">
+        .set-avatar-box {width: 600px;height: 500px;}
+        .header .title {font-size: 14px;font-weight: normal;}
+        .body {position: relative;padding-left: 170px;}
+        .body .content {height: 335px;}
+        .body .sidebar {position: absolute;left: 0;width: 165px;height: 300px;border-right: 1px solid #DCDCDC;margin-top: 10px;text-align: center;}
+        .body .nav-tabs {border: 0;text-align: center;margin-top: 15px;}
+        .body .nav-tabs > li {float: none;margin-bottom: 15px;padding: 0 5px;}
+        .body .nav-tabs > li > a {border: 0;padding: 3px 8px;}
+        .body .nav-tabs > li.active > a {border: 1px solid #D8D8D8;border-radius: 5px;background: #F0F0F0;}
+        .body .my-info .row {margin-bottom: 10px;height: 25px;line-height: 25px;}
+        .body .my-info {padding: 5px 30px;}
+        .body .friend-set .btns {width: 70px;float: right;}
+        .body fieldset { padding: 10px;width: 96%;}
+        .body .psd-info .row {margin-bottom: 5px;}
+        .body .psd-info .label {width: 140px;}
+        .body .person-introduction {vertical-align: top;}
+        .body .my-info .info-input {cursor: default;}
+        .body .my-info .info-input:not(.textarea-box) {width: 100px;height: 22px;}
+        .footer {padding: 10px;}
+        .footer .btns {float: right;}
+    </style>
+</head>
+<body class="isDrag">
+    <div class="container set-avatar-box">
+        <div class="header header-style isDrag">
+            <h1 class="title isDrag">设置</h1>
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div id="myTab">
+                <div class="sidebar">
+                    <span class="img-box"><img src="../images/small/4-1.bmp" alt="头像"></span>
+                    <ul class="set-lists nav nav-tabs">
+                        <li class="list active"><a  href="#tab-1" class="link">我的信息</a></li>
+                        <li class="list"><a  href="#tab-2" class="link">修改密码</a></li>
+                        <li class="list"><a  href="#tab-3" class="link">好友设置</a></li>
+                        <li class="list"><a  href="#tab-4" class="link">系统设置</a></li>
+                        <li class="list"><a  href="#tab-5" class="link">声音设置</a></li>
+                        <li class="list"><a  href="#tab-6" class="link">网络设置</a></li>
+                    </ul>
+                </div>
+                <div class="content tab-content body-content">
+                    <form action="">
+                        <div id="tab-1" class="tab-pane content-item">
+                            <div class="my-info">
+                                <div class="row">
+                                    <span class="label">账号:</span>
+                                    <span class="account-text">1212345663</span><!-- <input class="info-input input-box input-style account-val hide" name="account" value="1212345663" /> -->
+                                </div>
+                                <div class="row">
+                                    <span class="label">昵称:</span>
+                                    <span class="infor-text nick-text">奥点科技</span><input class="info-input input-box input-style hide nick-val" name="nick" value="奥点科技" />
+                                </div>
+                                <div class="row">
+                                    <span class="label">年龄:</span>
+                                    <span class="infor-text age-text">10</span><input class="info-input input-box input-style hide age-val" name="age" value="10" />
+                                </div>
+                                <div class="row">
+                                    <span class="label">性别:</span>
+                                    <span class="infor-text sex-text">男</span><input class="info-input input-box input-style hide sex-val" name="sex" value="男" />
+                                </div>
+                                <div class="row">
+                                    <div class="col g50">
+                                        <span class="label">省份:</span>
+                                        <span class="infor-text province-text">浙江</span><input class="info-input input-box input-style hide province-val" name="province" value="浙江" />          
+                                    </div>
+                                    <div class="col g50">
+                                        <span class="label">地区:</span>
+                                        <span class="infor-text area-text">杭州</span><input class="info-input input-box input-style hide area-val" name="area" value="杭州" />         
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <span class="label">城市:</span>
+                                    <span class="infor-text city-text">杭州</span><input class="info-input input-box input-style hide city-val" name="city" value="杭州" />
+                                </div>
+                                <div class="row">
+                                    <span class="label">主页:</span>
+                                    <span class="infor-text site-text">www.baidu.com</span><input class="info-input input-box input-style hide site-val" name="site" value="www.baidu.com" />
+                                </div>
+                                <div class="row">
+                                    <span class="label">邮箱:</span>
+                                    <span class="infor-text email-text">1212345663@qq.com</span><input class="info-input input-box input-style hide email-val" name="email"value="1212345663@qq.com" />
+                                </div>
+                                <div class="row">
+                                    <span class="label person-introduction">个人说明:</span>
+                                    <span class="infor-text introduction-text">奥点科技是一个...</span><textarea class="info-input hide textarea-box introduction-val" name="introduction">奥点科技是一个...</textarea>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane content-item tab-hidden">
+                            <div class="psd-info">
+                                <div class="row">
+                                    <label for="oldPsd" class="label">旧密码:</label>
+                                    <input type="password" id="oldPsd" class="input-box input-style info-input" name="oldPsd" />
+                                </div>
+                                <div class="row">
+                                    <label for="newPsd" class="label">新密码(6-16位):</label>
+                                    <input type="password" id="newPsd" class="input-box input-style info-input" name="newPsd" />
+                                </div>
+                                <div class="row">
+                                    <label for="confirmPsd" class="label">确认新密码(6-16位):</label>
+                                    <input type="password" id="confirmPsd" class="input-box input-style"/>
+                                </div>                            
+                            </div>
+                        </div>     
+                        <div id="tab-3" class="tab-pane content-item tab-hidden">
+                            <div class="friend-set">
+                                <fieldset>
+                                    <legend>好友验证</legend>
+                                    <div class="row">
+                                        <input type="radio" class="radio-box info-input" id="adminAll" name="friendVerification" value="1" checked>
+                                        <label for="adminAll" class="label">允许所有人把我列为好友</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" class="radio-box info-input" id="authentication" name="friendVerification" value="2">
+                                        <label for="authentication" class="label">需要身份验证才能把我列为好友</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" class="radio-box info-input" id="refusalAll" name="friendVerification" value="3">
+                                        <label for="refusalAll" class="label">不允许任何人把我列为好友</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>提醒设置</legend>
+                                    <div class="row">
+                                        <div class="col g50">
+                                            <input type="checkbox" class="noticeSet checkbox-box input-style" id="onlineFriend" name="noticeSet" value="1">
+                                            <label for="onlineFriend" class="label">只显示在线用户</label>
+                                        </div>
+                                        <div class="col g50">
+                                             <input type="checkbox" class="noticeSet checkbox-box input-style" id="notice" name="noticeSet" value="2">
+                                            <label for="notice" class="label">好友上线通知</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <input type="checkbox" class="noticeSet checkbox-box input-style" id="autoMsg" name="noticeSet" value="3">
+                                        <label for="autoMsg" class="label">自动弹出消息</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>状态设置</legend>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="checkbox" class="statusSet checkbox-box input-style" id="autoTransform" name="statusSet">
+                                            <label for="autoTransform" class="label">自动转换状态</label>
+                                        </div>
+                                        <div class="col">
+                                             <input type="checkbox" class="statusSet checkbox-box input-style" id="autoLeave" name="statusSet">
+                                            <label for="autoLeave" class="label">有鼠标键盘动作时自动离开状态</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="input-box input-style" id="time">
+                                        <label for="time" class="label">分钟鼠标键盘无动作时切换到</label>
+                                        <select name="" id="">
+                                            <option value="">离开状态</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>自动回复</legend>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="checkbox" class="checkbox-box input-style" id="isAutoReply">
+                                            <label for="isAutoReply" class="label">离开时自动回复（50字以内）</label>
+                                        </div>
+                                        <div class="col">
+                                            <label for="msgSelect" class="label">留言选择</label>
+                                            <select name="" id="msgSelect">
+                                                <option value="">1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <textarea name="" id="" cols="40" rows="4"></textarea>
+                                        </div>
+                                        <div class="col">
+                                            <div class="btns">
+                                                <button type="button" class="btn col btn-default add-btn">增加</button>
+                                                <button type="button" class="btn col btn-default remove-btn">删除</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>                             
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane content-item tab-hidden">
+                            <div class="system-set">
+                                <fieldset>
+                                    <legend>窗口风格</legend>
+                                    <div class="row">
+                                        <div class="g50">
+                                            <input type="checkbox" class="windowStyle checkbox-box input-style" id="alwayTop" name="windowStyle" value="1">
+                                            <label for="alwayTop" class="label">总在最前面</label>
+                                        </div>
+                                        <div class="g50">
+                                            <input type="checkbox" class="windowStyle checkbox-box input-style" id="windowsStyle" name="windowStyle" value="2">
+                                            <label for="windowsStyle" class="label">windows任务条风格</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="g50">
+                                            <input type="checkbox" class="windowStyle checkbox-box input-style" id="colorfulDisplay" name="windowStyle" value="3">
+                                            <label for="colorfulDisplay" class="label">以彩色方式显示URL</label>
+                                        </div>
+                                        <div class="g50">
+                                            <input type="checkbox" class="windowStyle checkbox-box input-style" id="noticeSet" name="windowStyle" value="4">
+                                            <label for="noticeSet" class="label">在任务栏显示图标</label>
+                                        </div>                
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>基本设置</legend>
+                                    <div class="row">
+                                        <input type="checkbox" class="info-input checkbox-box input-style" id="isStealth" name="basicSet" value="1">
+                                        <label for="isStealth" class="label">以隐身方式登陆</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>提取热键</legend>
+                                    <div class="row">
+                                        <input type="checkbox" class="checkbox-box input-style" id="isUseHotkey" name="isHotkey">
+                                        <label for="isUseHotkey" class="label">使用热键</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" class="radio-box info-input" id="defaultHotkey" name="hotkeySet" value="1">
+                                        <label for="defaultHotkey" class="label">默认热键</label>
+                                        <span class="hint">CTRL + ALT + Z</span>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" class="radio-box info-input" id="customHotkey" name="hotkeySet" value="2">
+                                        <label for="customHotkey" class="label">自定义热键</label>
+                                        <input type="text" class="input-box input-style" id="holkeyText" name="holkeyText" disabled>
+                                    </div>
+                                </fieldset>                         
+                            </div>
+                        </div>  
+                        <div id="tab-5" class="tab-pane content-item tab-hidden">
+                            <div class="voice-set">
+                                <fieldset>
+                                    <legend>声音开关</legend>
+                                    <div class="row">
+                                        <input type="radio" class="radio-box info-input" id="openVoice" name="voiceSwitch" value="1">
+                                        <label for="openVoice" class="label">打开声音</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" class="radio-box info-input" id="closeVoice" name="voiceSwitch" value="0">
+                                        <label for="closeVoice" class="label">关闭声音</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>声音选择</legend>
+                                    <div class="row">
+                                        <label for="voiceRes" class="label">声音:</label>
+                                        <select name="" id="voiceRes" class="">
+                                            <option value="1">新上线</option>
+                                        </select>
+                                        <button type="button" class="btn col btn-default broadcast-btn">播放</button>
+                                    </div>
+                                    <div class="row">
+                                        <label for="voiceFile" class="label">声音文件:</label>
+                                        <input type="text" value="" id="voiceFile" />
+                                        <button type="button" class="btn col btn-default browse-btn">浏览</button>
+                                    </div>
+                                </fieldset>                          
+                            </div>
+                        </div>
+                        <div id="tab-6" class="tab-pane content-item tab-hidden">
+                            <div class="net-set">
+                                <fieldset>
+                                    <legend>网络设置</legend>
+                                    <div class="row">
+                                        <label for="internetType" class="label">上网类型</label>
+                                        <select name="" id="internetType" class="select-box">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>代理设置</legend>
+                                    <div class="row">
+                                        <input type="checkbox" class="checkbox-box input-style" id="isProxy" name="isProxy">
+                                        <label for="isProxy" class="label">使用代理服务器</label>
+                                    </div>
+                                    <div class="row">
+                                        <label for="proxyType" class="label">代理类型:</label>
+                                        <select name="" id="proxyType" class="select-box">
+                                            <option value="">SOCK</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <label for="proxyAddress" class="label">代理服务器地址:</label>
+                                        <label for="port" class="label">端口号:</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" value="" id="proxyAddress" class="input-box input-style" />
+                                        <input type="text" value="" id="port" class="input-box input-style" />
+                                    </div>
+                                    <div class="row">
+                                        <label for="checkUser" class="label">校检用户名:</label>
+                                        <input type="text" value="" id="checkUser" class="input-box input-style" />
+                                    </div>
+                                    <div class="row">
+                                        <label for="checkUserPsd" class="label">校检用户密码:</label>
+                                        <input type="text" value="" id="checkUserPsd" class="input-box input-style" />
+                                        <button type="button" class="btn col btn-default test-btn">测试</button>
+                                    </div>
+                                    <div class="row">
+                                        <input type="checkbox" class="checkbox-box input-style" id="externalProxy" name="externalProxy">
+                                        <label for="externalProxy" class="label">使用外部代理服务器</label>
+                                    </div>
+                                </fieldset>                            
+                            </div>
+                        </div>    
+                    </form>                                                     
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row btns">
+                <button type="button" class="btn col btn-default ok-btn">确定</button>
+                <button type="button" class="btn col btn-default cancel-btn">取消</button>
+                <button type="button" class="btn col btn-default apply-btn">应用</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var Container  = window.Container;
+    (function(B){   
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        var img = 0;
+        var password = '';
+
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(600, 500);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+            
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });     
+
+        //初始化数据
+        var initData = function(myInfoObj, systemOnj){
+            var myInfo = B.one('.my-info'),
+                systemSet = B.one('.system-set');
+
+            for(var prop1 in myInfoObj){
+                if(prop1 === 'sex'){
+                    if(myInfoObj[prop1] === 0){
+                        myInfoObj[prop1] = '男';
+                    }else{
+                        myInfoObj[prop1] = '女';
+                    }
+                }
+                if(prop1 === 'img'){
+                    B.one('.img-box').one('img').src = '../images/small/'+myInfoObj[prop1]+'-1.bmp';
+                    img = myInfoObj[prop1];
+                }
+                if(prop1 !== 'passwd' && prop1 !== 'img'){
+                    myInfo.one('.'+prop1+'-text').text(myInfoObj[prop1]);
+
+                    if(prop1 !== 'account'){
+                        myInfo.one('.'+prop1+'-val').value = myInfoObj[prop1];
+                    }
+                        
+                }
+                if(prop1 === 'passwd') {
+                    password = myInfoObj[prop1];
+                }
+            }
+
+            for(var prop4 in systemOnj){
+                systemSet.one('.'+prop4+'-text').text(myInfoObj[prop4]);
+                systemSet.one('.'+prop4+'-val').value = myInfoObj[prop4];
+            }    
+        };
+
+        /*initData({account: 4738758,age: 15, area: '西湖', city: '杭州111',email: '3478487@qq.com',img: '4',nick: '说的放寒假',introduction: '这是一个测试...',passwd: 'dfdsfdfdsf',province: '行货',sex: 0,site:'478758@qq.com'},
+                {});*/
+
+        //提交数据
+        var submitData = function(){
+            var noticeSet, windowStyle;
+            var obj1 = {}, obj2 = {}, obj3 = {}, obj4= {},arr = [];
+
+            [].forEach.call(B.all('.my-info .info-input,.psd-info .info-input'), function(item, index){
+
+                if(item.hasClass('radio-box') || item.hasClass('checkbox-box')){
+                    if(!item.checked){
+                        return;
+                    }
+                }
+                obj1[item.name] = item.value;
+
+                if(item.name === 'newPsd'){
+                    if(item.value === ''){
+                        obj1['passwd'] = obj1['newPsd'] = password;
+                    }else {
+                        obj1['passwd'] = obj1['newPsd'] = hex_md5(item.value);
+                    }
+                }
+            });
+
+            // noticeSet = B.all('.noticeSet').getCheckValue();
+            windowStyle = B.all('.windowStyle').getCheckValue();
+
+            // obj2['noticeSet'] = noticeSet;
+            obj2['windowStyle'] = windowStyle;
+            obj1['img'] = img;
+            obj1['account'] = B.one('.account-text').text();
+
+            arr.push(obj1,obj2);
+
+            return arr;
+        };
+
+        //修改头像
+        Container && Container.sig_setFace.connect(function(face){
+            B.one('.img-box').one('img').src = '../images/small/'+face+'-1.bmp';
+            img = face;
+        });
+
+        Container && Container.sig_showBaseInfo.connect(function(info1,info2){
+            console.log(info1);
+            initData(info1,{});
+        });
+
+        //鼠标移进移出效果
+        B.one('.my-info').on('mouseout', function(event){
+            var target = event.target;
+
+            if(target.hasClass('info-input')){
+
+                target.previousSibling.text(target.value); 
+                target.previousSibling.show();
+                target.hide(); 
+            }
+        });          
+        B.one('.my-info').on('mouseover', function(event){
+            var target = event.target;
+
+            if(target.hasClass('infor-text')){
+
+                target.nextSibling.show();
+                target.hide();      
+                        
+            }
+        });
+
+        //修改头像
+        B.one('.img-box').on('click', function(event){
+            Container.js_setAvatar();
+        });
+
+        //确定
+        B.one('.ok-btn').on('click', function(event){
+            // console.log(submitData());
+            var arr = submitData();
+            console.log(arr[0]);
+            Container && Container.saveMysetInfo(arr[0], arr[1]);
+            Container && Container.close();
+        });
+
+        //取消
+        B.one('.cancel-btn').on('click', function(event){
+            Container && Container.close();
+        });
+
+        //应用
+        B.one('.apply-btn').on('click', function(event){
+            var arr = submitData();
+            Container && Container.saveMysetInfo(arr[0], arr[1]);
+        });
+
+        var tabview = new B.TabView({
+            boundingBox: '#myTab'
+        }).render();
+
+    })(Boia);
+</script>
+</html>

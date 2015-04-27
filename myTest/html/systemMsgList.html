@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统消息列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/boia.js"></script>
+    <style type="text/css">
+        .system-msg-list-box {width: 500px;height: 440px;}
+        .header .title {font-size: 14px;font-weight: normal;}
+        .body .msg-list {width: 98%;border-collapse: separate;margin: 0 auto;border-spacing: 0 10px; }
+        .td-col {text-align: center;}
+        .td-row {height: 35px;}
+        .footer {padding: 10px;}
+        .footer .close-btn {float: right;}
+        .datatable-table td {border: 1px solid transparent;}
+        .table-selected td {
+            border: solid 1px #c4c4c4;
+            border-style: solid none;
+        }
+        .table-selected td:first-child {
+            border-left-style: solid;
+            border-top-left-radius: 5px; 
+            border-bottom-left-radius: 5px;
+        }
+        .table-selected td:last-child {
+            border-right-style: solid;
+            border-bottom-right-radius: 5px; 
+            border-top-right-radius: 5px; 
+        }
+    </style>
+</head>
+<body class="isDrag">
+    <div class="container system-msg-list-box isDrag">
+        <div class="header header-style isDrag">
+            <h1 class="title isDrag">系统消息</h1>
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body">
+            <table class="msg-list datatable-table">
+                <thead class="datatable-columns">
+                    <tr class="th-row">                    
+                    </tr>
+                </thead>
+                <tbody class="datatable-data">
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <div class="row btns">
+                <button type="button" class="btn col btn-default remove-btn">删除</button>
+                <button type="button" class="btn col btn-default removeAll-btn">删除全部</button>
+                <button type="button" class="btn col btn-default close-btn">关闭</button>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    var Container  = window.Container;
+
+    (function(B){
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(500, 440);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        var columns = [{
+            key: 'address',
+            label: '来自何处'
+        },{
+            key: 'date',
+            label: '日期'
+        },{
+            key: 'time',
+            label: '时间'
+        },{
+            key: 'content',
+            label: '内容'
+        }];
+
+        var data = [
+          {address: '12360', uid: 1, title: '爱好者',publisher: 'dsfhj', time: '19:02:23', datetime: 111, date: '2014-02-12',content: '今晚12点...'},
+          {address: '23451', uid: 2, title: '爱好者',publisher: 'dsfhj', date: '2010-12-04', datetime: 222, time: '20:02:23', content: '今晚11点...'},
+          {address: '12360', uid: 3, title: '爱好者',publisher: 'dsfhj', date: '2014-05-15', datetime: 333, time: '13:02:23', content: '今晚10点...'},
+          {address: '12360', uid: 4, title: '爱好者',publisher: 'dsfhj', date: '2014-08-20', datetime: 444, time: '12:02:23', content: '今晚09点...'}
+        ];
+
+        var dataTable;
+
+        // 信号发送表格数据json
+        Container && Container.sig_showsysmsgs.connect(function(data){
+console.log(data)
+            dataTable = new B.DataTable({
+                boundingBox: '.datatable-table',
+                columnset: columns,
+                recordset: data,
+                resultFields: ['datetime', 'content', 'uid', 'title', 'publisher'],
+
+                onColumnClick: function(){
+
+                },
+
+                //双击行 弹出系统消息
+                onColumnDblClick: function(target){
+                    var arr = [];
+                    arr.push(target.dataset['title'],target.dataset['content'],target.dataset['datetime'],target.dataset['publisher'])
+                    Container.sysMsg_double_click(arr);
+                }
+            }).render();
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });
+
+        //删除
+        B.one('.remove-btn').on('click', function(){
+            var rowIndex = 0;
+
+            if(dataTable.previousSelectNode) {
+                rowIndex = dataTable.previousSelectNode.dataset['uid'];
+                //rowIndex = dataTable.previousSelectNode.rowIndex;
+                Container.sig_del_msg(rowIndex)
+            }
+            dataTable.deleteRow();
+        });
+
+        //删除全部
+        B.one('.removeAll-btn').on('click', function(){
+            dataTable.deleteAllRow();
+            Container.del_msgs();
+        });        
+
+        //关闭
+        B.one('.close-btn').on('click', function(){
+            Container && Container.close();
+        }); 
+
+    })(Boia);
+</script>    
+</body>
+</html>

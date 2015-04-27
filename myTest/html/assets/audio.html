@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>音频设置</title>
+        <link href="../../css/style.css" rel="stylesheet"/>
+        <link href="../../css/audio.css" rel="stylesheet"/>
+        <script src="../../bower_components/jquery/jquery.min.js" type="text/javascript"></script>
+        <style type="text/css">
+            .font-box {width: 742px;height: 423px;}
+        </style>
+    </head>
+<body>
+<div class="container font-box isDrag" >
+        <div class="header header-style isDrag">
+            <div class="tool">
+                <div class="tool-close"></div>
+            </div>
+        </div>
+    <div  id="audioDialog" class="audio-dialog">
+            <fieldset class="left">
+                <legend>
+                    音频设备设置
+                </legend>
+                <dl>
+                   <select id="play">
+                       <option value="0">主音频设备</option>
+                       <option value="1">副音频设备</option>
+                   </select> 
+                   <select id="record">
+                       <option value="0">主音频设备</option>
+                       <option value="1">副音频设备</option>
+                   </select> 
+                </dl>
+                
+            </fieldset>
+            <fieldset class="right">
+                <legend>
+                    视频设备设置
+                </legend>
+                <dl>
+                   <select id="cam">
+                       <option value="0">cam</option>
+                       <option value="1">5198</option>
+                   </select>
+                </dl>
+            </fieldset>     
+    </div>
+        <div>           
+            <span style="margin-top: 8px"><input id="btn_cancel" class="container audiobtn" type="button" value="取消"></span>
+            <span><input class="container audiobtn"type="button" id="btn_sure" value="确定"></span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    'use strict';
+
+    var Container = window.Container;
+
+    (function($) {
+        // 拖动事件
+        $('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = $(event.target);
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(800,500);
+            Container && Container.onDOMContentLoaded();
+
+        });
+
+        $('.tool-close,.cancel-btn').on('click', function(event){
+            Container && Container.close();
+        });
+    })(jQuery);
+    (function($){
+        function AudioSet (){
+           this.options={
+             $audio:$(".audio-dialog").find("select")
+           }
+            
+            this.initClick();
+       }
+       
+       AudioSet.prototype.initClick=function(){
+        var self = this;
+           $("#btn_sure").click(function(){
+                self.audioSet();
+            });
+           $("#btn_cancel").click(function(){
+                self.cancelAudioSet();
+            });      
+       },
+       AudioSet.prototype.audioSet=function(){
+        var pkt={}; 
+           $(this.options.$audio).each(function(idx,select){
+             pkt[$(select).attr("id")] = $(select).val();           
+          });   
+          Container && Container.fire('audio-set',pkt); 
+          this.cancelAudioSet();
+       }, 
+       AudioSet.prototype.cancelAudioSet=function(){
+          Container && Container.close();
+       }      
+         new AudioSet();
+    })(jQuery)
+
+
+</script>

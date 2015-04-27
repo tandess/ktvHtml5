@@ -1,0 +1,1241 @@
+param count: 10 
+param: D:\im_html5\ktv.exe 
+param: 1000000435 
+param: 25208 
+param: 3 
+param: Cs9P2FlikyIaGIbN9T8orow22EK2l8MX 
+param: KEXOO_16923 
+param: 25.kkyoo.com 
+param: 8000 
+param: 1 
+param: http://25.kkyoo.com/main.php?c=lobby 
+load MainWindow 
+KtvMainView: 1000000435 25208 3 "Cs9P2FlikyIaGIbN9T8orow22EK2l8MX" "KEXOO_16923" "http://25.kkyoo.com/main.php?c=lobby" "25.kkyoo.com" 8000 1 
+showMainView 
+RtmpPluginFactory::create "application/x-qt-rtmpplugin" QVariant(QUrl, QUrl("") ) 
+("id", "class", "type", "width", "height") 
+("viedo-object1", "viedo-object viedo-market", "application/x-qt-rtmpplugin", "258", "210") 
+RtmpPluginFactory::create "application/x-qt-rtmpplugin" QVariant(QUrl, QUrl("") ) 
+("id", "class", "type", "width", "height") 
+("viedo-object2", "viedo-object", "application/x-qt-rtmpplugin", "258", "210") 
+RtmpPluginFactory::create "application/x-qt-rtmpplugin" QVariant(QUrl, QUrl("") ) 
+("id", "class", "type", "width", "height") 
+("viedo-object3", "viedo-object", "application/x-qt-rtmpplugin", "258", "210") 
+onDOMContentLoaded 
+open 25208 "" 
+getRoomAddrFromIm "{
+    "cmd": 103,
+    "roomId": 25208
+}
+" 
+"ReadFile:<goods>
+<names>
+<item emotion="幸运" wealth="抢星" gift="情感" tab4="娱乐" tab5="节日" />
+</names>
+<emotion>
+<item index="1" name=" 玫瑰  1000" value="1000" img="..\images\Gift\Gift001.gif" tooltip="玫瑰，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="2" name=" 啤酒  1000" value="1000" img="..\images\Gift\Gift002.gif" tooltip="啤酒，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="3" name=" 萤火  1000" value="1000" img="..\images\Gift\Gift003.gif" tooltip="萤火，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="5" name=" 香烟 1000" value="1000" img="..\images\Gift\Gift005.gif" tooltip="香烟，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="6" name=" 拥抱 1000" value="1000" img="..\images\Gift\Gift006.gif" tooltip="拥抱，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="7" name="千纸鹤 1000" value="1000" img="..\images\Gift\Gift007.gif" tooltip="千纸鹤，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="8" name="  香吻  1000" value="1000" img="..\images\Gift\Gift008.gif" tooltip="香吻，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="9" name="载歌载  1000" value="1000" img="..\images\Gift\Gift009.gif" tooltip="载歌载舞，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="10" name="  礼盒  1000" value="1000" img="..\images\Gift\Gift010.gif" tooltip="礼盒，价值：1000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="1"/>
+<item index="4" name=" 水果  2000" value="2000" img="..\images\Gift\Gift004.gif" tooltip="水果，价值：2000 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="11" name="蓝色妖  1万" value="10000" img="..\images\Gift\Gift011.gif" tooltip="蓝色妖姬，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="12" name="黄玫瑰  1万" value="10000" img="..\images\Gift\Gift012.gif" tooltip="黄玫瑰，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="13" name="星光大  1万" value="10000" img="..\images\Gift\Gift013.gif" tooltip="星光大道，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="14" name="星光麦  1万" value="10000" img="..\images\Gift\Gift014.gif" tooltip="星光麦克，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="15" name="你最闪  1万" value="10000" img="..\images\Gift\Gift015.gif" tooltip="你最闪亮，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="16" name=" 香水  1万" value="10000" img="..\images\Gift\Gift016.gif" tooltip="香水，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="17" name="巧克力  1万" value="10000" img="..\images\Gift\Gift017.gif" tooltip="巧克力，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="18" name=" 元宝  1万" value="10000" img="..\images\Gift\Gift018.gif" tooltip="元宝，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="19" name=" 红酒  1万" value="10000" img="..\images\Gift\Gift019.gif" tooltip="红酒，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="20" name=" 天使  1万" value="10000" img="..\images\Gift\Gift020.gif" tooltip="天使，价值：1万 金币\n送出后最高有机会获得1000倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="21" name=" 皇冠  5万" value="50000" img="..\images\Gift\Gift021.gif" tooltip="皇冠，价值：5万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="22" name="金龙鱼  5万" value="50000" img="..\images\Gift\Gift022.gif" tooltip="金龙鱼，价值：5万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="23" name="聚宝盆  10万" value="100000" img="..\images\Gift\Gift023.gif" tooltip="聚宝盆，价值：10万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="24" name="摇钱树  10万" value="100000" img="..\images\Gift\Gift024.gif" tooltip="摇钱树，价值：10万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="25" name="芭比娃  10万" value="100000" img="..\images\Gift\Gift025.gif" tooltip="芭比娃娃，价值：10万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="30" name=" 跑车  10万" value="100000" img="..\images\Gift\Gift030.gif" tooltip="跑车，价值：10万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="26" name="歌舞皇  20万" value="200000" img="..\images\Gift\Gift026.gif" tooltip="歌舞皇后，价值：20万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="27" name="明星秀  20万" value="200000" img="..\images\Gift\Gift027.gif" tooltip="明星秀，价值：20万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="28" name="金苹果  50万" value="500000" img="..\images\Gift\Gift028.gif" tooltip="金苹果，价值：50万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="29" name="金碧辉  50万" value="500000" img="..\images\Gift\Gift029.gif" tooltip="金碧辉煌，价值：50万 金币\n送出后最高有机会获得500倍奖金喔！" dynamicgift="0" showeffect="0"/>
+<item index="187" name=" 支票  10万" value="100000" img="..\images\Gift\Gift187.gif" tooltip="支票，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="188" name="现金票  10万" value="100000" img="..\images\Gift\Gift188.gif" tooltip="现金票，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+</emotion>
+<wealth>
+<item index="150" name="熏衣草  100万" value="1000000" img="..\images\flash\flash000150.gif" tooltip="熏衣草，价值：100万 金币" dynamicgift="1"/>
+<item index="151" name="康乃馨  100万" value="1000000" img="..\images\flash\flash000151.gif" tooltip="康乃馨，价值：100万 金币" dynamicgift="1"/>
+<item index="152" name="百合花  100万" value="1000000" img="..\images\flash\flash000152.gif" tooltip="百合花，价值：100万 金币" dynamicgift="1"/>
+<item index="157" name="宝马  100万" value="1000000" img="..\images\flash\flash000157.gif" tooltip="宝马，价值：100万 金币" dynamicgift="1"/>
+<item index="159" name="奔驰  200万" value="2000000" img="..\images\flash\flash000159.gif" tooltip="奔驰，价值：200万 金币" dynamicgift="1"/>
+<item index="161" name="法拉利  200万" value="2000000" img="..\images\flash\flash000161.gif" tooltip="法拉利，价值：200万 金币" dynamicgift="1"/>
+<item index="155" name="百花香  300万" value="3000000" img="..\images\flash\flash000155.gif" tooltip="百花香，价值：300万 金币" dynamicgift="1"/>
+<item index="160" name="兰博基  300万" value="3000000" img="..\images\flash\flash000160.gif" tooltip="兰博基尼，价值：300万 金币" dynamicgift="1"/>
+<item index="169" name="金麦克  500万" value="5000000" img="..\images\flash\flash000169.gif" tooltip="金麦克，价值：500万 金币" dynamicgift="1"/>
+<item index="175" name="导弹   500万" value="5000000" img="..\images\flash\flash000175.gif" tooltip="导弹，价值：500万 金币" dynamicgift="1"/>
+<item index="177" name="航母   1000万" value="10000000" img="..\images\flash\flash000177.gif" tooltip="航母，价值：1000万 金币" dynamicgift="1"/>
+<item index="179" name="城市  5000万" value="50000000" img="..\images\flash\flash000179.gif" tooltip="城市，价值：5000万 金币" dynamicgift="1"/>
+</wealth>
+<gift>
+<item index="52" name="爱心烛  1万" value="10000" img="..\images\Gift\Gift052.gif" tooltip="爱心烛，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="54" name="丘比特  1万" value="10000" img="..\images\Gift\Gift054.gif" tooltip="丘比特，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="60" name="月亮心  1万" value="10000" img="..\images\Gift\Gift060.gif" tooltip="月亮心，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="61" name="爱久久  1万" value="10000" img="..\images\Gift\Gift061.gif" tooltip="爱久久，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="62" name="生日蛋  1万" value="10000" img="..\images\Gift\Gift062.gif" tooltip="生日蛋糕，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="78" name="网恋证  1万" value="10000" img="..\images\Gift\Gift078.gif" tooltip="网恋证，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="63" name=" 钻戒   5万" value="50000" img="..\images\Gift\Gift063.gif" tooltip="钻戒，价值：5万 金币" dynamicgift="0" showeffect="0"/>
+<item index="66" name="蓝钻石  5万" value="50000" img="..\images\Gift\Gift066.gif" tooltip="蓝钻石，价值：5万 金币" dynamicgift="0" showeffect="0"/>
+<item index="67" name="钟爱一 10万" value="100000" img="..\images\Gift\Gift067.gif" tooltip="钟爱一生，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="68" name="一生一  10万" value="100000" img="..\images\Gift\Gift068.gif" tooltip="一生一世，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="69" name="守候一 10万" value="100000" img="..\images\Gift\Gift069.gif" tooltip="守候一生，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="70" name="甜蜜的 10万" value="100000" img="..\images\Gift\Gift070.gif" tooltip="甜蜜的吻，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="71" name="幸福拥 10万" value="100000" img="..\images\Gift\Gift071.gif" tooltip="幸福拥抱，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="81" name="黄金袋 10万" value="100000" img="..\images\Gift\Gift081.gif" tooltip="黄金袋，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="74" name="久久花 50万" value="500000" img="..\images\Gift\Gift074.gif" tooltip="久久花束，价值：50万 金币" dynamicgift="0" showeffect="0"/>
+<item index="72" name="美女  100万" value="1000000" img="..\images\Gift\Gift072.gif" tooltip="美女，价值：100万 金币" dynamicgift="0" showeffect="0"/>
+<item index="73" name="帅哥  100万" value="1000000" img="..\images\Gift\Gift073.gif" tooltip="帅哥，价值：100万 金币" dynamicgift="0" showeffect="0"/>
+<item index="75" name="久久花  100万" value="1000000" img="..\images\Gift\Gift075.gif" tooltip="久久花篮，价值：100万 金币" dynamicgift="0" showeffect="0"/>
+<item index="76" name="不离不  100万" value="1000000" img="..\images\Gift\Gift076.gif" tooltip="不离不弃，价值：100万 金币" dynamicgift="0" showeffect="0"/>
+<item index="77" name="龙凤证  100万" value="1000000" img="..\images\Gift\Gift077.gif" tooltip="龙凤证，价值：100万 金币" dynamicgift="0" showeffect="0"/>
+<item index="200" name="求婚   200万" value="2000000" img="..\images\flash\flash000200.gif" tooltip="求婚，价值：200万 金币" dynamicgift="1"/>
+<item index="203" name="分手   200万" value="2000000" img="..\images\flash\flash000203.gif" tooltip="分手，价值：200万 金币" dynamicgift="1"/>
+<item index="204" name="离婚   200万" value="2000000" img="..\images\flash\flash000204.gif" tooltip="离婚，价值：200万 金币" dynamicgift="1"/>
+<item index="201" name="结婚   300万" value="3000000" img="..\images\flash\flash000201.gif" tooltip="结婚，价值：300万 金币" dynamicgift="1"/>
+<item index="202" name="婚礼   500万" value="5000000" img="..\images\flash\flash000202.gif" tooltip="婚礼，价值：500万 金币" dynamicgift="1"/>
+</gift>
+<tab4>
+<item index="83" name="欢迎光  1000" value="1000" img="..\images\Gift\Gift083.gif" tooltip="欢迎光临，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="84" name="  鼓掌  1000" value="1000" img="..\images\Gift\Gift084.gif" tooltip="鼓掌，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="85" name="  花杂  1000" value="1000" img="..\images\Gift\Gift085.gif" tooltip="花杂，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="86" name="  咖啡  1000" value="1000" img="..\images\Gift\Gift086.gif" tooltip="咖啡，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="87" name="  板砖  1000" value="1000" img="..\images\Gift\Gift087.gif" tooltip="板砖，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="88" name="  称赞  1000" value="1000" img="..\images\Gift\Gift088.gif" tooltip="称赞，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="89" name="  红包  1000" value="1000" img="..\images\Gift\Gift089.gif" tooltip="红包，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="90" name="  喜糖  1000" value="1000" img="..\images\Gift\Gift090.gif" tooltip="喜糖，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="91" name="  谢谢  1000" value="1000" img="..\images\Gift\Gift091.gif" tooltip="谢谢，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="97" name="舒而爽  1000" value="1000" img="..\images\Gift\Gift097.gif" tooltip="舒而爽，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="98" name="绿帽子  1000" value="1000" img="..\images\Gift\Gift098.gif" tooltip="绿帽子，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="99" name="打屁屁  1000" value="1000" img="..\images\Gift\Gift099.gif" tooltip="打屁屁，价值：1000 金币" dynamicgift="0" showeffect="1"/>
+<item index="92" name="  香吻  2000" value="2000" img="..\images\Gift\Gift092.gif" tooltip="香吻，价值：2000 金币" dynamicgift="0" showeffect="0"/>
+<item index="95" name="  音符  2000" value="2000" img="..\images\Gift\Gift095.gif" tooltip="音符，价值：2000 金币" dynamicgift="0" showeffect="0"/>
+<item index="100" name=" 家法  2000" value="2000" img="..\images\Gift\Gift100.gif" tooltip="家法，价值：2000 金币" dynamicgift="0" showeffect="0"/>
+<item index="101" name=" 子弹  2000" value="2000" img="..\images\Gift\Gift101.gif" tooltip="子弹，价值：2000 金币" dynamicgift="0" showeffect="0"/>
+<item index="102" name=" 心吻  1万" value="10000" img="..\images\Gift\Gift102.gif" tooltip="心吻，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="103" name="   龟    1万" value="10000" img="..\images\Gift\Gift103.gif" tooltip="龟，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="104" name="嫁给我  1万" value="10000" img="..\images\Gift\Gift104.gif" tooltip="嫁给我，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="105" name="定情信  1万" value="10000" img="..\images\Gift\Gift105.gif" tooltip="定情信物，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="106" name="发财  10万" value="100000" img="..\images\Gift\Gift106.gif" tooltip="发财，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="107" name="公主  10万" value="100000" img="..\images\Gift\Gift107.gif" tooltip="公主，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="108" name="一帆风  10万" value="100000" img="..\images\Gift\Gift108.gif" tooltip="一帆风顺，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="109" name="点歌支  100万" value="1000000" img="..\images\Gift\Gift109.gif" tooltip="点歌支票，价值：100万 金币" dynamicgift="0" showeffect="0"/>
+<item index="170" name="酒店  100万" value="1000000" img="..\images\flash\flash000170.gif" tooltip="酒店，价值：100万 金币" dynamicgift="1"/>
+<item index="171" name="庄园  100万" value="1000000" img="..\images\flash\flash000171.gif" tooltip="庄园，价值：100万 金币" dynamicgift="1"/>
+<item index="153" name="粉玫瑰  100万" value="1000000" img="..\images\flash\flash000153.gif" tooltip="粉玫瑰，价值：100万 金币" dynamicgift="1"/>
+<item index="154" name="马蹄莲  100万" value="1000000" img="..\images\flash\flash000154.gif" tooltip="马蹄莲，价值：100万 金币" dynamicgift="1"/>
+<item index="172" name="城堡   200万" value="2000000" img="..\images\flash\flash000172.gif" tooltip="城堡，价值：200万 金币" dynamicgift="1"/>
+<item index="173" name="飞机   300万" value="3000000" img="..\images\flash\flash000173.gif" tooltip="飞机，价值：300万 金币" dynamicgift="1"/>
+<item index="176" name="轮船   500万" value="5000000" img="..\images\flash\flash000176.gif" tooltip="轮船，价值：500万 金币" dynamicgift="1"/>
+<item index="178" name="游乐场 1000万" value="10000000" img="..\images\flash\flash000178.gif" tooltip="游乐场，价值：1000万 金币" dynamicgift="1"/>
+<item index="180" name="支票  1000万" value="10000000" img="..\images\flash\flash000180.gif" tooltip="支票，价值：1000万 金币" dynamicgift="1"/>
+<item index="181" name="财神爷 2000万" value="20000000" img="..\images\flash\flash000181.gif" tooltip="财神爷，价值：2000万 金币" dynamicgift="1"/>
+<item index="182" name="点歌金  100万" value="1000000" img="..\images\Gift\Gift182.gif" tooltip="点歌金麦，价值：100万 金币\n使用后对方可以增加上麦时间，1个=5分钟。" dynamicgift="0" showeffect="0"/>
+<item index="183" name="点歌娃  100万" value="1000000" img="..\images\Gift\Gift183.gif" tooltip="点歌娃娃，价值：100万 金币\n使用后对方可以根据所得数量提高在排序中的位置。" dynamicgift="0" showeffect="0"/>
+</tab4>
+<tab5>
+<item index="114" name="情人节 1万" value="10000" img="..\images\Gift\Gift114.gif" tooltip="情人节，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="115" name=" 七夕   1万" value="10000" img="..\images\Gift\Gift115.gif" tooltip="七夕，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="117" name="生日快  1万" value="10000" img="..\images\Gift\Gift117.gif" tooltip="生日快乐，价值：1万 金币" dynamicgift="0" showeffect="0"/>
+<item index="112" name="建军节  10万" value="100000" img="..\images\Gift\Gift112.gif" tooltip="建军节，价值：10万 金币" dynamicgift="0" showeffect="0"/>
+<item index="174" name="儿童节  10万" value="100000" img="..\images\flash\flash000174.gif" tooltip="儿童节，价值：10万 金币" dynamicgift="1"/>
+<item index="162" name="生日快  100万" value="1000000" img="..\images\flash\flash000162.gif" tooltip="生日快乐，价值：100万 金币" dynamicgift="1"/>
+<item index="163" name="恭贺新  100万" value="1000000" img="..\images\flash\flash000163.gif" tooltip="恭贺新婚，价值：100万 金币" dynamicgift="1"/>
+<item index="164" name="开业庆  100万" value="1000000" img="..\images\flash\flash000164.gif" tooltip="开业庆典，价值：100万 金币" dynamicgift="1"/>
+<item index="205" name="开业大  100万" value="1000000" img="..\images\flash\flash000205.gif" tooltip="开业大吉，价值：100万 金币" dynamicgift="1"/>
+<item index="168" name="元旦  100万" value="1000000" img="..\images\flash\flash000168.gif" tooltip="元旦，价值：100万 金币" dynamicgift="1"/>
+<item index="184" name="春节  100万" value="1000000" img="..\images\flash\flash000184.gif" tooltip="春节，价值：100万 金币" dynamicgift="1"/>
+<item index="185" name="元宵节  100万" value="1000000" img="..\images\flash\flash000185.gif" tooltip="元宵节，价值：100万 金币" dynamicgift="1"/>
+<item index="186" name="情人节  100万" value="1000000" img="..\images\flash\flash000186.gif" tooltip="情人节，价值：100万 金币" dynamicgift="1"/>
+<item index="189" name="女人节  100万" value="1000000" img="..\images\flash\flash000189.gif" tooltip="女人节，价值：100万 金币" dynamicgift="1"/>
+<item index="190" name="愚人节  100万" value="1000000" img="..\images\flash\flash000190.gif" tooltip="愚人节，价值：100万 金币" dynamicgift="1"/>
+<item index="166" name="端午节  100万" value="1000000" img="..\images\flash\flash000166.gif" tooltip="端午节，价值：100万 金币" dynamicgift="1"/>
+<item index="191" name="教师节  100万" value="1000000" img="..\images\flash\flash000191.gif" tooltip="教师节，价值：100万 金币" dynamicgift="1"/>
+<item index="192" name="中秋节  100万" value="1000000" img="..\images\flash\flash000192.gif" tooltip="中秋节，价值：100万 金币" dynamicgift="1"/>
+<item index="193" name="国庆节  100万" value="1000000" img="..\images\flash\flash000193.gif" tooltip="国庆节，价值：100万 金币" dynamicgift="1"/>
+<item index="194" name="光棍节  100万" value="1000000" img="..\images\flash\flash000194.gif" tooltip="光棍节，价值：100万 金币" dynamicgift="1"/>
+<item index="195" name="圣诞节  100万" value="1000000" img="..\images\flash\flash000195.gif" tooltip="圣诞节，价值：100万 金币" dynamicgift="1"/>
+<item index="196" name="劳动节  100万" value="1000000" img="..\images\flash\flash000196.gif" tooltip="劳动节，价值：100万 金币" dynamicgift="1"/>
+<item index="199" name="清明节  100万" value="1000000" img="..\images\flash\flash000199.gif" tooltip="清明节，价值：100万 金币" dynamicgift="1"/>
+<item index="206" name="吉祥礼 1000万" value="10000000" img="..\images\flash\flash000206.gif" tooltip="吉祥礼花，价值：1000万 金币\n送出后所有在房间内的房间管理平分奖金。" dynamicgift="1" showeffect="0" bFire="3"/>
+<item index="207" name="鸿运礼 2000万" value="20000000" img="..\images\flash\flash000207.gif" tooltip="鸿运礼花，价值：2000万 金币\n送出后所有在房间内的用户（不限身份）平分奖金。" dynamicgift="1" showeffect="0" bFire="4"/>
+</tab5>
+<count>
+<item index="1" name="" 		    value="1" showeffect="1"/>
+<item index="1" name=""   	    value="18" showeffect="1"/>
+<item index="1" name=""   	    value="99" showeffect="1"/>
+<item index="1" name=""           value="199" showeffect="1"/>
+<item index="1" name=""   	    value="300" showeffect="1"/>
+<item index="1" name="我爱你"     value="520" showeffect="1"/>
+<item index="1" name="丘比特"     value="666" showeffect="1"/>
+<item index="1" name="发大财" 	value="888" showeffect="1"/>
+<item index="1" name="就爱你"   	value="920" showeffect="1"/>
+<item index="1" name="比翼双飞" 	value="999" showeffect="1"/>
+<item index="1" name="一生一世" 	value="1314" showeffect="1"/>
+<item index="1" name="天长地久" 	value="9999" showeffect="1"/>
+</count>
+</goods>" 
+"ReadFile:<emotion>
+<tabname>
+<item name="默认" type="1" />
+<item name="可爱" type="2"/> 
+<item name="洋葱" type="3"/> 
+<item name="Boy" type="4"/>
+<item name="猴子" type="5"/>
+<item name="自定义" type="6"/>
+</tabname>
+<default>
+<item type="1" index="001" path="..\\images\\Emotion\\Emotion001.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="002" path="..\\images\\Emotion\\Emotion002.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="003" path="..\\images\\Emotion\\Emotion003.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="004" path="..\\images\\Emotion\\Emotion004.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="005" path="..\\images\\Emotion\\Emotion005.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="006" path="..\\images\\Emotion\\Emotion006.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="007" path="..\\images\\Emotion\\Emotion007.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="008" path="..\\images\\Emotion\\Emotion008.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="009" path="..\\images\\Emotion\\Emotion009.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="010" path="..\\images\\Emotion\\Emotion010.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="011" path="..\\images\\Emotion\\Emotion011.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="012" path="..\\images\\Emotion\\Emotion012.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="013" path="..\\images\\Emotion\\Emotion013.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="014" path="..\\images\\Emotion\\Emotion014.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="015" path="..\\images\\Emotion\\Emotion015.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="016" path="..\\images\\Emotion\\Emotion016.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="017" path="..\\images\\Emotion\\Emotion017.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="018" path="..\\images\\Emotion\\Emotion018.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="019" path="..\\images\\Emotion\\Emotion019.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="020" path="..\\images\\Emotion\\Emotion020.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="021" path="..\\images\\Emotion\\Emotion021.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="022" path="..\\images\\Emotion\\Emotion022.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="023" path="..\\images\\Emotion\\Emotion023.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="024" path="..\\images\\Emotion\\Emotion024.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="025" path="..\\images\\Emotion\\Emotion025.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="026" path="..\\images\\Emotion\\Emotion026.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="027" path="..\\images\\Emotion\\Emotion027.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="028" path="..\\images\\Emotion\\Emotion028.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="029" path="..\\images\\Emotion\\Emotion029.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="030" path="..\\images\\Emotion\\Emotion030.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="031" path="..\\images\\Emotion\\Emotion031.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="032" path="..\\images\\Emotion\\Emotion032.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="033" path="..\\images\\Emotion\\Emotion033.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="034" path="..\\images\\Emotion\\Emotion034.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="035" path="..\\images\\Emotion\\Emotion035.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="036" path="..\\images\\Emotion\\Emotion036.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="037" path="..\\images\\Emotion\\Emotion037.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="038" path="..\\images\\Emotion\\Emotion038.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="039" path="..\\images\\Emotion\\Emotion039.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="040" path="..\\images\\Emotion\\Emotion040.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="041" path="..\\images\\Emotion\\Emotion041.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="042" path="..\\images\\Emotion\\Emotion042.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="043" path="..\\images\\Emotion\\Emotion043.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="044" path="..\\images\\Emotion\\Emotion044.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="045" path="..\\images\\Emotion\\Emotion045.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="046" path="..\\images\\Emotion\\Emotion046.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="047" path="..\\images\\Emotion\\Emotion047.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="048" path="..\\images\\Emotion\\Emotion048.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="049" path="..\\images\\Emotion\\Emotion049.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="050" path="..\\images\\Emotion\\Emotion050.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="051" path="..\\images\\Emotion\\Emotion051.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="052" path="..\\images\\Emotion\\Emotion052.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="053" path="..\\images\\Emotion\\Emotion053.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="054" path="..\\images\\Emotion\\Emotion054.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="055" path="..\\images\\Emotion\\Emotion055.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="056" path="..\\images\\Emotion\\Emotion056.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="057" path="..\\images\\Emotion\\Emotion057.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="058" path="..\\images\\Emotion\\Emotion058.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="059" path="..\\images\\Emotion\\Emotion059.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="060" path="..\\images\\Emotion\\Emotion060.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="061" path="..\\images\\Emotion\\Emotion061.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="062" path="..\\images\\Emotion\\Emotion062.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="063" path="..\\images\\Emotion\\Emotion063.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="064" path="..\\images\\Emotion\\Emotion064.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="065" path="..\\images\\Emotion\\Emotion065.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="066" path="..\\images\\Emotion\\Emotion066.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="067" path="..\\images\\Emotion\\Emotion067.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="068" path="..\\images\\Emotion\\Emotion068.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="069" path="..\\images\\Emotion\\Emotion069.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="070" path="..\\images\\Emotion\\Emotion070.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="071" path="..\\images\\Emotion\\Emotion071.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="072" path="..\\images\\Emotion\\Emotion072.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="073" path="..\\images\\Emotion\\Emotion073.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="074" path="..\\images\\Emotion\\Emotion074.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="075" path="..\\images\\Emotion\\Emotion075.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="076" path="..\\images\\Emotion\\Emotion076.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="077" path="..\\images\\Emotion\\Emotion077.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="078" path="..\\images\\Emotion\\Emotion078.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="079" path="..\\images\\Emotion\\Emotion079.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="080" path="..\\images\\Emotion\\Emotion080.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="081" path="..\\images\\Emotion\\Emotion081.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="082" path="..\\images\\Emotion\\Emotion082.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="083" path="..\\images\\Emotion\\Emotion083.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="084" path="..\\images\\Emotion\\Emotion084.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="085" path="..\\images\\Emotion\\Emotion085.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="086" path="..\\images\\Emotion\\Emotion086.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="087" path="..\\images\\Emotion\\Emotion087.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="088" path="..\\images\\Emotion\\Emotion088.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="089" path="..\\images\\Emotion\\Emotion089.gif" tooltip="" preview_diffrent_path="0"/>
+<item type="1" index="090" path="..\\images\\Emotion\\Emotion090.gif" tooltip="" preview_diffrent_path="0"/>
+</default>
+<emotion_tab2>
+<item type="2" index="1" path="..\\images\\Emotion\\EmotionTab2\\1.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="2" path="..\\images\\Emotion\\EmotionTab2\\2.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="3" path="..\\images\\Emotion\\EmotionTab2\\3.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="4" path="..\\images\\Emotion\\EmotionTab2\\4.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="5" path="..\\images\\Emotion\\EmotionTab2\\5.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="6" path="..\\images\\Emotion\\EmotionTab2\\6.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="7" path="..\\images\\Emotion\\EmotionTab2\\7.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="8" path="..\\images\\Emotion\\EmotionTab2\\8.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="9" path="..\\images\\Emotion\\EmotionTab2\\9.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="10" path="..\\images\\Emotion\\EmotionTab2\\10.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="11" path="..\\images\\Emotion\\EmotionTab2\\11.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="12" path="..\\images\\Emotion\\EmotionTab2\\12.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="13" path="..\\images\\Emotion\\EmotionTab2\\13.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="14" path="..\\images\\Emotion\\EmotionTab2\\14.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="15" path="..\\images\\Emotion\\EmotionTab2\\15.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="16" path="..\\images\\Emotion\\EmotionTab2\\16.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="17" path="..\\images\\Emotion\\EmotionTab2\\17.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="18" path="..\\images\\Emotion\\EmotionTab2\\18.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="19" path="..\\images\\Emotion\\EmotionTab2\\19.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="20" path="..\\images\\Emotion\\EmotionTab2\\20.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="21" path="..\\images\\Emotion\\EmotionTab2\\21.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="22" path="..\\images\\Emotion\\EmotionTab2\\22.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="23" path="..\\images\\Emotion\\EmotionTab2\\23.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="24" path="..\\images\\Emotion\\EmotionTab2\\24.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="25" path="..\\images\\Emotion\\EmotionTab2\\25.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="26" path="..\\images\\Emotion\\EmotionTab2\\26.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="27" path="..\\images\\Emotion\\EmotionTab2\\27.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="28" path="..\\images\\Emotion\\EmotionTab2\\28.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="29" path="..\\images\\Emotion\\EmotionTab2\\29.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="30" path="..\\images\\Emotion\\EmotionTab2\\30.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="31" path="..\\images\\Emotion\\EmotionTab2\\31.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="32" path="..\\images\\Emotion\\EmotionTab2\\32.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="33" path="..\\images\\Emotion\\EmotionTab2\\33.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="34" path="..\\images\\Emotion\\EmotionTab2\\34.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="35" path="..\\images\\Emotion\\EmotionTab2\\35.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="36" path="..\\images\\Emotion\\EmotionTab2\\36.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="37" path="..\\images\\Emotion\\EmotionTab2\\37.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="38" path="..\\images\\Emotion\\EmotionTab2\\38.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="39" path="..\\images\\Emotion\\EmotionTab2\\39.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="40" path="..\\images\\Emotion\\EmotionTab2\\40.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="41" path="..\\images\\Emotion\\EmotionTab2\\41.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="42" path="..\\images\\Emotion\\EmotionTab2\\42.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="43" path="..\\images\\Emotion\\EmotionTab2\\43.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="44" path="..\\images\\Emotion\\EmotionTab2\\44.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="45" path="..\\images\\Emotion\\EmotionTab2\\45.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="46" path="..\\images\\Emotion\\EmotionTab2\\46.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="47" path="..\\images\\Emotion\\EmotionTab2\\47.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="48" path="..\\images\\Emotion\\EmotionTab2\\48.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="49" path="..\\images\\Emotion\\EmotionTab2\\49.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="50" path="..\\images\\Emotion\\EmotionTab2\\50.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="51" path="..\\images\\Emotion\\EmotionTab2\\51.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="52" path="..\\images\\Emotion\\EmotionTab2\\52.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="53" path="..\\images\\Emotion\\EmotionTab2\\53.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="54" path="..\\images\\Emotion\\EmotionTab2\\54.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="55" path="..\\images\\Emotion\\EmotionTab2\\55.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="56" path="..\\images\\Emotion\\EmotionTab2\\56.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="57" path="..\\images\\Emotion\\EmotionTab2\\57.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="58" path="..\\images\\Emotion\\EmotionTab2\\58.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="59" path="..\\images\\Emotion\\EmotionTab2\\59.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="60" path="..\\images\\Emotion\\EmotionTab2\\60.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="61" path="..\\images\\Emotion\\EmotionTab2\\61.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="62" path="..\\images\\Emotion\\EmotionTab2\\62.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="63" path="..\\images\\Emotion\\EmotionTab2\\63.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="64" path="..\\images\\Emotion\\EmotionTab2\\64.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="65" path="..\\images\\Emotion\\EmotionTab2\\65.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="66" path="..\\images\\Emotion\\EmotionTab2\\66.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="67" path="..\\images\\Emotion\\EmotionTab2\\67.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="68" path="..\\images\\Emotion\\EmotionTab2\\68.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="69" path="..\\images\\Emotion\\EmotionTab2\\69.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="70" path="..\\images\\Emotion\\EmotionTab2\\70.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="71" path="..\\images\\Emotion\\EmotionTab2\\71.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="72" path="..\\images\\Emotion\\EmotionTab2\\72.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="73" path="..\\images\\Emotion\\EmotionTab2\\73.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="74" path="..\\images\\Emotion\\EmotionTab2\\74.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="75" path="..\\images\\Emotion\\EmotionTab2\\75.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="76" path="..\\images\\Emotion\\EmotionTab2\\76.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="77" path="..\\images\\Emotion\\EmotionTab2\\77.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="78" path="..\\images\\Emotion\\EmotionTab2\\78.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="79" path="..\\images\\Emotion\\EmotionTab2\\79.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="80" path="..\\images\\Emotion\\EmotionTab2\\80.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="81" path="..\\images\\Emotion\\EmotionTab2\\81.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="82" path="..\\images\\Emotion\\EmotionTab2\\82.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="83" path="..\\images\\Emotion\\EmotionTab2\\83.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="84" path="..\\images\\Emotion\\EmotionTab2\\84.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="85" path="..\\images\\Emotion\\EmotionTab2\\85.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="86" path="..\\images\\Emotion\\EmotionTab2\\86.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="87" path="..\\images\\Emotion\\EmotionTab2\\87.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="88" path="..\\images\\Emotion\\EmotionTab2\\88.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="89" path="..\\images\\Emotion\\EmotionTab2\\89.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="90" path="..\\images\\Emotion\\EmotionTab2\\90.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="91" path="..\\images\\Emotion\\EmotionTab2\\91.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="92" path="..\\images\\Emotion\\EmotionTab2\\92.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="93" path="..\\images\\Emotion\\EmotionTab2\\93.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="94" path="..\\images\\Emotion\\EmotionTab2\\94.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="95" path="..\\images\\Emotion\\EmotionTab2\\95.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="96" path="..\\images\\Emotion\\EmotionTab2\\96.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="97" path="..\\images\\Emotion\\EmotionTab2\\97.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="98" path="..\\images\\Emotion\\EmotionTab2\\98.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="99" path="..\\images\\Emotion\\EmotionTab2\\99.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="2" index="100" path="..\\images\\Emotion\\EmotionTab2\\100.bmp" tooltip="" preview_diffrent_path="0"/>
+</emotion_tab2>
+<emotion_tab3>
+<item type="3" index="1"  path="..\\images\\Emotion\\EmotionTab3\\1.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="2"  path="..\\images\\Emotion\\EmotionTab3\\2.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="3"  path="..\\images\\Emotion\\EmotionTab3\\3.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="4"  path="..\\images\\Emotion\\EmotionTab3\\4.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="5"  path="..\\images\\Emotion\\EmotionTab3\\5.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="6"  path="..\\images\\Emotion\\EmotionTab3\\6.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="7"  path="..\\images\\Emotion\\EmotionTab3\\7.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="8"  path="..\\images\\Emotion\\EmotionTab3\\8.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="9"  path="..\\images\\Emotion\\EmotionTab3\\9.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="10"  path="..\\images\\Emotion\\EmotionTab3\\10.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="11"  path="..\\images\\Emotion\\EmotionTab3\\11.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="12"  path="..\\images\\Emotion\\EmotionTab3\\12.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="13"  path="..\\images\\Emotion\\EmotionTab3\\13.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="14"  path="..\\images\\Emotion\\EmotionTab3\\14.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="15"  path="..\\images\\Emotion\\EmotionTab3\\15.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="16"  path="..\\images\\Emotion\\EmotionTab3\\16.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="17"  path="..\\images\\Emotion\\EmotionTab3\\17.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="18"  path="..\\images\\Emotion\\EmotionTab3\\18.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="19"  path="..\\images\\Emotion\\EmotionTab3\\19.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="20"  path="..\\images\\Emotion\\EmotionTab3\\20.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="21"  path="..\\images\\Emotion\\EmotionTab3\\21.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="22"  path="..\\images\\Emotion\\EmotionTab3\\22.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="23"  path="..\\images\\Emotion\\EmotionTab3\\23.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="24"  path="..\\images\\Emotion\\EmotionTab3\\24.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="25"  path="..\\images\\Emotion\\EmotionTab3\\25.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="26"  path="..\\images\\Emotion\\EmotionTab3\\26.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="27"  path="..\\images\\Emotion\\EmotionTab3\\27.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="28"  path="..\\images\\Emotion\\EmotionTab3\\28.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="29"  path="..\\images\\Emotion\\EmotionTab3\\29.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="30"  path="..\\images\\Emotion\\EmotionTab3\\30.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="31"  path="..\\images\\Emotion\\EmotionTab3\\31.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="32"  path="..\\images\\Emotion\\EmotionTab3\\32.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="33"  path="..\\images\\Emotion\\EmotionTab3\\33.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="34"  path="..\\images\\Emotion\\EmotionTab3\\34.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="35"  path="..\\images\\Emotion\\EmotionTab3\\35.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="36"  path="..\\images\\Emotion\\EmotionTab3\\36.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="37"  path="..\\images\\Emotion\\EmotionTab3\\37.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="38"  path="..\\images\\Emotion\\EmotionTab3\\38.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="39"  path="..\\images\\Emotion\\EmotionTab3\\39.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="40"  path="..\\images\\Emotion\\EmotionTab3\\40.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="41"  path="..\\images\\Emotion\\EmotionTab3\\41.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="42"  path="..\\images\\Emotion\\EmotionTab3\\42.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="43"  path="..\\images\\Emotion\\EmotionTab3\\43.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="44"  path="..\\images\\Emotion\\EmotionTab3\\44.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="45"  path="..\\images\\Emotion\\EmotionTab3\\45.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="46"  path="..\\images\\Emotion\\EmotionTab3\\46.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="47"  path="..\\images\\Emotion\\EmotionTab3\\47.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="48"  path="..\\images\\Emotion\\EmotionTab3\\48.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="49"  path="..\\images\\Emotion\\EmotionTab3\\49.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="50"  path="..\\images\\Emotion\\EmotionTab3\\50.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="51"  path="..\\images\\Emotion\\EmotionTab3\\51.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="52"  path="..\\images\\Emotion\\EmotionTab3\\52.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="53"  path="..\\images\\Emotion\\EmotionTab3\\53.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="54"  path="..\\images\\Emotion\\EmotionTab3\\54.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="55"  path="..\\images\\Emotion\\EmotionTab3\\55.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="56"  path="..\\images\\Emotion\\EmotionTab3\\56.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="57"  path="..\\images\\Emotion\\EmotionTab3\\57.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="58"  path="..\\images\\Emotion\\EmotionTab3\\58.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="59"  path="..\\images\\Emotion\\EmotionTab3\\59.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="60"  path="..\\images\\Emotion\\EmotionTab3\\60.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="61"  path="..\\images\\Emotion\\EmotionTab3\\61.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="62"  path="..\\images\\Emotion\\EmotionTab3\\62.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="63"  path="..\\images\\Emotion\\EmotionTab3\\63.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="64"  path="..\\images\\Emotion\\EmotionTab3\\64.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="65"  path="..\\images\\Emotion\\EmotionTab3\\65.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="66"  path="..\\images\\Emotion\\EmotionTab3\\66.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="67"  path="..\\images\\Emotion\\EmotionTab3\\67.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="68"  path="..\\images\\Emotion\\EmotionTab3\\68.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="69"  path="..\\images\\Emotion\\EmotionTab3\\69.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="70"  path="..\\images\\Emotion\\EmotionTab3\\70.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="71"  path="..\\images\\Emotion\\EmotionTab3\\71.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="72"  path="..\\images\\Emotion\\EmotionTab3\\72.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="73"  path="..\\images\\Emotion\\EmotionTab3\\73.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="74"  path="..\\images\\Emotion\\EmotionTab3\\74.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="76"  path="..\\images\\Emotion\\EmotionTab3\\76.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="77"  path="..\\images\\Emotion\\EmotionTab3\\77.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="78"  path="..\\images\\Emotion\\EmotionTab3\\78.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="79"  path="..\\images\\Emotion\\EmotionTab3\\79.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="80"  path="..\\images\\Emotion\\EmotionTab3\\80.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="81"  path="..\\images\\Emotion\\EmotionTab3\\81.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="82"  path="..\\images\\Emotion\\EmotionTab3\\82.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="83"  path="..\\images\\Emotion\\EmotionTab3\\83.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="84"  path="..\\images\\Emotion\\EmotionTab3\\84.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="85"  path="..\\images\\Emotion\\EmotionTab3\\85.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="86"  path="..\\images\\Emotion\\EmotionTab3\\86.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="3" index="87"  path="..\\images\\Emotion\\EmotionTab3\\87.bmp" tooltip="" preview_diffrent_path="0"/>
+</emotion_tab3>
+<emotion_tab4>
+<item type="4" index="1" path="..\\images\\Emotion\\EmotionTab4\\1.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="2" path="..\\images\\Emotion\\EmotionTab4\\2.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="3" path="..\\images\\Emotion\\EmotionTab4\\3.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="4" path="..\\images\\Emotion\\EmotionTab4\\4.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="5" path="..\\images\\Emotion\\EmotionTab4\\5.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="6" path="..\\images\\Emotion\\EmotionTab4\\6.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="7" path="..\\images\\Emotion\\EmotionTab4\\7.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="8" path="..\\images\\Emotion\\EmotionTab4\\8.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="9" path="..\\images\\Emotion\\EmotionTab4\\9.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="10" path="..\\images\\Emotion\\EmotionTab4\\10.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="11" path="..\\images\\Emotion\\EmotionTab4\\11.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="12" path="..\\images\\Emotion\\EmotionTab4\\12.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="13" path="..\\images\\Emotion\\EmotionTab4\\13.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="14" path="..\\images\\Emotion\\EmotionTab4\\14.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="15" path="..\\images\\Emotion\\EmotionTab4\\15.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="16" path="..\\images\\Emotion\\EmotionTab4\\16.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="17" path="..\\images\\Emotion\\EmotionTab4\\17.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="18" path="..\\images\\Emotion\\EmotionTab4\\18.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="19" path="..\\images\\Emotion\\EmotionTab4\\19.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="20" path="..\\images\\Emotion\\EmotionTab4\\20.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="21" path="..\\images\\Emotion\\EmotionTab4\\21.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="22" path="..\\images\\Emotion\\EmotionTab4\\22.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="23" path="..\\images\\Emotion\\EmotionTab4\\23.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="24" path="..\\images\\Emotion\\EmotionTab4\\24.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="25" path="..\\images\\Emotion\\EmotionTab4\\25.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="26" path="..\\images\\Emotion\\EmotionTab4\\26.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="27" path="..\\images\\Emotion\\EmotionTab4\\27.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="28" path="..\\images\\Emotion\\EmotionTab4\\28.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="29" path="..\\images\\Emotion\\EmotionTab4\\29.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="30" path="..\\images\\Emotion\\EmotionTab4\\30.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="31" path="..\\images\\Emotion\\EmotionTab4\\31.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="32" path="..\\images\\Emotion\\EmotionTab4\\32.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="33" path="..\\images\\Emotion\\EmotionTab4\\33.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="34" path="..\\images\\Emotion\\EmotionTab4\\34.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="35" path="..\\images\\Emotion\\EmotionTab4\\35.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="36" path="..\\images\\Emotion\\EmotionTab4\\36.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="37" path="..\\images\\Emotion\\EmotionTab4\\37.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="38" path="..\\images\\Emotion\\EmotionTab4\\38.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="39" path="..\\images\\Emotion\\EmotionTab4\\39.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="40" path="..\\images\\Emotion\\EmotionTab4\\40.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="41" path="..\\images\\Emotion\\EmotionTab4\\41.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="42" path="..\\images\\Emotion\\EmotionTab4\\42.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="43" path="..\\images\\Emotion\\EmotionTab4\\43.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="44" path="..\\images\\Emotion\\EmotionTab4\\44.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="45" path="..\\images\\Emotion\\EmotionTab4\\45.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="46" path="..\\images\\Emotion\\EmotionTab4\\46.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="47" path="..\\images\\Emotion\\EmotionTab4\\47.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="48" path="..\\images\\Emotion\\EmotionTab4\\48.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="49" path="..\\images\\Emotion\\EmotionTab4\\49.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="50" path="..\\images\\Emotion\\EmotionTab4\\50.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="51" path="..\\images\\Emotion\\EmotionTab4\\51.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="52" path="..\\images\\Emotion\\EmotionTab4\\52.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="53" path="..\\images\\Emotion\\EmotionTab4\\53.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="54" path="..\\images\\Emotion\\EmotionTab4\\54.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="55" path="..\\images\\Emotion\\EmotionTab4\\55.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="56" path="..\\images\\Emotion\\EmotionTab4\\56.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="57" path="..\\images\\Emotion\\EmotionTab4\\57.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="58" path="..\\images\\Emotion\\EmotionTab4\\58.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="59" path="..\\images\\Emotion\\EmotionTab4\\59.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="60" path="..\\images\\Emotion\\EmotionTab4\\60.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="61" path="..\\images\\Emotion\\EmotionTab4\\61.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="62" path="..\\images\\Emotion\\EmotionTab4\\62.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="63" path="..\\images\\Emotion\\EmotionTab4\\63.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="64" path="..\\images\\Emotion\\EmotionTab4\\64.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="65" path="..\\images\\Emotion\\EmotionTab4\\65.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="66" path="..\\images\\Emotion\\EmotionTab4\\66.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="67" path="..\\images\\Emotion\\EmotionTab4\\67.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="4" index="68" path="..\\images\\Emotion\\EmotionTab4\\68.bmp" tooltip="" preview_diffrent_path="0"/>
+</emotion_tab4>
+<emotion_tab5>
+<item type="5" index="1" path="..\\images\\Emotion\\EmotionTab5\\1.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="2" path="..\\images\\Emotion\\EmotionTab5\\2.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="3" path="..\\images\\Emotion\\EmotionTab5\\3.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="4" path="..\\images\\Emotion\\EmotionTab5\\4.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="5" path="..\\images\\Emotion\\EmotionTab5\\5.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="6" path="..\\images\\Emotion\\EmotionTab5\\6.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="7" path="..\\images\\Emotion\\EmotionTab5\\7.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="8" path="..\\images\\Emotion\\EmotionTab5\\8.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="9" path="..\\images\\Emotion\\EmotionTab5\\9.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="10" path="..\\images\\Emotion\\EmotionTab5\\10.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="11" path="..\\images\\Emotion\\EmotionTab5\\11.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="12" path="..\\images\\Emotion\\EmotionTab5\\12.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="13" path="..\\images\\Emotion\\EmotionTab5\\13.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="14" path="..\\images\\Emotion\\EmotionTab5\\14.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="15" path="..\\images\\Emotion\\EmotionTab5\\15.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="16" path="..\\images\\Emotion\\EmotionTab5\\16.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="17" path="..\\images\\Emotion\\EmotionTab5\\17.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="18" path="..\\images\\Emotion\\EmotionTab5\\18.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="19" path="..\\images\\Emotion\\EmotionTab5\\19.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="20" path="..\\images\\Emotion\\EmotionTab5\\20.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="21" path="..\\images\\Emotion\\EmotionTab5\\21.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="22" path="..\\images\\Emotion\\EmotionTab5\\22.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="23" path="..\\images\\Emotion\\EmotionTab5\\23.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="24" path="..\\images\\Emotion\\EmotionTab5\\24.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="25" path="..\\images\\Emotion\\EmotionTab5\\25.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="26" path="..\\images\\Emotion\\EmotionTab5\\26.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="27" path="..\\images\\Emotion\\EmotionTab5\\27.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="28" path="..\\images\\Emotion\\EmotionTab5\\28.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="29" path="..\\images\\Emotion\\EmotionTab5\\29.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="30" path="..\\images\\Emotion\\EmotionTab5\\30.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="31" path="..\\images\\Emotion\\EmotionTab5\\31.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="32" path="..\\images\\Emotion\\EmotionTab5\\32.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="33" path="..\\images\\Emotion\\EmotionTab5\\33.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="34" path="..\\images\\Emotion\\EmotionTab5\\34.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="35" path="..\\images\\Emotion\\EmotionTab5\\35.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="36" path="..\\images\\Emotion\\EmotionTab5\\36.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="37" path="..\\images\\Emotion\\EmotionTab5\\37.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="38" path="..\\images\\Emotion\\EmotionTab5\\38.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="39" path="..\\images\\Emotion\\EmotionTab5\\39.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="40" path="..\\images\\Emotion\\EmotionTab5\\40.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="41" path="..\\images\\Emotion\\EmotionTab5\\41.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="42" path="..\\images\\Emotion\\EmotionTab5\\42.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="43" path="..\\images\\Emotion\\EmotionTab5\\43.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="44" path="..\\images\\Emotion\\EmotionTab5\\44.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="45" path="..\\images\\Emotion\\EmotionTab5\\45.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="46" path="..\\images\\Emotion\\EmotionTab5\\46.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="47" path="..\\images\\Emotion\\EmotionTab5\\47.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="48" path="..\\images\\Emotion\\EmotionTab5\\48.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="49" path="..\\images\\Emotion\\EmotionTab5\\49.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="50" path="..\\images\\Emotion\\EmotionTab5\\50.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="51" path="..\\images\\Emotion\\EmotionTab5\\51.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="52" path="..\\images\\Emotion\\EmotionTab5\\52.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="53" path="..\\images\\Emotion\\EmotionTab5\\53.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="54" path="..\\images\\Emotion\\EmotionTab5\\54.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="55" path="..\\images\\Emotion\\EmotionTab5\\55.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="56" path="..\\images\\Emotion\\EmotionTab5\\56.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="57" path="..\\images\\Emotion\\EmotionTab5\\57.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="58" path="..\\images\\Emotion\\EmotionTab5\\58.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="59" path="..\\images\\Emotion\\EmotionTab5\\59.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="60" path="..\\images\\Emotion\\EmotionTab5\\60.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="61" path="..\\images\\Emotion\\EmotionTab5\\61.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="62" path="..\\images\\Emotion\\EmotionTab5\\62.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="63" path="..\\images\\Emotion\\EmotionTab5\\63.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="64" path="..\\images\\Emotion\\EmotionTab5\\64.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="65" path="..\\images\\Emotion\\EmotionTab5\\65.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="5" index="66" path="..\\images\\Emotion\\EmotionTab5\\66.bmp" tooltip="" preview_diffrent_path="0"/>
+</emotion_tab5>
+<emotion_tab6>
+<item type="6" index="1" path="..\\images\\Emotion\\EmotionTab6\\1.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="2" path="..\\images\\Emotion\\EmotionTab6\\2.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="3" path="..\\images\\Emotion\\EmotionTab6\\3.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="4" path="..\\images\\Emotion\\EmotionTab6\\4.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="5" path="..\\images\\Emotion\\EmotionTab6\\5.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="6" path="..\\images\\Emotion\\EmotionTab6\\6.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="7" path="..\\images\\Emotion\\EmotionTab6\\7.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="8" path="..\\images\\Emotion\\EmotionTab6\\8.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="9" path="..\\images\\Emotion\\EmotionTab6\\9.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="10" path="..\\images\\Emotion\\EmotionTab6\\10.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="11" path="..\\images\\Emotion\\EmotionTab6\\11.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="12" path="..\\images\\Emotion\\EmotionTab6\\12.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="13" path="..\\images\\Emotion\\EmotionTab6\\13.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="14" path="..\\images\\Emotion\\EmotionTab6\\14.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="15" path="..\\images\\Emotion\\EmotionTab6\\15.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="16" path="..\\images\\Emotion\\EmotionTab6\\16.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="17" path="..\\images\\Emotion\\EmotionTab6\\17.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="18" path="..\\images\\Emotion\\EmotionTab6\\18.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="19" path="..\\images\\Emotion\\EmotionTab6\\19.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="20" path="..\\images\\Emotion\\EmotionTab6\\20.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="21" path="..\\images\\Emotion\\EmotionTab6\\21.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="22" path="..\\images\\Emotion\\EmotionTab6\\22.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="23" path="..\\images\\Emotion\\EmotionTab6\\23.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="24" path="..\\images\\Emotion\\EmotionTab6\\24.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="25" path="..\\images\\Emotion\\EmotionTab6\\25.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="26" path="..\\images\\Emotion\\EmotionTab6\\26.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="27" path="..\\images\\Emotion\\EmotionTab6\\27.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="28" path="..\\images\\Emotion\\EmotionTab6\\28.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="29" path="..\\images\\Emotion\\EmotionTab6\\29.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="30" path="..\\images\\Emotion\\EmotionTab6\\30.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="31" path="..\\images\\Emotion\\EmotionTab6\\31.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="32" path="..\\images\\Emotion\\EmotionTab6\\32.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="33" path="..\\images\\Emotion\\EmotionTab6\\33.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="34" path="..\\images\\Emotion\\EmotionTab6\\34.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="35" path="..\\images\\Emotion\\EmotionTab6\\35.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="36" path="..\\images\\Emotion\\EmotionTab6\\36.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="37" path="..\\images\\Emotion\\EmotionTab6\\37.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="38" path="..\\images\\Emotion\\EmotionTab6\\38.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="39" path="..\\images\\Emotion\\EmotionTab6\\39.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="40" path="..\\images\\Emotion\\EmotionTab6\\40.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="41" path="..\\images\\Emotion\\EmotionTab6\\41.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="42" path="..\\images\\Emotion\\EmotionTab6\\42.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="43" path="..\\images\\Emotion\\EmotionTab6\\43.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="44" path="..\\images\\Emotion\\EmotionTab6\\44.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="45" path="..\\images\\Emotion\\EmotionTab6\\45.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="46" path="..\\images\\Emotion\\EmotionTab6\\46.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="47" path="..\\images\\Emotion\\EmotionTab6\\47.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="48" path="..\\images\\Emotion\\EmotionTab6\\48.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="49" path="..\\images\\Emotion\\EmotionTab6\\49.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="50" path="..\\images\\Emotion\\EmotionTab6\\50.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="51" path="..\\images\\Emotion\\EmotionTab6\\51.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="52" path="..\\images\\Emotion\\EmotionTab6\\52.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="53" path="..\\images\\Emotion\\EmotionTab6\\53.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="54" path="..\\images\\Emotion\\EmotionTab6\\54.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="55" path="..\\images\\Emotion\\EmotionTab6\\55.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="56" path="..\\images\\Emotion\\EmotionTab6\\56.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="57" path="..\\images\\Emotion\\EmotionTab6\\57.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="58" path="..\\images\\Emotion\\EmotionTab6\\58.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="59" path="..\\images\\Emotion\\EmotionTab6\\59.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="60" path="..\\images\\Emotion\\EmotionTab6\\60.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="61" path="..\\images\\Emotion\\EmotionTab6\\61.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="64" path="..\\images\\Emotion\\EmotionTab6\\64.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="65" path="..\\images\\Emotion\\EmotionTab6\\65.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="66" path="..\\images\\Emotion\\EmotionTab6\\66.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="67" path="..\\images\\Emotion\\EmotionTab6\\67.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="68" path="..\\images\\Emotion\\EmotionTab6\\68.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="69" path="..\\images\\Emotion\\EmotionTab6\\69.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="70" path="..\\images\\Emotion\\EmotionTab6\\70.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="71" path="..\\images\\Emotion\\EmotionTab6\\71.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="72" path="..\\images\\Emotion\\EmotionTab6\\72.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="73" path="..\\images\\Emotion\\EmotionTab6\\73.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="75" path="..\\images\\Emotion\\EmotionTab6\\75.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="76" path="..\\images\\Emotion\\EmotionTab6\\76.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="77" path="..\\images\\Emotion\\EmotionTab6\\77.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="78" path="..\\images\\Emotion\\EmotionTab6\\78.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="79" path="..\\images\\Emotion\\EmotionTab6\\79.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="80" path="..\\images\\Emotion\\EmotionTab6\\80.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="81" path="..\\images\\Emotion\\EmotionTab6\\81.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="82" path="..\\images\\Emotion\\EmotionTab6\\82.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="83" path="..\\images\\Emotion\\EmotionTab6\\83.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="84" path="..\\images\\Emotion\\EmotionTab6\\84.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="85" path="..\\images\\Emotion\\EmotionTab6\\85.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="86" path="..\\images\\Emotion\\EmotionTab6\\86.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="87" path="..\\images\\Emotion\\EmotionTab6\\87.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="88" path="..\\images\\Emotion\\EmotionTab6\\88.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="89" path="..\\images\\Emotion\\EmotionTab6\\89.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="90" path="..\\images\\Emotion\\EmotionTab6\\90.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="91" path="..\\images\\Emotion\\EmotionTab6\\91.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="92" path="..\\images\\Emotion\\EmotionTab6\\92.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="93" path="..\\images\\Emotion\\EmotionTab6\\93.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="94" path="..\\images\\Emotion\\EmotionTab6\\94.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="95" path="..\\images\\Emotion\\EmotionTab6\\95.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="96" path="..\\images\\Emotion\\EmotionTab6\\96.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="97" path="..\\images\\Emotion\\EmotionTab6\\97.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="98" path="..\\images\\Emotion\\EmotionTab6\\98.bmp" tooltip="" preview_diffrent_path="0"/>
+<item type="6" index="99" path="..\\images\\Emotion\\EmotionTab6\\99.bmp" tooltip="" preview_diffrent_path="0"/>
+</emotion_tab6>
+</emotion>" 
+"ReadFile:<colorBars>
+    <colorBar>
+        <item index="0" html="<a style='color:#9c6e72'>▁▂▃</a><a style='color:#9bd0fb'>★</a><a style='color:#5528d7'>感</a>☆<a style='color:#9bd0fb'>动</a><a style='color:#9bd0fb'>★</a>中<a style='color:#EA4A42'>☆</a><a style='color:#E784A5'>...</a><a style='color:#7DBC2E'>★</a><a style='color:#fb848D'>▃▂▁" name="感动"/>
+        <item index="1" html="<a style='color:#9c6e72'>♀♀♀</a><a style='color:#9bd0fb'>★</a><a style='color:#5528d7'>小</a>☆<a style='color:#9bd0fb'>甜</a><a style='color:#9bd0fb'>★</a>心<a style='color:#EA4A42'>☆</a><a style='color:#E784A5'>...</a><a style='color:#7DBC2E'>★</a><a style='color:#fb848D'>♀♀♀"  name="甜心"/>
+        <item index="2" html="<a style='color:#9c6e72'>♂♂♂</a><a style='color:#9bd0fb'>★</a><a style='color:#5528d7'>啪</a>☆<a style='color:#9bd0fb'>啪</a><a style='color:#9bd0fb'>★</a>啪<a style='color:#EA4A42'>☆</a><a style='color:#E784A5'>...</a><a style='color:#7DBC2E'>★</a><a style='color:#fb848D'>♂♂♂" name="啪啪啪"/>
+        
+    </colorBar>
+</colorBars>" 
+"ReadFile:<seal>
+<pagenames>
+<item pagename="称号" pagetype="1" order="1"/> 
+<item pagename="称赞" pagetype="2" order="2"/> 
+<item pagename="角色" pagetype="3" order="3"/>
+<item pagename="整蛊" pagetype="4" order="4"/>
+<item pagename="贵族" pagetype="5" order="5"/>
+</pagenames>
+<page1>
+<item money="5" tip="宅男（全场），价格：500金币，时效：30分钟" path="../../images/seal/97.bmp" type="1" id="1" path2="../../images/seal/97.bmp"/>
+<item money="5" tip="宅女（全场），价格：500金币，时效：30分钟" path="../../images/seal/98.bmp" type="1" id="2" path2="../../images/seal/98.bmp"/>
+<item money="5" tip="富婆（全场），价格：500金币，时效：30分钟" path="../../images/seal/154.bmp" type="1" id="3" path2="../../images/seal/154.bmp"/>
+<item money="5" tip="老板（全场），价格：500金币，时效：30分钟" path="../../images/seal/155.bmp" type="1" id="4" path2="../../images/seal/155.bmp"/>
+<item money="5" tip="寿星（全场），价格：500金币，时效：30分钟" path="../../images/seal/150.bmp" type="1" id="5" path2="../../images/seal/150.bmp"/>
+<item money="5" tip="富二代（全场），价格：500金币，时效：30分钟" path="../../images/seal/2010-11-2315fuerdai.bmp" type="1" id="6" path2="../../images/seal/2010-11-2315fuerdai.bmp"/>
+<item money="5" tip="牛人（全场），价格：500金币，时效：30分钟" path="../../images/seal/1.bmp" type="1" id="7" path2="../../images/seal/1.bmp"/>
+<item money="5" tip="麦霸（全场），价格：500金币，时效：30分钟" path="../../images/seal/4.bmp" type="1" id="8" path2="../../images/seal/4.bmp"/>
+<item money="5" tip="花心（全场），价格：500金币，时效：30分钟" path="../../images/seal/11.bmp" type="1" id="9" path2="../../images/seal/11.bmp"/>
+<item money="5" tip="花痴（全场），价格：500金币，时效：30分钟" path="../../images/seal/12.bmp" type="1" id="10" path2="../../images/seal/12.bmp"/>
+<item money="5" tip="酒鬼（全场），价格：500金币，时效：30分钟" path="../../images/seal/19.bmp" type="1" id="11" path2="../../images/seal/19.bmp"/>
+<item money="5" tip="舞后（全场），价格：500金币，时效：30分钟" path="../../images/seal/36.bmp" type="1" id="12" path2="../../images/seal/36.bmp"/>
+<item money="5" tip="小强（全场），价格：500金币，时效：30分钟" path="../../images/seal/111.bmp" type="1" id="13" path2="../../images/seal/111.bmp"/>
+<item money="5" tip="忽悠（全场），价格：500金币，时效：30分钟" path="../../images/seal/135.bmp" type="1" id="14" path2="../../images/seal/135.bmp"/>
+</page1>
+<page2>
+<item money="5" tip="给力（全场），价格：5金币，时效：30分钟" path="../../images/seal/2010-11-23531geili.bmp" type="2" id="1" path2="../../images/seal/2010-11-23531geili.bmp"/>
+<item money="5" tip="歌神（全场），价格：5金币，时效：30分钟" path="../../images/seal/43.bmp" type="2" id="2" path2="../../images/seal/43.bmp"/>
+<item money="5" tip="巨星（全场），价格：5金币，时效：30分钟" path="../../images/seal/44.bmp" type="2" id="3" path2="../../images/seal/44.bmp"/>
+<item money="5" tip="美女（全场），价格：5金币，时效：30分钟" path="../../images/seal/26.bmp" type="2" id="4" path2="../../images/seal/26.bmp"/>
+<item money="5" tip="帅哥（全场），价格：5金币，时效：30分钟" path="../../images/seal/27.bmp" type="2" id="5" path2="../../images/seal/27.bmp"/>
+<item money="5" tip="偶像（全场），价格：5金币，时效：30分钟" path="../../images/seal/33.bmp" type="2" id="6" path2="../../images/seal/33.bmp"/>
+<item money="5" tip="天使（全场），价格：5金币，时效：30分钟" path="../../images/seal/39.bmp" type="2" id="7" path2="../../images/seal/39.bmp"/>
+<item money="5" tip="牛叉（全场），价格：5金币，时效：30分钟" path="../../images/seal/148.bmp" type="2" id="8" path2="../../images/seal/148.bmp"/>
+<item money="5" tip="丰满（全场），价格：5金币，时效：30分钟" path="../../images/seal/102.bmp" type="2" id="9" path2="../../images/seal/102.bmp"/>
+<item money="5" tip="性感（全场），价格：5金币，时效：30分钟" path="../../images/seal/103.bmp" type="2" id="10" path2="../../images/seal/103.bmp"/>
+<item money="5" tip="幽默（全场），价格：5金币，时效：30分钟" path="../../images/seal/104.bmp" type="2" id="11" path2="../../images/seal/104.bmp"/>
+<item money="5" tip="NB（全场），价格：5金币，时效：30分钟" path="../../images/seal/106.bmp" type="2" id="12" path2="../../images/seal/106.bmp"/>
+<item money="5" tip="清纯（全场），价格：5金币，时效：30分钟" path="../../images/seal/108.bmp" type="2" id="13" path2="../../images/seal/108.bmp"/>
+<item money="5" tip="辣妹（全场），价格：5金币，时效：30分钟" path="../../images/seal/105.bmp" type="2" id="14" path2="../../images/seal/105.bmp"/>
+<item money="5" tip="可爱（全场），价格：5金币，时效：30分钟" path="../../images/seal/3.bmp" type="2" id="15" path2="../../images/seal/3.bmp"/>
+<item money="5" tip="迷人（全场），价格：5金币，时效：30分钟" path="../../images/seal/2.bmp" type="2" id="16" path2="../../images/seal/2.bmp"/>
+<item money="5" tip="惹火（全场），价格：5金币，时效：30分钟" path="../../images/seal/5.bmp" type="2" id="17" path2="../../images/seal/5.bmp"/>
+<item money="5" tip="人才（全场），价格：5金币，时效：30分钟" path="../../images/seal/32.bmp" type="2" id="18" path2="../../images/seal/32.bmp"/>
+</page2>
+<page3>
+<item money="1" tip="剩男（全场），价格：1金币，时效：30分钟" path="../../images/seal/2010-11-23662shengnan.bmp" type="3" id="1" path2="../../images/seal/2010-11-23662shengnan.bmp"/>
+<item money="1" tip="剩女（全场），价格：1金币，时效：30分钟" path="../../images/seal/2010-11-23128shengnv.bmp" type="3" id="2" path2="../../images/seal/2010-11-23128shengnv.bmp"/>
+<item money="1" tip="老婆（全场），价格：1金币，时效：30分钟" path="../../images/seal/22.bmp" type="3" id="3" path2="../../images/seal/22.bmp"/>
+<item money="1" tip="老公（全场），价格：1金币，时效：30分钟" path="../../images/seal/23.bmp" type="3" id="4" path2="../../images/seal/23.bmp"/>
+<item money="1" tip="相公（全场），价格：1金币，时效：30分钟" path="../../images/seal/24.bmp" type="3" id="5" path2="../../images/seal/24.bmp"/>
+<item money="1" tip="娘子（全场），价格：1金币，时效：30分钟" path="../../images/seal/25.bmp" type="3" id="6" path2="../../images/seal/25.bmp"/>
+<item money="1" tip="公主（全场），价格：1金币，时效：30分钟" path="../../images/seal/166.bmp" type="3" id="7" path2="../../images/seal/166.bmp"/>
+<item money="1" tip="格格（全场），价格：1金币，时效：30分钟" path="../../images/seal/138.bmp" type="3" id="8" path2="../../images/seal/138.bmp"/>
+<item money="1" tip="宝贝（全场），价格：1金币，时效：30分钟" path="../../images/seal/165.bmp" type="3" id="9" path2="../../images/seal/165.bmp"/>
+<item money="1" tip="城管（全场），价格：1金币，时效：30分钟" path="../../images/seal/167.bmp" type="3" id="10" path2="../../images/seal/167.bmp"/>
+<item money="1" tip="皇上（全场），价格：1金币，时效：30分钟" path="../../images/seal/134.bmp" type="3" id="11" path2="../../images/seal/134.bmp"/>
+<item money="1" tip="皇后（全场），价格：1金币，时效：30分钟" path="../../images/seal/133.bmp" type="3" id="12" path2="../../images/seal/133.bmp"/>
+<item money="1" tip="帮主（全场），价格：1金币，时效：30分钟" path="../../images/seal/136.bmp" type="3" id="13" path2="../../images/seal/136.bmp"/>
+<item money="1" tip="丫头（全场），价格：1金币，时效：30分钟" path="../../images/seal/137.bmp" type="3" id="14" path2="../../images/seal/137.bmp"/>
+</page3>
+<page4>
+<item money="1" tip="征婚（全场），价格：1金币，时效：30分钟" path="../../images/seal/15.bmp" type="4" id="1" path2="../../images/seal/15.bmp"/>
+<item money="1" tip="打劫（全场），价格：1金币，时效：30分钟" path="../../images/seal/18.bmp" type="4" id="2" path2="../../images/seal/18.bmp"/>
+<item money="1" tip="裸奔（全场），价格：1金币，时效：30分钟" path="../../images/seal/2010-11-1999luoben.bmp" type="4" id="3" path2="../../images/seal/2010-11-1999luoben.bmp"/>
+<item money="1" tip="鸟人（全场），价格：1金币，时效：30分钟" path="../../images/seal/2010-11-23440niaoren.bmp" type="4" id="4" path2="../../images/seal/2010-11-23440niaoren.bmp"/>
+<item money="1" tip="猪头（全场），价格：1金币，时效：30分钟" path="../../images/seal/51.bmp" type="4" id="5" path2="../../images/seal/51.bmp"/>
+<item money="1" tip="色狼（全场），价格：1金币，时效：30分钟" path="../../images/seal/52.bmp" type="4" id="6" path2="../../images/seal/52.bmp"/>
+<item money="1" tip="二奶（全场），价格：1金币，时效：30分钟" path="../../images/seal/59.bmp" type="4" id="7" path2="../../images/seal/59.bmp"/>
+<item money="1" tip="闷骚（全场），价格：1金币，时效：30分钟" path="../../images/seal/63.bmp" type="4" id="8" path2="../../images/seal/63.bmp"/>
+<item money="1" tip="人妖（全场），价格：1金币，时效：30分钟" path="../../images/seal/65.bmp" type="4" id="9" path2="../../images/seal/65.bmp"/>
+<item money="1" tip="呕像（全场），价格：1金币，时效：30分钟" path="../../images/seal/69.bmp" type="4" id="10" path2="../../images/seal/69.bmp"/>
+<item money="1" tip="饭桶（全场），价格：1金币，时效：30分钟" path="../../images/seal/6.bmp" type="4" id="11" path2="../../images/seal/6.bmp"/>
+<item money="1" tip="胖子（全场），价格：1金币，时效：30分钟" path="../../images/seal/7.bmp" type="4" id="12" path2="../../images/seal/7.bmp"/>
+<item money="1" tip="原配（全场），价格：1金币，时效：30分钟" path="../../images/seal/8.bmp" type="4" id="13" path2="../../images/seal/8.bmp"/>
+</page4>
+<page5>
+<item money="2" tip="情圣（全场），价格：2金币，时效：30分钟" path="../../images/seal/85.bmp" type="5" id="1" path2="../../images/seal/85.bmp"/>
+<item money="2" tip="情人（全场），价格：2金币，时效：30分钟" path="../../images/seal/81.bmp" type="5" id="2" path2="../../images/seal/81.bmp"/>
+<item money="2" tip="型男（全场），价格：2金币，时效：30分钟" path="../../images/seal/2010-11-2336xingnan.bmp" type="5" id="3" path2="../../images/seal/2010-11-2336xingnan.bmp"/>
+<item money="2" tip="索女（全场），价格：2金币，时效：30分钟" path="../../images/seal/2010-11-23163suonv.bmp" type="5" id="4" path2="../../images/seal/2010-11-23163suonv.bmp"/>
+<item money="2" tip="极品（全场），价格：2金币，时效：30分钟" path="../../images/seal/77.bmp" type="5" id="5" path2="../../images/seal/77.bmp"/>
+<item money="2" tip="波霸（全场），价格：2金币，时效：30分钟" path="../../images/seal/404.bmp" type="5" id="6" path2="../../images/seal/404.bmp"/>
+<item money="2" tip="小样（全场），价格：2金币，时效：30分钟" path="../../images/seal/84.bmp" type="5" id="7" path2="../../images/seal/84.bmp"/>
+<item money="2" tip="赌神（全场），价格：2金币，时效：30分钟" path="../../images/seal/86.bmp" type="5" id="8" path2="../../images/seal/86.bmp"/>
+<item money="2" tip="销魂（全场），价格：2金币，时效：30分钟" path="../../images/seal/118.bmp" type="5" id="9" path2="../../images/seal/118.bmp"/>
+<item money="2" tip="风流（全场），价格：2金币，时效：30分钟" path="../../images/seal/119.bmp" type="5" id="10" path2="../../images/seal/119.bmp"/>
+<item money="2" tip="潮人（全场），价格：2金币，时效：30分钟" path="../../images/seal/120.bmp" type="5" id="11" path2="../../images/seal/120.bmp"/>
+<item money="2" tip="妖精（全场），价格：2金币，时效：30分钟" path="../../images/seal/121.bmp" type="5" id="12" path2="../../images/seal/121.bmp"/>
+<item money="2" tip="惊艳（全场），价格：2金币，时效：30分钟" path="../../images/seal/122.bmp" type="5" id="13" path2="../../images/seal/122.bmp"/>
+<item money="2" tip="尤物（全场），价格：2金币，时效：30分钟" path="../../images/seal/125.bmp" type="5" id="14" path2="../../images/seal/125.bmp"/>
+<item money="2" tip="二手（全场），价格：2金币，时效：30分钟" path="../../images/seal/402.bmp" type="5" id="15" path2="../../images/seal/402.bmp"/>
+<item money="2" tip="神棍（全场），价格：2金币，时效：30分钟" path="../../images/seal/406.bmp" type="5" id="16" path2="../../images/seal/406.bmp"/>
+<item money="2" tip="嚣张（全场），价格：2金币，时效：30分钟" path="../../images/seal/410.bmp" type="5" id="17" path2="../../images/seal/410.bmp"/>
+<item money="2" tip="红人（全场），价格：2金币，时效：30分钟" path="../../images/seal/411.bmp" type="5" id="18" path2="../../images/seal/411.bmp"/>
+<item money="2" tip="呆瓜（全场），价格：2金币，时效：30分钟" path="../../images/seal/412.bmp" type="5" id="19" path2="../../images/seal/412.bmp"/>
+<item money="2" tip="传说（全场），价格：2金币，时效：30分钟" path="../../images/seal/413.bmp" type="5" id="20" path2="../../images/seal/413.bmp"/>
+<item money="2" tip="拉登（全场），价格：2金币，时效：30分钟" path="../../images/seal/414.bmp" type="5" id="21" path2="../../images/seal/414.bmp"/>
+<item money="2" tip="高手（全场），价格：2金币，时效：30分钟" path="../../images/seal/418.bmp" type="5" id="22" path2="../../images/seal/418.bmp"/>
+<item money="2" tip="挺拔（全场），价格：2金币，时效：30分钟" path="../../images/seal/420.bmp" type="5" id="23" path2="../../images/seal/420.bmp"/>
+<item money="2" tip="忧郁（全场），价格：2金币，时效：30分钟" path="../../images/seal/423.bmp" type="5" id="24" path2="../../images/seal/423.bmp"/>
+<item money="2" tip="怪人（全场），价格：2金币，时效：30分钟" path="../../images/seal/424.bmp" type="5" id="25" path2="../../images/seal/424.bmp"/>
+</page5>
+</seal>" 
+"ReadFile:{"micConfig":"100","voiceConfig":"15","voicePress":"1","micPress":"1","isMic":"1","isBgMusic":"1","playIndexDrive":"0","micIndexDrive":"0","capIndexDrive":"0"}
+" 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":16776960,"Underline":0}
+" 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":16776960,"Underline":0}
+" 
+"ReadFile:{"micConfig":"100","voiceConfig":"15","voicePress":"1","micPress":"1","isMic":"1","isBgMusic":"1","playIndexDrive":"0","micIndexDrive":"0","capIndexDrive":"0"}
+" 
+newLocalMessage "{
+    "cmd": 103,
+    "host": "192.168.1.147",
+    "port": 9009,
+    "roomid": 25208,
+    "type": 0
+}
+" 
+newLocalMessage LCC_GET_ROOM_ADDR "192.168.1.147" 9009 0 
+OnRecvOperateFlag 
+OnRcvMediaQualityParamConfig 
+OnRcvMediaBitrateConfig 
+OnRcvCustomerServerRoomType 
+onRecvFriendRoom 
+OnRoomMessage 1 0 
+OnRcvRoomParam "网络情缘大舞台" 
+OnRoomMessage 1285 0 
+OnRcvOtherServerInfo 
+OnRcvKeepUserList 
+OnRcvMikeChangeMode 
+OnRcvMikeStatus 
+OnRecvPrivateMickStatus 
+onRecvNewMoney 95297220 61519 
+OnRcvKtvOffLineUserList 
+OnRcvUsePriMuteSet 
+OnRcvPriMikeConfig 
+OnRcvPriMikeList 
+OnRcvSetGiftSendMode 
+OnRecvOperateFlag 
+OnRcvUserList 
+OnRcvGetRoomInfo 
+OnRcvMikeScoreJudgeList 
+OnRcvPauseSong 
+OnUserEnterRoom 1000000435 "test" 
+OnRecvUseLuxeGoods 
+OnRecvSalutatoryInfo "" 1 
+OnRecvSalutatoryInfo "" 2 
+OnRecvSalutatoryInfo "" 3 
+OnRcvSongList 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+showKtvView 
+recename: "网络情缘大舞台" 
+OnRcvGetMemberOrDeny 
+OnRcvGetMemberOrDeny 
+OnRcvGetRoomManager 
+OnRcvDeputyOwnerList 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":16776960,"Underline":0}
+" 
+createView QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.6777e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+getValue QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.6777e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+onDOMContentLoaded 
+fire "font-set" QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "ffff00") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "ffff00") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":16776960,"Underline":0}
+" 
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "ffff00") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+HtmlView::closeEvent 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":16776960,"Underline":0}
+" 
+SendChatText: 1000000435 0 
+OnRcvChatText 1000000435 0 "$CHAT$#<FMT_HEAD Bold=1 Italic=1 Underline=0 FontColor=16776960 FontSize=24 FontName=宋体 SendUIN=1000000435 ReceiveUIN=0 IsStealth=0 Action=&无动作&\FMT_END#>125" 0 
+OnRcvWinSystemMsg 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":16776960,"Underline":0}
+" 
+createView QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.6777e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+getValue QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.6777e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+onDOMContentLoaded 
+OnRcvWinSystemMsg 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":16776960,"Underline":0}
+" 
+createView QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.6777e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+getValue QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.6777e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+onDOMContentLoaded 
+fire "font-set" QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":32896,"Underline":0}
+" 
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+HtmlView::closeEvent 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":32896,"Underline":0}
+" 
+SendChatText: 1000000435 0 
+OnRcvChatText 1000000435 0 "$CHAT$#<FMT_HEAD Bold=1 Italic=1 Underline=0 FontColor=32896 FontSize=24 FontName=宋体 SendUIN=1000000435 ReceiveUIN=0 IsStealth=0 Action=&无动作&\FMT_END#>152" 0 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":32896,"Underline":0}
+" 
+createView QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 32896) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+getValue QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 32896) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+onDOMContentLoaded 
+fire "font-set" QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "000080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "000080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":128,"Underline":0}
+" 
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "000080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "000080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+HtmlView::closeEvent 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":128,"Underline":0}
+" 
+SendChatText: 1000000435 0 
+OnRcvChatText 1000000435 0 "$CHAT$#<FMT_HEAD Bold=1 Italic=1 Underline=0 FontColor=128 FontSize=24 FontName=宋体 SendUIN=1000000435 ReceiveUIN=0 IsStealth=0 Action=&无动作&\FMT_END#>85" 0 
+OnRcvWinSystemMsg 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":128,"Underline":0}
+" 
+createView QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 128) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+getValue QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 128) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+onDOMContentLoaded 
+fire "font-set" QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "C0C0C0") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "C0C0C0") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":12632256,"Underline":0}
+" 
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "C0C0C0") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "C0C0C0") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+HtmlView::closeEvent 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":12632256,"Underline":0}
+" 
+SendChatText: 1000000435 0 
+OnRcvChatText 1000000435 0 "$CHAT$#<FMT_HEAD Bold=1 Italic=1 Underline=0 FontColor=12632256 FontSize=24 FontName=宋体 SendUIN=1000000435 ReceiveUIN=0 IsStealth=0 Action=&无动作&\FMT_END#>785" 0 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":12632256,"Underline":0}
+" 
+createView QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.26323e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+getValue QMap(("config", QVariant(QVariantMap, QMap(("Bold", QVariant(double, 1) ) ( "Italic" ,  QVariant(double, 1) ) ( "Underline" ,  QVariant(double, 0) ) ( "color" ,  QVariant(double, 1.26323e+07) ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) )  ) ) )  
+onDOMContentLoaded 
+OnRcvWinSystemMsg 
+fire "font-set" QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":32896,"Underline":0}
+" 
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+onJsEvent QMap(("Underline", QVariant(bool, false) ) ( "color" ,  QVariant(QString, "008080") ) ( "font-name" ,  QVariant(QString, "宋体") ) ( "font-size" ,  QVariant(QString, "24px") ) ( "font-style" ,  QVariant(QString, "italic") ) ( "font-weight" ,  QVariant(QString, "bold") ) )  
+HtmlView::closeEvent 
+"ReadFile:{"font-name":"宋体","Bold":1,"Italic":1,"font-size":"24px","color":32896,"Underline":0}
+" 
+SendChatText: 1000000435 0 
+OnRcvChatText 1000000435 0 "$CHAT$#<FMT_HEAD Bold=1 Italic=1 Underline=0 FontColor=32896 FontSize=24 FontName=宋体 SendUIN=1000000435 ReceiveUIN=0 IsStealth=0 Action=&无动作&\FMT_END#>986" 0 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 
+OnRcvWinSystemMsg 
+OnRecvPing 
+OnRcvUpdateRoomUserCount 3 

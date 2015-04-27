@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册信息</title>
+    <script src="../js/boia.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style type="text/css">
+        .regist-msg {width: 350px;height: 240px;}
+        .footer {padding: 10px;}
+        .footer .btns {float: right;}
+        .body .title {margin-left: 10px;font-size: 14px}
+        .body .num {text-align: center;line-height: 100px;font-size: 30px;font-family: "Aller"}
+        .body .applyProtect {text-align: right;margin-right: 30px;color: #1C96D7;}
+    </style>
+</head>
+<body class="isDrag">
+    <div class="container regist-msg isDrag">
+        <div class="header header-style isDrag">
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body isDrag">
+            <div class="title isDrag">注册成功，您的号码是：</div>
+            <div class="num bold isDrag">123456789</div>
+            <div class="applyProtect">申请密保</div>
+        </div>
+        <div class="footer isDrag">
+            <div class="row btns isDrag">
+                <button type="button" class="btn col btn-default complete-btn">完成</button>
+            </div>
+        </div>
+    </div>
+<script>
+    var Container  = window.Container;
+
+    (function(B){
+        'use strict';
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        var hashObj = B.parseHashUrl();
+
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(420, 320);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });
+
+        B.one('.num').text(hashObj.uin);
+
+        B.one('.complete-btn').on('click', function(){
+            Container && Container.ShowMainView(hashObj.uin)
+        });
+        
+    })(Boia);
+</script>
+</body>
+</html>

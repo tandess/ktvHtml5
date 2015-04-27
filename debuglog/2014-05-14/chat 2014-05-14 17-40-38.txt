@@ -1,0 +1,7 @@
+[Level: Warning] [2014-05-14:17-40-38] beginner
+[Level: Warning] [2014-05-14:17-40-38] ChatConnection::open,host:121.199.15.206,port:9009
+[Level: Warning] [2014-05-14:17-40-38]  //创建命令通道  ChatConnection::open,host:25.kkyoo.com,port:9009
+[Level: Warning] [2014-05-14:17-40-38]  //启动定时器线程 ChatConnection::open
+[Level: Warning] [2014-05-14:17-40-38] ChatChannel::svc,svc start,Cmd,18e8
+[Level: Warning] [2014-05-14:17-40-38]  //发送进入聊天室命令 ChatConnection::open
+[Level: Warning] [2014-05-14:17-40-38] Cmd channel get packet:EPH_CHAT_LOGON_ROOM

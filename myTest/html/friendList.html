@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好友列表</title>
+    <script type="text/javascript" src="../js/boia.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style type="text/css">
+        .friend-list-box {position: relative;height: 100%;width: 100%;min-width: 200px;max-width: 400px;background: url(../images/window/imbg.jpg) no-repeat;border: 1px solid #858585;border-radius: 5px;}
+        .friend-list-box .status-menu, .friend-list-box .action-menu {background: white;}
+        .friend-list-box .action-menu .menu-icon {width: 16px;height: 16px;}
+        .friend-list-box .status-menu .menu-icon {width: 14px;height: 14px;}
+        .friend-list-box .online-icon {background-image: url(../images/icon/online.png);}
+        .friend-list-box .offline-icon {background-image: url(../images/icon/offline.png);}
+        .friend-list-box .leave-icon {background-image: url(../images/icon/leave.png);}
+        .friend-list-box .invisible-icon {background-image: url(../images/icon/invisible.png);}
+        .friend-list-box .new-user-icon {background-image: url(../images/icon/newUser.png);}
+        .friend-list-box .change-user-icon {background-image: url(../images/icon/changeUser.png);}
+        .friend-list-box .online-user-icon {background-image: url(../images/icon/onlineUser.png);}
+        .friend-list-box .check-msg-icon {background-image: url(../images/icon/checkMsg.png);}
+        .friend-list-box .system-msg-icon {background-image: url(../images/icon/systemMsg.png);}
+        .friend-list-box .send-msg-icon {background-image: url(../images/icon/sendMsg.png);}
+        .friend-list-box .my-set-icon {background-image: url(../images/icon/mySet.png);}
+        .friend-list-box .system-set-icon {background-image: url(../images/icon/systemSet.png);}
+        .friend-list-box .system-check-icon {background-image: url(../images/icon/systemCheck.png);}
+        .friend-list-box .save-center-icon {background-image: url(../images/icon/saveCenter.png);}
+        .friend-list-box .help-icon {background-image: url(../images/icon/help.png);}    
+        .friend-list-box .exit-icon {background-image: url(../images/icon/exit.png);}    
+        .header {height: 130px;}
+        .header .select-box {position: absolute;top: 25px;left: 15px;}
+        .header .userNum {vertical-align: top;color: white;
+                font-weight: bold;text-shadow: 1px 1px 1px rgba(0,0,0,.5);}
+        .header .img-box {vertical-align: top;margin-right: 10px;}
+        .header .userNum .num {vertical-align: top;margin-left: 5px;}
+        .body .conversation {background: url(../images/icon/friend_btn.png) no-repeat center;}
+        .body .interview {background: url(../images/icon/hall_btn.png) no-repeat center;}
+        .body .nav-tabs>li.active>a {background-color: transparent;}
+        .body #myTab {height: 100%;}
+        .body #myTab .nav-tabs a{text-indent: -9999px;display: block;border: 0;outline: 0;}
+        .body .nav-tabs {background: #ddebee;}
+        .body .nav-tabs .active {background-color: white;}
+        .body .nav-tabs li a:hover {border: 0;}
+        .body .body-content {overflow-y: auto;}
+        .footer {height: 60px;background: #EEF6F9;line-height: 60px;}
+        .footer .col {width: 56px;height: 22px;vertical-align: middle;}
+        .footer .menu-btn {background: url(../images/icon/menu.png) no-repeat; width: 30px;height: 30px;}
+        .footer .menu-btn:hover {background: url(../images/icon/menu-hover.png) no-repeat;}
+        .footer .hall-btn {background: url(../images/icon/hall.png) no-repeat;}
+        .footer .song-room-btn {background: url(../images/icon/song-room.png) no-repeat;}
+        .footer .find-btn {background: url(../images/icon/find.png) no-repeat;}
+        .footer .btns {display: inline-block;position: absolute;right: 0;margin-right: 2px;}
+        .footer .pointer {border: 1px solid transparent;}
+        .footer .pointer:hover {background-color: white;border: 1px solid #ccc;}
+    </style>
+</head>
+<body class="isDrag">
+    <div class="friend-list-box container">
+        <div class="status-menu menu hide">
+            <div class="menu-item">
+                <div class="menu-icon online-icon"></div>
+                <div class="menu-text">在线</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon offline-icon"></div>
+                <div class="menu-text">离线</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon leave-icon"></div>
+                <div class="menu-text">离开</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon invisible-icon"></div>
+                <div class="menu-text">隐身</div>
+            </div>
+        </div>
+        <div class="action-menu menu hide">
+            <div class="menu-item">
+                <div class="menu-icon new-user-icon"></div>
+                <div class="menu-text">注册新用户</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon change-user-icon"></div>
+                <div class="menu-text">更改用户</div>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-item">
+                <div class="menu-icon online-user-icon"></div>
+                <div class="menu-text">只显示在线用户</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon check-msg-icon"></div>
+                <div class="menu-text">查看历史消息(H)</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon system-msg-icon"></div>
+                <div class="menu-text">系统消息</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon send-msg-icon"></div>
+                <div class="menu-text">发送系统消息</div>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-item">
+                <div class="menu-icon my-set-icon"></div>
+                <div class="menu-text">我的设置</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon system-set-icon"></div>
+                <div class="menu-text">系统设置</div>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-item">
+                <div class="menu-icon system-check-icon"></div>
+                <div class="menu-text">系统检测</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon save-center-icon"></div>
+                <div class="menu-text">安全中心</div>
+            </div>  
+            <div class="menu-item">
+                <div class="menu-icon help-icon"></div>
+                <div class="menu-text">帮助</div>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-item">
+                <div class="menu-icon exit-icon"></div>
+                <div class="menu-text">退出</div>
+            </div>              
+        </div>
+        <div class="header isDrag">
+            <div class="select-box">
+                <span class="img-box">
+                    <img class="user-image" src="../images/small/1-1.bmp" alt="头像">
+                </span>
+                <span class="userNum">
+                    <img class="status-icon" src="../images/icon/online.png" alt="在线">
+                    <span class="num isDrag">78325489</span>
+                </span>
+            </div>
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div id="myTab">
+                <ul class="nav nav-tabs">
+                    <li class="conversation"><a href="#tab-1">Tab #1</a></li>
+                    <li class="active interview"><a href="#tab-2">Tab #2</a></li>
+                </ul>
+                <div class="tab-content body-content">
+                    <div id="tab-1" class="tab-pane content-item tab-hidden">
+                        <div class="treeview treeview-friend-list"></div>
+                    </div>
+                    <div id="tab-2" class="content-item">
+                        <div class="treeview treeview-visite"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer isDrag">
+            <div class="row isDrag">
+                <div class="col menu-btn"></div>
+                <div class="btns isDrag">
+                    <div class="col hall-btn pointer"></div>
+                    <div class="col song-room-btn pointer"></div>
+                    <div class="col find-btn pointer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var Container  = window.Container;
+
+    (function(B){
+        'use strict';
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        // 根据屏幕大小改变元素高度
+        var autoChangeHeight = function(){
+            var bodyHeight = document.documentElement.clientHeight - 180;
+            B.one('.body').css('height', bodyHeight + 'px');
+            B.one('.body-content').css('height', bodyHeight- 46 + 'px');
+        };
+
+        // 页面大小改变
+        window.addEventListener('resize', function(event){
+            autoChangeHeight();
+        });
+
+        document.addEventListener('DOMContentLoaded',function(){
+            autoChangeHeight();
+
+            Container && Container.setSize(300,700);
+            Container && Container.setMaximumWidth(400);
+            Container && Container.setMinimumWidth(200);
+            Container && Container.enableResize(true);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        var children1 = [{
+            id: 1,
+            label: '我的好友',
+            total: 18,
+            item: [{
+                label: '10085',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '2',
+                roomid: '111',
+                roomtype: 'hds'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            }]
+        },{
+            id: 2,
+            label: '黑名单',
+            total: 20,
+            item: [{
+                label: '小智',
+                ip: 12345,
+                imgIndex: '4',
+                roomid: '333',
+                roomtype: 'df'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            },{
+                label: '100877',
+                num: '123456',
+                ip: 12345,
+                imgIndex: '3',
+                roomid: '222',
+                roomtype: 'sdah'
+            }]
+        }];
+
+        var children2 = [{
+            id: 1,
+            label: '最近访问',
+            total: 18,
+            item: [{
+                label: '10052',
+                ip: 12345,
+                imgIndex: '5'
+            },{
+                label: '455465',
+                ip: 12345,
+                imgIndex: '6'
+            }]
+        }];
+
+        var handleFriendsInfo = function(friends,visitors){
+            friendList.children = friends;
+            friendList.render();
+            visitorList.children = visitors;
+            visitorList.render();
+        };
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+
+            Container && Container.hide();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.hide();
+        });
+
+        /*双击事件*/
+        var friendList = new B.TreeView({
+            boundingBox: '.treeview-friend-list',
+            onListDoubleClick: function(){
+                alert(111)
+            }
+        });   
+
+        var visitorList = new B.TreeView({
+            boundingBox: '.treeview-visite',
+            onListDoubleClick: function(node){
+                Container && Container.enterKtvRoom(parseInt(node.getAttribute('roomid')),parseInt(node.getAttribute('roomtype')));
+            }    
+        });   
+        
+        /*var tabview = new B.TabView({
+            boundingBox: '#myTab'
+        }).render();*/
+        
+        // 初始化头像 状态和用户名
+        Container && Container.sig_uin_img && Container.sig_uin_img.connect(function(user,img,invis){
+            B.one('.num').text(user);
+            B.one('.user-image').src = '../images/small/'+img+'-1.bmp';
+            if(invis === true){
+                B.one('.status-icon').src = '../images/icon/invisible.png';
+            }else {
+                B.one('.status-icon').src = '../images/icon/online.png';
+            }
+        });
+
+        // 记录好友列表上次的大小并且调整
+        Container && Container.sig_geometry && Container.sig_geometry.connect(function(x,y,w,h){
+            Container && Container.setSize(w,h);
+            Container && Container.movePos(x,y);
+        });
+
+        //修改头像
+        Container && Container.sig_changeFace.connect(function(face){
+            B.one('.user-image').src = '../images/small/'+face+'-1.bmp';
+        });
+
+        // 初始化列表
+        Container && Container.testSignal3.connect(function(list,status){
+
+            handleFriendsInfo(children2,list);
+        });
+
+        // 点击头像弹出我的设置
+        B.one('.user-image').on('click', function(){
+            Container && Container.mySet();
+        });
+
+        //打开大厅
+        B.one('.hall-btn').on('click', function(){
+            Container && Container.openHall();
+        });
+
+        var menu = new B.Menu({
+            boundingBox: '.status-menu',
+            areaNode: '.status-icon',
+            onAreaClick: function(event){
+                event.preventDefault();
+                event.stopPropagation();
+
+                this.show();
+                this.setPos(event.pageX, event.pageY + 10);
+            },
+            onListClick: function(listNode){
+                var statusStr = 'online';
+                var statusIndex = 0;
+
+                switch(listNode.one('.menu-text').text()){
+                    case '在线': 
+                        statusStr = 'online';
+                        statusIndex = 1;
+                        break;
+                    case '隐身': 
+                        statusStr = 'invisible';
+                        statusIndex = 4;
+                        break;
+                    case '离开': 
+                        statusStr = 'leave';
+                        statusIndex = 3;
+                        break;
+                    case '离线': 
+                        statusStr = 'offline';
+                        statusIndex = 2;
+                        break;
+                }
+
+                B.one('.status-icon').src = '../images/icon/'+statusStr+'.png';
+                Container && Container.updateStatus(statusIndex);
+            }
+        });
+
+        var menu = new B.Menu({
+            boundingBox: '.action-menu',
+            areaNode: '.menu-btn',
+            onAreaClick: function(event){
+                event.preventDefault();
+                event.stopPropagation();
+
+                this.show();
+                this.setPos(event.pageX, event.pageY - this.size().height - 20);
+            },
+            onListClick: function(listNode){
+                switch(listNode.one('.menu-text').text()){
+                    case '系统设置':
+                        console.log('系统设置');
+                        break;
+                    case '注册新用户':
+                        Container.registNew();
+                        break;
+                    case '只显示在线用户':
+                        console.log('只显示在线用户');
+                        break;
+                    case '查看历史消息(H)':
+                        console.log('查看历史消息(H)');
+                        break;
+                    case '系统消息':
+                        Container.seeSysMsg();
+                        break;
+                    case '发送系统消息':
+                        Container.sendSysInfo();
+                        break;
+                    case '我的设置':
+                        Container.mySet();
+                        break;
+                    case '系统检测':
+                        Container.sysCheck();
+                        break;
+                    case '安全中心':
+                        console.log('安全中心');
+                        break;
+                    case '帮助':
+                        //Container.setAvatar();
+                        console.log('帮助');
+                        break;
+                    case '退出':
+                        Container.quitSys();
+                        break;
+                    case '更改用户':
+                        Container.changeUser();
+                        break;
+                }
+            }
+        });
+
+    })(Boia);
+</script>
+</html>

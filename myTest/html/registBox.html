@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册窗口</title>
+    <script src="../js/boia.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style type="text/css">
+        .regist-box {width: 350px;height: 260px;background: white;}
+        .header .select-box {padding: 15px;display: inline-block;}
+        .header .img-box {display: inline-block;width: 40px;height: 40px;padding-top: 1px;background: white;border: 1px solid #BEDDEF;text-align: center;cursor: pointer;}
+        .body {margin-top: 40px;}
+        .body .row {margin-bottom: 10px;}
+        .body .input-box {width: 95px;height: 25px;}
+        .body .label {width: 60px;text-align: right;}
+        .footer {padding: 10px;}
+        .footer .btns {float: right;}
+    </style>
+</head>
+<body class="isDrag">
+    <div class="componentBox"></div>
+    <div class="container regist-box isDrag">
+        <div class="header header-style isDrag">
+            <div class="select-box">
+                <span class="img-box"><img src="../images/small/4-1.bmp" data-index="4" alt="头像" class=""></span>
+                <span>选择头像</span>
+            </div>
+            <div class="tool">
+                <div class="tool-min"></div>
+                <div class="tool-close"></div>
+            </div>
+        </div>
+        <div class="body isDrag">
+            <div class="row isDrag">
+                <div class="g50 isDrag">
+                    <label class="label isDrag" for="name" >昵称：</label>
+                    <input type="text" id="name" class="input-box input-style" />
+                </div>
+                <div class="g50 isDrag"></div>
+            </div>
+            <div class="row isDrag">
+                <div class="g50 isDrag">
+                    <label class="label isDrag" for="age">年龄：</label>
+                    <input type="text" id="age" class="input-box input-style" />
+                </div>
+                <div class="g50 isDrag">
+                    <label class="label" for="sex">性别：</label>
+                    <!-- <input type="text" id="sex" class="input-box" /> -->
+                    <select name="sex" id="sex" class="input-box input-style">
+                        <option value="0" selected>男</option>
+                        <option value="1">女</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row isDrag">
+                <div class="g50 isDrag">
+                    <label class="label isDrag" for="password">密码：</label>
+                    <input type="password" id="password" class="input-box input-style" />
+                </div>
+                <div class="g50">
+                    <label class="label isDrag" for="confirm-psd">确认密码：</label>
+                    <input type="password" id="confirm-psd" class="input-box input-style" />
+                </div>
+            </div>
+        </div>
+        <div class="footer isDrag">
+            <div class="row btns isDrag">
+                <button type="button" class="btn col btn-default regist-btn">注册</button>
+                <button type="button" class="btn col btn-default cancel-btn">取消</button>
+            </div>
+        </div>
+    </div>
+<script>
+    var Container  = window.Container;
+
+    (function(B) {
+        'use strict';
+
+        // 拖动事件
+        B.one('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = event.target;
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+
+        var digitsPat = /^\d+$/;
+
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(350,260);
+            Container && Container.onDOMContentLoaded();
+        });
+
+        //关闭最小化事件
+        B.one('.tool-close').on('click', function() {
+            event.stopPropagation();
+
+            Container && Container.close();
+        });
+        B.one('.tool-min').on('click', function() {
+            Container && Container.showMinimized();
+        });
+
+        var nameTip = new B.Tooltip({
+
+            trigger: '#name',
+            tipText: '请输入昵称'
+
+        }).render();     
+
+        var ageTip = new B.Tooltip({
+
+            trigger: '#age',
+            tipText: '请输入年龄'
+
+        }).render();  
+
+        var psdTip = new B.Tooltip({
+
+            trigger: '#password',
+            tipText: '请输入密码'
+
+        }).render();         
+
+        var confirmPsdTip = new B.Tooltip({
+
+            trigger: '#confirm-psd',
+            tipText: '请输入密码'
+
+        }).render();
+
+        //选择头像
+        B.one('.select-box').on('click', function(event){
+            Container && Container.regist_face();
+        });       
+
+         //修改头像
+        Container && Container.sig_setFace.connect(function(face){
+            var img = B.one('.img-box').one('img');
+
+            img.src = '../images/small/'+face+'-1.bmp';
+            img.dataset['index'] = face;
+        });                      
+
+        //注册
+        B.one('.regist-btn').on('click', function(event){
+            var name = B.one('#name').value,
+                age = B.one('#age').value,
+                sex = B.one('#sex').value,
+                psd = B.one('#password').value,
+                cofirmPsd = B.one('#confirm-psd').value,
+                pic = parseInt(B.one('.img-box').one('img').dataset['index']);
+
+            event.stopPropagation();
+
+            if(!name){
+                nameTip.show();
+                return;
+            }
+            if(!age){
+                ageTip.show();
+                return;
+            }else if(!digitsPat.test(age)){
+                ageTip.tipText = '请输入数字';
+                ageTip.show();
+                return;
+            }
+
+            if(!psd){
+                psdTip.show();
+                return;                    
+            }
+            if(!cofirmPsd){
+                confirmPsdTip.show();
+                return;
+            }else if(psd != cofirmPsd){
+                psdTip.tipText = '两次输入的密码不一致';
+                psdTip.show();
+                return;
+            }
+
+            Container && Container.regNewUIN(psd,name,age,sex,pic);
+
+        });
+
+        //取消
+        B.one('.cancel-btn').on('click', function(event){
+            event.stopPropagation();
+            Container && Container.backLoginUrl();
+        });
+
+    })(Boia);
+</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>消息盒子</title>
+<style type="text/css">
+  <!--
+	body{ font-size:12px; font-family:"微软雅黑"; color:#000000;margin:0px auto;}
+	 #box{ width:310px; height:292px; float:left;background:url(images/xxhz_bg.jpg) repeat-x;}
+	 ul{ list-style:none; margin:0px; padding:0px;}
+     ul li{ margin:0px; padding:0px;}
+	 p{ margin:0px auto; padding:0px; line-height:150%;height:22px; overflow:hidden; }
+	 .div_contant{ width:310px; height:auto; float:left;}
+	 .div_contant_01{width:310px; height:auto; float:left;}
+	 .div_contant_02{width:310px; height:252px; float:left; background:#FFFFFF; text-align:center; padding-top:40px;}
+	 .div_contant_02 a{ color:#0869BE; font-size:12px; text-decoration:underline;}
+	 .div_contant_02 a:hover{ color:#FF3300; text-decoration:underline;}
+	 .yx_pic{ width:301px; height:50px; float:left; border-bottom:1px #6D85B5 solid; border-top:1px #FFFFFF solid; padding:8px 0px 7px 10px; margin-left:1px;}
+	 .yx_pic_L{ width:60px; height:50px; float:left;}
+	 .yx_pic_R{ width:231px; height:50px; float:left; margin-left:5px;}
+	  .span_01{ color:#057FBE;}
+	 .span_02{ color:#FD0100; }
+	 .page{ width:310px;height:25px; color:#057FBF; text-align:center;border-top:1px #FFFFFF solid; padding-bottom:1px;}
+	 .page a{ color:#057FBF; text-decoration:none;}
+	 .page a:hover{ color:#FF3300; text-decoration:underline}
+  -->
+</style>
+
+<script src="json.js"  type="text/javascript"></script>
+<script  type="text/javascript">
+
+var m_curPage=1;
+var m_maxLine = 4;
+var m_curType = 1;
+var m_bShow=false;
+var m_bconnect = true;
+var m_maxPage = 1;
+function SendDataToKTV(type,data)
+{
+	//alert("data:"+str);
+	var str ="type="+type+"&"+data;
+	Notify(str);
+}
+
+function Notify(str)
+{
+	window.navigate("htmlflash:"+str);
+}
+
+function SendObjToKTV(type,obj)
+{
+	//alert("data:"+str);
+	var str ="type="+type+"&";
+	str += JSON.stringify(obj);
+	Notify(str);
+}
+var g_gameMap = {};
+function RecvPacketFromeC(str)
+{
+	// 异步发送  收到报文入口处
+	var objData = JSON.parse(str);
+	//alert(str);
+	if(objData['cmd'])
+	{
+		if(objData['cmd'] == "CMD_CONNECT_LOSE")
+		{
+			//m_bconnect = false;
+			SendCloseGame();
+			document.getElementById('Detail_list').innerHTML = 
+			'<div class="div_contant_02" ><img src="images/xxhz/xxhz_jzsb.png" width="219" height="72" style="margin-left:0px;"/> <br /><br />网络有些拥堵，请重新进入KTV房间。</div>'
+		}
+		else if(objData['cmd'] == "CMD_MODLIST")
+		{
+			OnRecvInviteGameList(objData);
+		}
+		else if(objData['cmd'] == "CMD_SHOW_DLG")
+		{
+			if(!m_bShow)
+			{
+				m_bShow = true;
+				LoopRefreshList();
+			}
+		}
+		else if(objData['cmd'] == "CMD_HIDE_DLG")
+		{
+			m_bShow = false;
+		}
+		if(objData['cmd'] == "CMD_GAME_INFO")
+		{
+			var msg={};
+			msg.cmd="CMD_HIDE_WINDOW";
+			SendObjToKTV("OwnerFlashMessage",msg);
+			//
+			//var gameArray = [];
+			var gameData = objData.data;
+			for(var key in gameData)
+			{
+					var gameList = gameData[key].List;
+					for (var index in gameList)
+					{
+						var item = gameList[index];
+						if(item.InteractName === undefined)
+						{
+							continue;
+						}
+						if(g_gameMap[item.Cmd] ==null)
+						{
+							var gameInfo = {};
+							gameInfo.url = item.InteractIco;
+							gameInfo.cmd = item.Cmd;
+							gameInfo.name = item.InteractName;
+							gameInfo.type = 1;//游戏类型
+							gameInfo.cmdpath = item.CmdPath;
+							g_gameMap[item.Cmd] = gameInfo;
+						}
+					}
+			}
+			//
+		}
+
+	}
+}
+var g_htmlList = [];
+function OnRecvInviteGameList(objData)
+{
+	g_htmlList=[];
+	
+	//document.getElementById('Detail_list').innerHTML="";
+	if(objData.type!= null && objData.arr != null && objData.len != null)
+	{
+		if(objData.type != m_curType)
+		{
+			return;
+		}
+		var strHtml="";
+		var index = 0;
+		for(var i=0;i<objData.arr.length;i++)
+		{
+			var url = "";
+			var gamecmd = objData.arr[i].gamecmd;
+			if(g_gameMap[gamecmd])
+			{
+				url = g_gameMap[gamecmd].url;
+			}
+			var temphtml = 
+			'<div class="yx_pic">\
+				 <div class="yx_pic_L"><img src="'+url+'" width="60" height="50" border="0" /></div>\
+				 <div class="yx_pic_R">\
+						<p>\
+						  <span></span><span class="span_01">'+objData.arr[i].owner+'</span><span>发起了</span>\
+						  <span class="span_02">'+objData.arr[i].gamename+'</span><span>游戏！</span>\
+						 </p>\
+						 <p>\
+						  <span style="float:right;">\
+						  <a href="#" onclick="OnJoin('+m_curType+',&quot;'+objData.arr[i].id+'&quot;,&quot;'+gamecmd+'&quot;);" title="'+objData.arr[i].owner+"发起了"+objData.arr[i].gamename+"游戏！"+'">\
+						  <img src="images/xxhz/jr_yx01.png" onmouseover="this.src=\'images/xxhz/jr_yx01.png\'" onmouseout="this.src=\'images/xxhz/jr_yx01.png\'"  border="0"/></a>\
+						  </span><span>游戏人数：</span><span class="span_02">'+objData.arr[i].usernum+'</span>\
+						</p>\
+				 </div>\
+			   </div>';
+			//var tmp = start+i;
+			strHtml+=temphtml;
+			if(++index == m_maxLine)
+			{
+				g_htmlList.push(strHtml);
+				strHtml = "";
+				index = 0;
+			}
+		}
+		if(strHtml != "")
+		{
+			g_htmlList.push(strHtml);
+		}
+			//alert(g_htmlList.length )
+		m_maxPage = Math.ceil(objData.len/m_maxLine);
+		if(m_maxPage > 1)
+		{
+		////////////////  最下面  页面  、、、、、、
+			var strBottomHtml='';//'<span><ul><li><label>当前是第'+m_curPage+'页    </label>';
+			if(m_curPage > 1)
+			{
+				strBottomHtml = strBottomHtml + '<a href="#" onclick="UpPage();"><img src="images/xxhz/next_01.png" width="14" height="11" border="0" style="margin-top:5px;" /></a> | ';
+			}
+			else
+			{
+				strBottomHtml = strBottomHtml + '<a href="#" ><img src="images/xxhz/next_01.png" width="14" height="11" border="0" style="margin-top:5px;" /></a>';
+			}
+			if(m_curPage < m_maxPage)
+			{
+				strBottomHtml = strBottomHtml + '<a href="#" onclick="NextPage();"><img src="images/xxhz/next_02.png" width="14" height="11" border="0"  style="margin-left:10px;margin-top:5px;"/></a>';
+			}
+			else
+			{
+				m_curPage = m_maxPage;
+				strBottomHtml = strBottomHtml + '<a href="#" ><img src="images/xxhz/next_02.png" width="14" height="11" border="0"  style="margin-left:10px;margin-top:5px;"/>  </a>';
+			}
+			document.getElementById('bottom_html').innerHTML=strBottomHtml;
+		}
+		else
+		{
+			m_curPage = 1;
+		}
+		if(g_htmlList.length == 0)
+		{
+			document.getElementById('Detail_list').innerHTML = '<div class="div_contant_02" >\
+			<Img src="images/xxhz/78.gif" width="69" height="48" /><br /><br /> \
+			<img src="images/xxhz/mfq_yx.png" width="205" height="69" />\
+			<br /><br /><br />\
+			<a href="#" onclick="SendAGame()">点击这里发起游戏</a></div>'
+		}
+		else
+		{
+			document.getElementById('Detail_list').innerHTML=g_htmlList[0];
+		}
+	}
+	else
+	{
+		alert("some data is null");
+	}
+}
+function SendAGame()
+{
+	SendCloseGame();
+	var msg =
+	{
+		cmd:"CMD_SEND_ONE_GAME"
+	}
+	SendObjToKTV("OwnerFlashMessage",msg);
+}
+function UpPage()
+{
+	m_curPage = (--m_curPage > 1)?m_curPage:1;
+}
+function NextPage()
+{
+	m_curPage = (++m_curPage < m_maxPage)?m_curPage:m_maxPage;
+}
+
+function RefreshList()
+{
+	var ss = ((m_curPage-1)<=0)?0:(m_curPage-1)*m_maxLine-1;
+	var pkt = {
+		type:m_curType,
+		start:ss,
+		end:m_curPage*m_maxLine-1
+	};
+	
+	//test.RequestModList(pkt);
+	var msg = {};
+	msg.cmd="CMD_REQUESET_GAME_LIST";
+	msg.msg = pkt;
+	var outPkt={};
+	outPkt.cmd="CMD_KTV";
+	outPkt.msg = msg;
+	SendObjToKTV("TO_NETWORK",outPkt);
+}
+
+function LoopRefreshList()
+{
+	if(m_bShow&&m_bconnect)
+	{
+		RefreshList();
+		window.setTimeout(LoopRefreshList,2000);
+	}
+}
+
+
+
+function LoadSuccess()
+{
+	SendDataToKTV("LoadSuccess","success");
+}
+
+function CallLoadSuccess()
+{
+	window.setTimeout(LoadSuccess,200);
+}
+function SendCloseGame()
+{
+	var pkt =
+	{
+		cmd:"CMD_HIDE_WINDOW"
+	}
+	SendObjToKTV("OwnerFlashMessage",pkt);
+}
+function OnJoin(type,id,gamecmd) 
+{
+	SendCloseGame();
+	var msg={};
+	msg.type = type;
+	msg.id = id;
+	msg.gamecmd = gamecmd;
+	msg.cmd="CMD_ENTER_GAME";
+	var pkt={};
+	pkt.msg = msg;
+	pkt.cmd="CMD_KTV";
+	SendObjToKTV("TO_NETWORK",pkt);
+}
+
+</script>
+</head>
+
+<body onLoad="CallLoadSuccess();">
+<div id="box">
+  <div class="div_contant">
+    <div class="div_contant_01" id="Detail_list">
+		<div class = "div_contant_02" >
+		<img src="images/xxhz/loadingdata.gif"  width="50" height="50"/>
+		<br />
+		<br />
+		<br /> 游戏列表正在努力为您加载中，请稍等...
+		</div>
+	</div>
+	
+	<div class="page" id="bottom_html" >
+	    <a href="#" title="上一页">
+		<img src="images/xxhz/next_01.png" width="14" height="11" border="0" style="margin-top:5px;" />
+		</a>
+		<a href="#" title="下一页">
+		<img src="images/xxhz/next_02.png" width="14" height="11" border="0"  style="margin-left:10px;margin-top:5px;"/>
+		</a>
+	  </div>
+  </div>
+ </div>
+</body>
+</html>

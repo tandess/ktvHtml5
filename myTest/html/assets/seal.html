@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>印章</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script src="../../bower_components/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../bower_components/underscore/underscore.js" type="text/javascript"></script>
+    <style type="text/css">
+        .seal-box {width: 335px;height: 260px;background: white;}
+        .pre-seal-box{margin-left:3px}
+    </style>
+</head>
+<body class="isDrag">
+<div class="container seal-box isDrag" id="seal-box">
+    <div class="header header-style isDrag">
+        <div class="tool">
+            <div class="tool-close"></div>
+        </div>
+    </div>
+    <div>
+        <ul class="nav nav-tabs" id="sealTab">
+            <li class="active"><a href="#tab-1" data-toggle="tab" class="sealTab">称号</a></li>
+            <li><a href="#tab-2" data-toggle="tab" v>称赞</a></li>
+            <li><a href="#tab-3" data-toggle="tab" class="sealTab">角色</a></li>
+            <li><a href="#tab-4" data-toggle="tab" class="sealTab">整蛊</a></li>
+            <li><a href="#tab-5" data-toggle="tab" class="sealTab">贵族</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-1">
+                <span class="pre-seal-box seal-box1"></span>
+            </div>
+            <div class="tab-pane" id="tab-2">
+                <span class="pre-seal-box seal-box2"></span>
+            </div>
+            <div class="tab-pane" id="tab-3">
+                <span class="pre-seal-box seal-box3"></span>
+            </div>
+            <div class="tab-pane" id="tab-4">
+                <span class="pre-seal-box seal-box4"></span>
+            </div>
+            <div class="tab-pane" id="tab-5">
+                <span class="pre-seal-box seal-box5"></span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+<script>
+    'use strict';
+
+    var Container  = window.Container;
+    var sealList = Container && Container.getValue().sealList||[{id:1,type:"1",path:"..\\..\\images\\seal\\97.bmp",tip:"asd"},{id:2,type:"2",path:"..\\images\\seal\\97.bmp",tip:"asd"},{id:3,type:"1",path:"..\\images\\seal\\97.bmp",tip:"asd"}];
+    var selectUin = Container && Container.getValue().selectUin;
+    (function($) {
+        // 拖动事件
+        $('body').on('mousedown', function(event){
+            if(event.button != 0) return;
+
+            var target = $(event.target);
+
+            if(target.hasClass('isDrag')) {
+                Container && Container.startMove(event.screenX,event.screenY);
+            }
+        });
+        var initSealList = function(){
+            $.each(sealList, function(idx, seal){
+                var  htmlTemp = _.template('<span title="<%= tip %>" money="<%= money %>" class="imgSeal" id="<%= id %>" type="<%= type %>"><img height="32" src="<%= path %>"/></span>');
+                $('.seal-box'+seal.type).append(htmlTemp(seal));
+            });
+        };
+        var imgSealClick = function(){
+            $(".imgSeal").click(function(){
+                var id = $(this).attr("id"),type=$(this).attr("type"),money=$(this).attr("money");
+                Container && Container.fire('seal-set', {
+                    id: id,
+                    type:type,
+                    selectUin:selectUin,
+                    money:money
+                });
+                Container && Container.close();
+            });
+        };
+        //页面加载完成
+        document.addEventListener('DOMContentLoaded',function(){
+            Container && Container.setSize(335,260);
+            Container && Container.onDOMContentLoaded();
+            initSealList();
+            imgSealClick();
+        });
+
+        $('.tool-close,.cancel-btn').on('click', function(event){
+            Container && Container.close();
+        });
+    })(jQuery);
+
+    (function($) {
+
+        $('#sealTab a').click(function (e){
+
+            e.preventDefault();
+            $(this).parent().addClass("active").siblings().removeClass("active");
+            $(e.currentTarget.hash).show().siblings().hide();
+
+        })
+
+    })(jQuery);
+</script>
+
+</html>
